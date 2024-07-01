@@ -35,8 +35,8 @@ body {
   background-size: cover;
   color: white;
   /* background-image: url("../../public/background.svg"); */
-  background-image: url("../public/trianglify-lowres-1.png");
   background-color: #110420;
+  background-image: url("/trianglify-lowres-1.png");
 }
 
 ::-webkit-scrollbar {

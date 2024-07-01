@@ -65,8 +65,6 @@ const allPosts = await Astro.glob("../pages/posts/*.md");
         {
           allPosts.map((post) => (
             <a
-              target="_blank"
-              rel="noopener noreferrer"
               href={post.url}
               class="relative overflow-x-hidden top-0 left-0 w-full min-h-[260px]  block ring-1 ring-primary/5 rounded-3xl shadow-xl dark:shadow-thick break-words hover:ring-primary/5 dark:hover:ring-white/20 dark:ring-white/10 ring-primary/5">
               <img
