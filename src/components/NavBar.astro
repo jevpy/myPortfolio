@@ -1,0 +1,389 @@
+---
+const currentPath = Astro.url.pathname;
+
+const post = currentPath.split("/")[1];
+---
+
+<style>
+  .menu,
+  .social {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+  }
+
+  .social{
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  .menu {
+    width: 200px;
+    padding: 0.75rem 0.5rem 0.25rem;
+    border: thin solid #4e4e4e;
+    border-radius: 10rem;
+    border-radius: 0.5rem;
+
+    background-image: linear-gradient(
+      to right top,
+      #1b0a32,
+      #1c082b,
+      #1c0624,
+      #1b051e,
+      #180418
+    );
+    background-image: none;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(0px);
+  }
+
+  .menu p {
+    background-color: #53086bff;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    color: #caa0fcff;
+    color: #e6d3ffff;
+  }
+
+  .menu a,
+  .menu .button-sound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .menu a:hover small,
+  .menu .button-sound:hover small {
+    display: block;
+    transition: display 0.3s ease-in-out;
+  }
+
+  .menu small {
+    color: rgb(231, 225, 238);
+    display: none;
+    position: absolute;
+    bottom: 1.9rem;
+  }
+
+  .menu a.active::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-top: 2px;
+    background-color: rgb(198, 83, 243);
+  }
+
+  .social {
+    margin-top: 1rem;
+  }
+
+  .social a {
+    transition: transform 0.2s ease;
+  }
+
+  .social a:hover {
+    transform: scale(1.2);
+  }
+
+  .button-sound {
+    cursor: pointer;
+  }
+</style>
+
+<nav class={currentPath === "/" ? "hidden" : "block navbar"}>
+  <div class="menu">
+    <a href="/">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        color="currentColor"
+        fill="none">
+        <path
+          d="M15.0001 17C14.2006 17.6224 13.1504 18 12.0001 18C10.8499 18 9.79965 17.6224 9.00012 17"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"></path>
+        <path
+          d="M2.35151 13.2135C1.99849 10.9162 1.82198 9.76763 2.25629 8.74938C2.69059 7.73112 3.65415 7.03443 5.58126 5.64106L7.02111 4.6C9.41841 2.86667 10.6171 2 12.0001 2C13.3832 2 14.5818 2.86667 16.9791 4.6L18.419 5.64106C20.3461 7.03443 21.3097 7.73112 21.744 8.74938C22.1783 9.76763 22.0018 10.9162 21.6487 13.2135L21.3477 15.1724C20.8473 18.4289 20.597 20.0572 19.4291 21.0286C18.2612 22 16.5538 22 13.1389 22H10.8613C7.44646 22 5.73903 22 4.57112 21.0286C3.40321 20.0572 3.15299 18.4289 2.65255 15.1724L2.35151 13.2135Z"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linejoin="round"></path>
+      </svg>
+      <small>Home</small>
+    </a>
+    <a href="/about" class={currentPath === "/about" ? "active" : ""}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        color="currentColor"
+        fill="none">
+        <path
+          d="M6.57757 15.4816C5.1628 16.324 1.45336 18.0441 3.71266 20.1966C4.81631 21.248 6.04549 22 7.59087 22H16.4091C17.9545 22 19.1837 21.248 20.2873 20.1966C22.5466 18.0441 18.8372 16.324 17.4224 15.4816C14.1048 13.5061 9.89519 13.5061 6.57757 15.4816Z"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M16.5 6.5C16.5 8.98528 14.4853 11 12 11C9.51472 11 7.5 8.98528 7.5 6.5C7.5 4.01472 9.51472 2 12 2C14.4853 2 16.5 4.01472 16.5 6.5Z"
+          stroke="currentColor"
+          stroke-width="1.5"></path>
+      </svg>
+      <small>About</small>
+    </a>
+    <a
+      href="/blog"
+      class={currentPath === "/blog" || post === "posts" ? "active" : ""}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        color="currentColor"
+        fill="none">
+        <path
+          d="M12 6L12 20"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"></path>
+        <path
+          d="M5.98056 3.28544C9.32175 3.9216 11.3131 5.25231 12 6.01628C12.6869 5.25231 14.6782 3.9216 18.0194 3.28544C19.7121 2.96315 20.5584 2.80201 21.2792 3.41964C22 4.03727 22 5.04022 22 7.04612V14.255C22 16.0891 22 17.0061 21.5374 17.5787C21.0748 18.1512 20.0564 18.3451 18.0194 18.733C16.2037 19.0787 14.7866 19.6295 13.7608 20.1831C12.7516 20.7277 12.247 21 12 21C11.753 21 11.2484 20.7277 10.2392 20.1831C9.21344 19.6295 7.79633 19.0787 5.98056 18.733C3.94365 18.3451 2.9252 18.1512 2.4626 17.5787C2 17.0061 2 16.0891 2 14.255V7.04612C2 5.04022 2 4.03727 2.72078 3.41964C3.44157 2.80201 4.2879 2.96315 5.98056 3.28544Z"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+      <small>Blog</small>
+    </a>
+    <a
+      href="https://drive.google.com/file/d/1x3Ieu8HLCqAFHF5E5VD_KAoEhH6wW4Ff/view"
+      target="_blank"
+      rel="noopener noreferrer">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        color="#ffffff"
+        fill="none">
+        <path
+          d="M20.4593 17.5153C20.8198 17.9308 21 18.1385 21 18.5C21 18.8615 20.8198 19.0692 20.4593 19.4847C19.5612 20.5199 17.9381 22 16 22C14.0619 22 12.4388 20.5199 11.5407 19.4847C11.1802 19.0692 11 18.8615 11 18.5C11 18.1385 11.1802 17.9308 11.5407 17.5153C12.4388 16.4801 14.0619 15 16 15C17.9381 15 19.5612 16.4801 20.4593 17.5153Z"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linejoin="round"></path>
+        <path
+          d="M20 13.0032V7.81989C20 6.12616 20 5.27928 19.732 4.60291C19.3012 3.51554 18.3902 2.65784 17.2352 2.25228C16.5168 2 15.6173 2 13.8182 2C10.6698 2 9.09563 2 7.83836 2.44148C5.81714 3.15122 4.22281 4.6522 3.46894 6.55509C3 7.73875 3 9.22077 3 12.1848V14.731C3 17.8013 3 19.3364 3.8477 20.4025C4.09058 20.708 4.37862 20.9792 4.70307 21.2078C5.61506 21.8506 6.85019 21.9757 9 22"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M3 12C3 10.1591 4.49238 8.66667 6.33333 8.66667C6.99912 8.66667 7.78404 8.78333 8.43137 8.60988C9.00652 8.45576 9.45576 8.00652 9.60988 7.43136C9.78333 6.78404 9.66667 5.99912 9.66667 5.33333C9.66667 3.49238 11.1591 2 13 2"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M15.9922 18.5H16.0012"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+      <small>CV</small>
+    </a>
+    <div
+      class={currentPath !== "/" || post === "posts"
+        ? "button-sound"
+        : "hidden"}>
+      <div class="button-music">
+        <svg
+          class="hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          color="#ffffff"
+          fill="none">
+          <path
+            d="M14 14.8135V9.18646C14 6.04126 14 4.46866 13.0747 4.0773C12.1494 3.68593 11.0603 4.79793 8.88232 7.02192C7.75439 8.17365 7.11085 8.42869 5.50604 8.42869C4.10257 8.42869 3.40084 8.42869 2.89675 8.77262C1.85035 9.48655 2.00852 10.882 2.00852 12C2.00852 13.118 1.85035 14.5134 2.89675 15.2274C3.40084 15.5713 4.10257 15.5713 5.50604 15.5713C7.11085 15.5713 7.75439 15.8264 8.88232 16.9781C11.0603 19.2021 12.1494 20.3141 13.0747 19.9227C14 19.5313 14 17.9587 14 14.8135Z"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M17 9C17.6254 9.81968 18 10.8634 18 12C18 13.1366 17.6254 14.1803 17 15"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M20 7C21.2508 8.36613 22 10.1057 22 12C22 13.8943 21.2508 15.6339 20 17"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          color="#ffffff"
+          fill="none">
+          <path
+            d="M22 22L2 2"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M17 10C17.6296 10.7667 18 11.7054 18 12.7195C18 13.1635 17.929 13.593 17.7963 14"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M20 8C21.2508 9.22951 22 10.7952 22 12.5C22 13.9164 21.4829 15.2367 20.5906 16.348"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M14 14C14 17.1452 14 19.5313 13.074 19.9227C12.1481 20.3141 11.0583 19.2021 8.8787 16.9781C7.7499 15.8264 7.106 15.5713 5.5 15.5713C4.3879 15.5713 3.02749 15.7187 2.33706 14.6643C2 14.1496 2 13.4331 2 12C2 10.5669 2 9.85038 2.33706 9.33566C3.02749 8.28131 4.3879 8.42869 5.5 8.42869C6.60725 8.42869 7.3569 8.43869 7.96 7.96M14 9.5C14 6.3548 14.026 4.46866 13.1 4.0773C12.3292 3.75147 11.5323 4.46765 10 6"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </div>
+      <small>Music</small>
+    </div>
+    <div class="hidden">
+      <audio id="audio" loop>
+        <source src="../../public/audio2.mp3" type="audio/mp3" />
+      </audio>
+    </div>
+  </div>
+  <div class="px-2 social">
+    <a
+      href="https://www.linkedin.com/in/jean-pierre-ayala-viera/"
+      target="_blank"
+      rel="noopener noreferrer">
+      <svg
+        width="18"
+        height="18"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid"
+        viewBox="0 0 256 256"
+        ><path
+          d="M218.123 218.127h-37.931v-59.403c0-14.165-.253-32.4-19.728-32.4-19.756 0-22.779 15.434-22.779 31.369v60.43h-37.93V95.967h36.413v16.694h.51a39.907 39.907 0 0 1 35.928-19.733c38.445 0 45.533 25.288 45.533 58.186l-.016 67.013ZM56.955 79.27c-12.157.002-22.014-9.852-22.016-22.009-.002-12.157 9.851-22.014 22.008-22.016 12.157-.003 22.014 9.851 22.016 22.008A22.013 22.013 0 0 1 56.955 79.27m18.966 138.858H37.95V95.967h37.97v122.16ZM237.033.018H18.89C8.58-.098.125 8.161-.001 18.471v219.053c.122 10.315 8.576 18.582 18.89 18.474h218.144c10.336.128 18.823-8.139 18.966-18.474V18.454c-.147-10.33-8.635-18.588-18.966-18.453"
+          fill="currentColor"></path></svg
+      >
+    </a>
+    <a
+      href="https://www.instagram.com/id.olts/"
+      target="_blank"
+      rel="noopener noreferrer">
+      <svg
+        class="instagram"
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        preserveAspectRatio="xMidYMid"
+        viewBox="0 0 256 256"
+        ><path
+          fill="currentColor"
+          d="M128 23.064c34.177 0 38.225.13 51.722.745 12.48.57 19.258 2.655 23.769 4.408 5.974 2.322 10.238 5.096 14.717 9.575 4.48 4.479 7.253 8.743 9.575 14.717 1.753 4.511 3.838 11.289 4.408 23.768.615 13.498.745 17.546.745 51.723 0 34.178-.13 38.226-.745 51.723-.57 12.48-2.655 19.257-4.408 23.768-2.322 5.974-5.096 10.239-9.575 14.718-4.479 4.479-8.743 7.253-14.717 9.574-4.511 1.753-11.289 3.839-23.769 4.408-13.495.616-17.543.746-51.722.746-34.18 0-38.228-.13-51.723-.746-12.48-.57-19.257-2.655-23.768-4.408-5.974-2.321-10.239-5.095-14.718-9.574-4.479-4.48-7.253-8.744-9.574-14.718-1.753-4.51-3.839-11.288-4.408-23.768-.616-13.497-.746-17.545-.746-51.723 0-34.177.13-38.225.746-51.722.57-12.48 2.655-19.258 4.408-23.769 2.321-5.974 5.095-10.238 9.574-14.717 4.48-4.48 8.744-7.253 14.718-9.575 4.51-1.753 11.288-3.838 23.768-4.408 13.497-.615 17.545-.745 51.723-.745M128 0C93.237 0 88.878.147 75.226.77c-13.625.622-22.93 2.786-31.071 5.95-8.418 3.271-15.556 7.648-22.672 14.764C14.367 28.6 9.991 35.738 6.72 44.155 3.555 52.297 1.392 61.602.77 75.226.147 88.878 0 93.237 0 128c0 34.763.147 39.122.77 52.774.622 13.625 2.785 22.93 5.95 31.071 3.27 8.417 7.647 15.556 14.763 22.672 7.116 7.116 14.254 11.492 22.672 14.763 8.142 3.165 17.446 5.328 31.07 5.95 13.653.623 18.012.77 52.775.77s39.122-.147 52.774-.77c13.624-.622 22.929-2.785 31.07-5.95 8.418-3.27 15.556-7.647 22.672-14.763 7.116-7.116 11.493-14.254 14.764-22.672 3.164-8.142 5.328-17.446 5.95-31.07.623-13.653.77-18.012.77-52.775s-.147-39.122-.77-52.774c-.622-13.624-2.786-22.929-5.95-31.07-3.271-8.418-7.648-15.556-14.764-22.672C227.4 14.368 220.262 9.99 211.845 6.72c-8.142-3.164-17.447-5.328-31.071-5.95C167.122.147 162.763 0 128 0Zm0 62.27C91.698 62.27 62.27 91.7 62.27 128c0 36.302 29.428 65.73 65.73 65.73 36.301 0 65.73-29.428 65.73-65.73 0-36.301-29.429-65.73-65.73-65.73Zm0 108.397c-23.564 0-42.667-19.103-42.667-42.667S104.436 85.333 128 85.333s42.667 19.103 42.667 42.667-19.103 42.667-42.667 42.667Zm83.686-110.994c0 8.484-6.876 15.36-15.36 15.36-8.483 0-15.36-6.876-15.36-15.36 0-8.483 6.877-15.36 15.36-15.36 8.484 0 15.36 6.877 15.36 15.36Z"
+        ></path></svg
+      >
+    </a>
+    <a
+      href="https://github.com/jevpy"
+      target="_blank"
+      rel="noopener noreferrer">
+      <svg
+        viewBox="0 0 256 250"
+        width="18"
+        height="18"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid">
+        <path
+          d="M128.001 0C57.317 0 0 57.307 0 128.001c0 56.554 36.676 104.535 87.535 121.46 6.397 1.185 8.746-2.777 8.746-6.158 0-3.052-.12-13.135-.174-23.83-35.61 7.742-43.124-15.103-43.124-15.103-5.823-14.795-14.213-18.73-14.213-18.73-11.613-7.944.876-7.78.876-7.78 12.853.902 19.621 13.19 19.621 13.19 11.417 19.568 29.945 13.911 37.249 10.64 1.149-8.272 4.466-13.92 8.127-17.116-28.431-3.236-58.318-14.212-58.318-63.258 0-13.975 5-25.394 13.188-34.358-1.329-3.224-5.71-16.242 1.24-33.874 0 0 10.749-3.44 35.21 13.121 10.21-2.836 21.16-4.258 32.038-4.307 10.878.049 21.837 1.47 32.066 4.307 24.431-16.56 35.165-13.12 35.165-13.12 6.967 17.63 2.584 30.65 1.255 33.873 8.207 8.964 13.173 20.383 13.173 34.358 0 49.163-29.944 59.988-58.447 63.157 4.591 3.972 8.682 11.762 8.682 23.704 0 17.126-.148 30.91-.148 35.126 0 3.407 2.304 7.398 8.792 6.14C219.37 232.5 256 184.537 256 128.002 256 57.307 198.691 0 128.001 0Zm-80.06 182.34c-.282.636-1.283.827-2.194.39-.929-.417-1.45-1.284-1.15-1.922.276-.655 1.279-.838 2.205-.399.93.418 1.46 1.293 1.139 1.931Zm6.296 5.618c-.61.566-1.804.303-2.614-.591-.837-.892-.994-2.086-.375-2.66.63-.566 1.787-.301 2.626.591.838.903 1 2.088.363 2.66Zm4.32 7.188c-.785.545-2.067.034-2.86-1.104-.784-1.138-.784-2.503.017-3.05.795-.547 2.058-.055 2.861 1.075.782 1.157.782 2.522-.019 3.08Zm7.304 8.325c-.701.774-2.196.566-3.29-.49-1.119-1.032-1.43-2.496-.726-3.27.71-.776 2.213-.558 3.315.49 1.11 1.03 1.45 2.505.701 3.27Zm9.442 2.81c-.31 1.003-1.75 1.459-3.199 1.033-1.448-.439-2.395-1.613-2.103-2.626.301-1.01 1.747-1.484 3.207-1.028 1.446.436 2.396 1.602 2.095 2.622Zm10.744 1.193c.036 1.055-1.193 1.93-2.715 1.95-1.53.034-2.769-.82-2.786-1.86 0-1.065 1.202-1.932 2.733-1.958 1.522-.03 2.768.818 2.768 1.868Zm10.555-.405c.182 1.03-.875 2.088-2.387 2.37-1.485.271-2.861-.365-3.05-1.386-.184-1.056.893-2.114 2.376-2.387 1.514-.263 2.868.356 3.061 1.403Z"
+        ></path>
+      </svg>
+    </a>
+  </div>
+</nav>
+
+<script is:inline>
+  const buttonsound = document.querySelector(".button-sound");
+  const audio = document.getElementById("audio");
+  const musicOn = document.querySelectorAll(".button-music svg")[0];
+  const musicOff = document.querySelectorAll(".button-music svg")[1];
+  const pathname = window.location.pathname;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    if (pathname !== "/") {
+      audio.volume = 0.75;
+      let click = 0;
+      buttonsound.addEventListener("click", () => {
+        click++;
+        if (click % 2 !== 0) {
+          audio.play();
+          musicOn.classList.toggle("hidden");
+          musicOff.classList.toggle("hidden");
+        } else {
+          audio.pause();
+          musicOn.classList.toggle("hidden");
+          musicOff.classList.toggle("hidden");
+        }
+      });
+    }
+  });
+
+  // const audioPreference = localStorage.getItem("audioPreference");
+  // if (audioPreference === "off") {
+  //   audio.muted = true;
+  //   musicOn.style.display = "none";
+  //   musicOff.style.display = "block";
+  // } else {
+  //   // audio.muted = false;
+  //   musicOff.style.display = "none";
+  //   musicOn.style.display = "block";
+  // }
+
+  // buttonsound.addEventListener("click", () => {
+  //   audio.muted = !audio.muted;
+  //   const newPreference = audio.muted ? "off" : "on";
+
+  //   if (newPreference === "off") {
+  //     musicOn.style.display = "none";
+  //     musicOff.style.display = "block";
+  //   } else {
+  //     musicOff.style.display = "none";
+  //     musicOn.style.display = "block";
+  //   }
+
+  //   localStorage.setItem("audioPreference", newPreference);
+  // });
+
+  // window.addEventListener("load", () => {
+
+  //   localStorage.setItem("audioPreference", "off");
+
+  //   if (uploadPreference === "off") {
+  //     audio.muted = true;
+  //   } else {
+  //     audio.muted = false;
+  //   }
+  // });
+</script>

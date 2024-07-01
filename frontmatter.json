@@ -1,0 +1,65 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "astro",
+  "frontMatter.preview.host": "http://localhost:4321/posts",
+  "frontMatter.content.publicFolder": {
+    "path": "src/assets",
+    "relative": true
+  },
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "posts",
+      "path": "[[workspace]]/src/pages/posts"
+    }
+  ],
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Slug",
+          "name": "slug",
+          "type": "slug"
+        },
+        {
+          "title": "coverImage",
+          "name": "coverImage",
+          "type": "image",
+          "isPreviewImage": true
+        },
+        {
+          "title": "pubDate",
+          "name": "pubDate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "dateFormat": "yy-MM-dd"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags",
+          "taxonomyLimit": 3
+        }
+      ]
+    }
+  ],
+  "frontMatter.content.snippets": {
+    "Videos": {
+      "description": "",
+      "body": "<div></div>",
+      "fields": []
+    }
+  }
+}

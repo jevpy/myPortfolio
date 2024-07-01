@@ -1,0 +1,72 @@
+---
+import CodeDescription from "./CodeDescription.astro";
+---
+
+<style>
+  @keyframes pulsate-bck {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+      background-color: rgb(139, 248, 172);
+    }
+  }
+
+  div {
+    background-color: #0d0714ff;
+  }
+
+  .avaliable::before {
+    display: inline-block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(74, 233, 122);
+    margin-right: 5px;
+    animation: pulsate-bck 1.5s ease-in-out infinite both;
+  }
+</style>
+
+<div
+  class="lg:row-span-1 lg:col-span-3 ring-1 ring-primary/5 shadow-xl rounded-3xl p-8 md:col-span-2 hover:ring-primary/5 dark:hover:ring-white/20 dark:ring-white/10 ring-primary/5">
+  <div
+    class="flex flex-col md:flex-row md:items-center justify-between gap-x-4">
+    <div class="relative flex items-center gap-x-4">
+      <img
+        src="profile.jpg"
+        alt="profile"
+        class="h-10 w-10 rounded-full ring-1 dark:ring-white/10 ring-primary/5"
+      />
+      <div class="text-sm leading-6">
+        <p class="font-semibold text-primary dark:text-white">
+          Jean Pierre Ayala Viera
+        </p>
+        <p class="text-zinc-500 dark:text-zinc-400">
+          Fullstack &amp; Web developer
+        </p>
+      </div>
+    </div>
+
+    <div class="flex flex-wrap mt-4 ">
+      <small class="avaliable">Avaliable for working</small>
+    </div>
+  </div>
+  <p
+    class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white">
+    Hey, welcome to my site!
+  </p>
+  <p class="mt-4 text-zinc-300 font-light lg:text-xl">
+    I'm a frontend developer, fullstack and gamer from Peru. In the digital
+    world, I create interfaces and dive into beautiful coding world.
+    <br />
+    <br />
+    Beyond screens, I find solace and joy plays soccer and videogames. My life blends
+    tech, finance, coding sessions and spending time with family and my pets.
+  </p>
+  <CodeDescription />
+</div>

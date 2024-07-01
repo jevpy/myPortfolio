@@ -1,0 +1,91 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+const allPosts = await Astro.glob("../pages/posts/*.md");
+---
+
+<style>
+  a {
+    overflow: hidden;
+  }
+
+  a:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  a:hover {
+    box-shadow: 0 0 2px #e4d1e5;
+  }
+
+  a:first-of-type h2 {
+    font-size: 1.95rem;
+  }
+  a:not(:first-of-type) h2 {
+    font-size: 1.5rem;
+  }
+
+  .title {
+    transition: text-decoration-line 0.5s;
+    text-wrap: wrap;
+  }
+
+  a:hover .title {
+    text-decoration-line: underline;
+    text-decoration-color: purple;
+    text-decoration-thickness: 14px;
+    text-decoration-skip-ink: none;
+    text-underline-offset: -4px;
+  }
+
+  @media screen and (min-width: 48em) {
+    a:first-of-type {
+      grid-column: span 2;
+      min-height: 300px;
+      min-height: 350px;
+    }
+
+    a:first-of-type h2 {
+      font-size: 3rem;
+    }
+    a:not(:first-of-type) h2 {
+      font-size: 1.75rem;
+    }
+  }
+</style>
+
+<MainLayout
+  title="Blog"
+  description="My Blog Posts"
+  description="Follow the news on tools, AI and more that can be useful in your life. Also keep up to date with these news">
+  <section>
+    <div class="p-4">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-5 list-none lg:grid-cols-3">
+        {
+          allPosts.map((post) => (
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={post.url}
+              class="relative overflow-x-hidden top-0 left-0 w-full min-h-[260px]  block ring-1 ring-primary/5 rounded-3xl shadow-xl dark:shadow-thick break-words hover:ring-primary/5 dark:hover:ring-white/20 dark:ring-white/10 ring-primary/5">
+              <img
+                class="absolute top-0 left-0 h-full w-full -z-10 rounded-3xl object-cover "
+                src={post.frontmatter.image.url}
+                alt=""
+              />
+              <div class="bg-black/80 text-white h-full w-full relative  top-0 left-0 lg:h-full z-20 flex flex-col-reverse justify-between rounded-3xl px-4 pt-8 pb-4 flex-wrap text-wrap break-words ">
+                <h2 class=" w-full title opacity-100 break-words mt-10">
+                  {post.frontmatter.title}
+                </h2>
+                <div class="px-4 bg-purple-400 w-[160px] text-center rounded-lg">
+                  {post.frontmatter.pubDate}
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</MainLayout>

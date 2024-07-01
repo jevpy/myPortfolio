@@ -1,0 +1,237 @@
+<!-- // Styling Requires Tailwind CSS -->
+<div
+  class="ring-1 lg:col-span-1 ring-primary/5 rounded-3xl shadow-xl dark:shadow-thick pt-5 px-8 lg:px-4 bg-transparent lg:row-start-2 w-full min-h-[600px] hover:ring-primary/5 dark:hover:ring-white/20 dark:ring-white/10 ring-primary/5 md:col-span-2">
+  <h2 class="text-left mb-2">Contact</h2>
+
+  <form
+    action="https://api.web3forms.com/submit"
+    method="POST"
+    id="form"
+    class="needs-validation w-full"
+    data-astro-reload
+    novalidate
+    autocomplete="off">
+    <input
+      type="hidden"
+      name="access_key"
+      value="ffc09542-bcf6-40be-b887-5bfd9fb5cc04"
+    />
+
+    <input
+      type="checkbox"
+      class="hidden"
+      style="display:none"
+      name="botcheck"
+    />
+    <div class="mb-5">
+      <input
+        type="text"
+        placeholder="Full Name"
+        required
+        class="w-full px-4 py-3 border bg-transparent rounded-md outline-none"
+        name="name"
+        id="name"
+      />
+      <div
+        class="empty-feedback invalid-feedback text-red-400 text-sm mt-1"
+        id="name-message">
+        Only letters and white spaces are allowed.
+      </div>
+    </div>
+    <div class="mb-5">
+      <label for="email_address" class="sr-only">Email Address</label><input
+        id="email_address"
+        type="email"
+        placeholder="Email Address"
+        name="email"
+        required
+        class="w-full px-4 py-3 border bg-transparent rounded-md outline-none"
+      />
+      <div class="empty-feedback text-red-400 text-sm mt-1">
+        Please provide your email address.
+      </div>
+      <div class="invalid-feedback text-red-400 text-sm mt-1 email-message">
+        Please provide a valid email address.
+      </div>
+    </div>
+    <div class="mb-3">
+      <textarea
+        id="message"
+        name="message"
+        required
+        placeholder="Your Message"
+        class="w-full px-4 py-3 border bg-transparent rounded-md outline-none h-36 resize-none"
+      ></textarea>
+      <div
+        class="empty-feedback invalid-feedback text-red-400 text-sm mt-1 textarea-message">
+        Please enter your message.
+      </div>
+    </div>
+    <button
+      class="p-4 w-full bg-purple-800 rounded-3xl hover:bg-purple-700 transition-all"
+      >Send me message</button
+    >
+  </form>
+  <div id="result" class="mt-3 text-center"></div>
+</div>
+<style>
+  div {
+    background-color: #0d0714ff;
+  }
+
+  .invalid-feedback,
+  .empty-feedback {
+    display: none;
+  }
+
+  .was-validated :placeholder-shown:invalid ~ .empty-feedback {
+    display: block;
+  }
+
+  .was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+    display: block;
+  }
+
+  .is-invalid,
+  .was-validated :invalid {
+    border-color: #dc3545;
+  }
+
+  input,
+  textarea {
+    caret-color: rgb(189, 29, 189);
+  }
+</style>
+
+<script is:inline>
+
+  document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+      const form = document.getElementById("form");
+      const result = document.getElementById("result");
+
+      const regexName = new RegExp("^[A-Za-zÑñÁáÉéÍíÓóÚúÜüs]+$");
+      const regexEmail = new RegExp(
+        "^[a-z0-9]+(.[_a-z0-9]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,15})$"
+      );
+      const regexMessage = new RegExp("^.{1,255}$");
+
+      const name = document.getElementById("name");
+      const email = document.getElementById("email_address");
+      const message = document.getElementById("message");
+
+      const nameMessage = document.getElementById("name-message");
+      const textareaMessage = document.getElementById("textarea-message");
+      const emailMessage = document.getElementById("email-message");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        form.classList.add("was-validated");
+
+        if (
+          !regexName.test(name.value) &&
+          !regexName.test(email.value) &&
+          !regexMessage.test(message.value)
+        ) {
+          form.querySelectorAll(":invalid")[0].focus();
+          name.classList.add("border-red-700");
+          nameMessage.classList.remove("invalid-feedback");
+          nameMessage.classList.remove("empty-feedback");
+          nameMessage.classList.add("block");
+          emailMessage.classList.remove("invalid-feedback");
+          emailMessage.classList.remove("empty-feedback");
+          emailMessage.classList.add("block");
+          textareaMessage.classList.remove("invalid-feedback");
+          textareaMessage.classList.remove("empty-feedback");
+          textareaMessage.classList.add("block");
+          message.classList.add("border-red-700");
+          textareaMessage.innerHTML =
+            "Please enter a message with less than 255 characters.";
+          return;
+        }
+
+        if (!regexName.test(name.value)) {
+
+          nameMessage.classList.remove("invalid-feedback");
+          nameMessage.classList.remove("empty-feedback");
+          nameMessage.classList.add("block");
+          name.classList.add("border-red-700");
+          return;
+        }
+
+        // do the same of code top 🔝
+
+        if (!regexEmail.test(email.value)) {
+          emailMessage.classList.remove("invalid-feedback");
+          emailMessage.classList.remove("empty-feedback");
+          emailMessage.classList.add("block");
+          email.classList.add("border-red-700");
+          return;
+        }
+
+        if (!regexMessage.test(message.value)) {
+          textareaMessage.classList.remove("invalid-feedback");
+          textareaMessage.classList.remove("empty-feedback");
+          textareaMessage.classList.add("block");
+          message.classList.add("border-red-700");
+          textareaMessage.innerHTML =
+            "Please enter a message with less than 255 characters.";
+          return;
+        }
+
+        // end
+
+        if (!form.checkValidity()) {
+          form.querySelectorAll(":invalid")[0].focus();
+          return;
+        }
+
+        const formData = new FormData(form);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+
+        result.innerHTML = "Sending...";
+
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: json,
+        })
+          .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+              result.classList.add("text-green-500");
+              result.classList.add("block");
+              result.innerHTML = json.message;
+            } else {
+              console.log(response);
+              result.classList.add("text-red-500");
+              result.innerHTML = json.message;
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+          })
+          .then(function () {
+            form.reset();
+            form.classList.remove("was-validated");
+            name.classList.remove("border-red-700");
+            email.classList.remove("border-red-700");
+            message.classList.remove("border-red-700");
+            nameMessage.classList.add("hidden");
+            emailMessage.classList.add("hidden");
+            textareaMessage.classList.add("hidden");
+            setTimeout(() => {
+              result.style.display = "none";
+            }, 5000);
+          });
+      });
+    },
+    { once: true }
+  );
+</script>

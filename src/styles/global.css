@@ -1,0 +1,98 @@
+* {
+  min-width: 0;
+  font: inherit;
+}
+
+*::selection {
+  background-color: rgb(111, 20, 129);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: auto;
+}
+
+img,
+video,
+svg {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  font-family: "NeverMind semi-serif", sans-serif;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  /* background-image: url("../../public/background.svg"); */
+  background-image: url("../public/trianglify-lowres-1.png");
+  background-color: #110420;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #110420;
+  border-radius: 50px;
+  margin-top: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e1bbf0;
+  border-radius: 50px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: 2.986rem;
+}
+
+h2 {
+  font-size: 2.488rem;
+}
+
+h3 {
+  font-size: 2.074rem;
+}
+
+h4 {
+  font-size: 1.728rem;
+}
+
+h5 {
+  font-size: 1.44rem;
+}
+
+h6 {
+  font-size: 1.2rem;
+}
+
+p {
+  /* text-wrap: pretty; */
+  font-size: 1.1rem;
+  color: rgb(212 212 216);
+}
+
+small {
+  font-size: 0.833rem;
+}

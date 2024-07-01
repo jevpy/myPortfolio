@@ -1,0 +1,79 @@
+---
+import BlogLayout from "./BlogLayout.astro";
+
+const { frontmatter } = Astro.props;
+
+---
+
+<style is:global>
+  p {
+    margin: 1rem 0;
+    opacity: 0.9;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 1.75rem 0;
+    color: white;
+  }
+
+  pre {
+    padding: 1rem;
+    max-width: 500px;
+    margin: 2rem auto;
+  }
+
+  blockquote {
+    max-width: 700px;
+    padding: 1rem;
+    border: thin solid purple;
+    border-radius: 0.5rem;
+    margin: 1rem auto;
+  }
+
+  table {
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  thead th {
+    width: calc(100% / 3);
+  }
+
+  thead th,
+  tbody td {
+    padding: 1rem 0.5rem;
+  }
+
+  tbody > tr:nth-of-type(Odd) {
+    background-color: rgb(30, 13, 34);
+  }
+
+  .blog-post a {
+    text-decoration: underline;
+    color: rgb(244, 188, 244);
+  }
+
+  a > img {
+    width: 500px;
+  }
+</style>
+
+<BlogLayout title={frontmatter.title} description={frontmatter.description}>
+  <section class="blog-post min-h-[80vh] mx-auto max-w-[900px]">
+    <slot />
+  </section>
+</BlogLayout>

@@ -1,0 +1,155 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+---
+
+<style>
+  @keyframes vibrate-1 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-0.5rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .main-title {
+    padding: 0 1rem;
+  }
+
+  .options a > svg {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .options a:hover > svg {
+    transform: rotate(45deg);
+  }
+
+  .main-description h1 {
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
+    font-style: oblique;
+    color: #bdbdffff;
+    text-shadow: 5px 5px 20px rgba(189, 189, 255, 0.5);
+    -webkit-text-shadow: 5px 5px 20px rgba(189, 189, 255, 0.5);
+    -moz-text-shadow: 5px 5px 20px rgba(189, 189, 255, 0.5);
+  }
+
+  .main-description img {
+    filter: drop-shadow(-2px -3px 200px rgba(140, 0, 255, 1));
+  }
+
+  .vibrate-1 {
+    animation: vibrate-1 3s linear infinite both;
+  }
+
+  @media screen and (min-width: 48em) {
+    .main-title {
+      padding: 0.5rem 2rem;
+    }
+
+    .main-description {
+      justify-content: center;
+      padding: 0 2rem;
+    }
+  }
+
+  @media screen and (min-width: 64em) {
+    .main-description p {
+      line-height: 2em;
+      font-size: 1rem;
+    }
+
+    .main-description {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .main-description,
+    .options {
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>
+
+<MainLayout
+  title="AI, Web, Programming and more"
+  description="Keep up to date with the latest trends in web development, AI and much more. Also get to know me a little more and discover some projects I did as a programmer.">
+  <section class="text-zinc-300 main-title w-auto">
+    <article class="main-description">
+      <div>
+        <h1 class="xl:text-7xl">Trending Web, AI, others</h1>
+        <p class="mt-3 xl:mt-10">Hello! I'm Jean Pierre Ayala.</p>
+        <p class="mt-3 mb-8">
+          Welcome to my technology website, your gateway to the future of
+          innovation. Dive into the latest trends in artificial intelligence,
+          programming and much more. Get ahead of the curve and explore with me
+          the endless possibilities of technology. Read and improve your daily
+          life with the use of digital tools.
+        </p>
+      </div>
+      <img
+        class="block md:mx-auto vibrate-1 md:w-[400px] xl:w-[500px] lg:w-[400px]"
+        src="laptopImage.png"
+        alt="Laptop Image"
+      />
+    </article>
+    <div
+      class="flex mx-auto options justify-between items-center mb-4 text-left">
+      <a
+        href="/blog"
+        class="w-28 flex mx-auto justify-center text-center items-center py-2"
+        ><span class="block mr-1">Blog</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="w-5 h-5">
+          <path
+            fill-rule="evenodd"
+            d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </a>
+      <a
+        href="/about"
+        class="w-28 flex mx-auto justify-center text-center items-center py-2"
+        ><span class="block mr-1">About me</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="w-5 h-5">
+          <path
+            fill-rule="evenodd"
+            d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </a>
+      <a
+        href="https://drive.google.com/file/d/1x3Ieu8HLCqAFHF5E5VD_KAoEhH6wW4Ff/view"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-28 flex mx-auto justify-center text-center items-cente py-2"
+        ><span class="block mr-1">CV</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          class="w-5 h-5">
+          <path
+            fill-rule="evenodd"
+            d="M5.22 14.78a.75.75 0 0 0 1.06 0l7.22-7.22v5.69a.75.75 0 0 0 1.5 0v-7.5a.75.75 0 0 0-.75-.75h-7.5a.75.75 0 0 0 0 1.5h5.69l-7.22 7.22a.75.75 0 0 0 0 1.06Z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </a>
+    </div>
+  </section>
+</MainLayout>

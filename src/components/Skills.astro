@@ -1,0 +1,60 @@
+<style>
+  div {
+    background-color: #0d0714ff;
+  }
+</style>
+
+<style>
+  .img-skills {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .img-skills img {
+    margin: 0.5rem;
+    width: 50px;
+    height: 50px;
+  }
+
+  @media screen and (min-width: 64em) {
+    .social-media a {
+      padding: 0.5rem;
+    }
+    .social-media a:hover > svg {
+      transition: transform 0.2s;
+      transform: scale(1.2);
+    }
+
+    .img-skills img {
+      margin: 1rem 0.5rem;
+      width: 60px;
+      height: 60px;
+    }
+  }
+</style>
+
+<div
+  class="lg:row-span-2 lg:-mt-[750px] xl:-mt-[620px]  ring-1 dark:ring-white/10 ring-primary/5 hover:ring-primary/5 dark:bg-secondary dark:hover:ring-white/20 overflow-hidden duration-300 shadow-xl dark:shadow-thick rounded-3xl p-8">
+  <h2
+    class=" font-normal tracking-tight text-primary dark:text-white ">
+    Skills
+  </h2>
+  <div class="img-skills md:mt-8">
+    <img src="/javascript.svg" alt="javascript" />
+    <img src="/php.svg" alt="php" />
+    <img src="/git.svg" alt="git" />
+    <img src="/github.svg" alt="github" />
+    <img src="/nextjs.svg" alt="nextjs" />
+    <img src="/node.svg" alt="node" />
+    <img src="/expressjs.svg" alt="expressjs" />
+    <img src="/laravel.svg" alt="laravel" />
+    <img src="/react.svg" alt="react" />
+    <img src="/typescript.svg" alt="tyepescript" />
+    <img src="/astro.svg" alt="astro" />
+    <img src="/tailwindcss.svg" alt="tailwindcss" />
+    <img src="/mysql.svg" alt="mysql" />
+    <img src="/mongodb.svg" alt="mongodb" />
+  </div>
+</div>

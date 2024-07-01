@@ -1,0 +1,23 @@
+---
+import Description from "./DescriptionAbout.astro";
+import Projects from "./Projects.astro";
+import Resume from "./Resume.astro";
+import SocialContact from "./SocialContact.astro";
+import Skills from "./Skills.astro";
+import Phrase from "./Phrase.astro";
+import ContactForm from "./ContactForm.astro";
+---
+
+<section>
+  <div class="p-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 list-none lg:grid-cols-4">
+      <Description />
+      <ContactForm />
+      <Projects />
+      <Resume />
+      <SocialContact />
+      <Skills />
+      <Phrase />
+    </div>
+  </div>
+</section>

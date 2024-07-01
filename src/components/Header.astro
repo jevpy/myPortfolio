@@ -1,0 +1,25 @@
+---
+import NavBar from "./NavBar.astro";
+---
+
+<style>
+  header {
+    min-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: .5rem 1rem 0 1rem;
+  }
+
+</style>
+
+<header>
+  <a href="/" class="block mx-auto w-[80px] mb-2">
+    <img
+      src="../../public/logo.png"
+      alt=""
+      width="100%"
+      height="100%"
+    />
+  </a>
+  <NavBar />
+</header>

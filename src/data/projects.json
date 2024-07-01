@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Health System",
+    "description":
+      "This is an MVC system designed to assist staff in informing patients about the treatment of their disease.",
+    "techs": ["php", "javascript", "mysql"],
+    "url": "https://github.com/jevpy/system-health"
+  },
+  {
+    "name": "Hotel System",
+    "description":
+      "This was created for to manage rooms of a hotel. This system consists of admin page and website.",
+    "techs": ["laravel", "mysql", "tailwindcss"],
+    "url": "https://github.com/jevpy/system-hotel"
+  },
+  {
+    "name": "Gallery Photos",
+    "description":
+      "Application to upload, edit, and delete photos. Here you can save the most important photos.",
+    "techs": ["nextjs", "tailwindcss", "typescript"],
+    "url": "https://github.com/jevpy/gallery-photos"
+  },
+  {
+    "name": "Found Dev",
+    "description":
+      "Application to search for developers. Here you can meet with other developers",
+    "techs": ["nextjs", "tailwindcss", "typescript"],
+    "url": "https://github.com/jevpy/found-dev"
+  }
+]

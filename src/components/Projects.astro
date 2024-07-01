@@ -1,0 +1,84 @@
+---
+import projects from "../data/projects.json";
+---
+
+<style>
+  div {
+    background-color: #0d0714ff;
+  }
+
+
+
+  .view-project:hover  small{
+    text-decoration: underline;
+  }
+
+
+  .view-project:hover svg{
+    transform: rotate(45deg);
+  }
+
+</style>
+
+<div
+  class="ring-1 lg:row-span-1 flex flex-col hover:ring-primary/10 dark:hover:ring-white/20 duration-300 dark:ring-white/10 ring-primary/5 lg:row-start-2 lg:gap-4 lg:grid-cols-none lg:col-start-2 md:col-span-2 rounded-3xl px-8 pb-8 pt-5 dark:bg-secondary shadow-xl dark:shadow-thick">
+  <h2 class="text-left mb-2">Projects</h2>
+  <div class="w-full grid md:grid-cols-2 gap-4">
+
+
+    {
+      projects.map((project) => (
+        <div class="hover:ring-primary/10 dark:hover:ring-white/20 duration-300 dark:ring-white/10 ring-primary/5 shadow-thick rounded-3xl ring-1 p-4 flex flex-col justify-between">
+          <h4 class="text-purple-300">{project.name}</h4>
+          <small class="text-zinc-400">{project.description}</small>
+          <div class="flex flex-col w-full justify-between ">
+            <div class="flex items-center mt-4">
+              <small class="text-fuchsia-200">techs:</small>
+              <div class="flex justify-between">
+                {project.techs.map((tech) => (
+                  <img
+                    src={`/${tech}.svg`}
+                    alt={tech}
+                    width="25px"
+                    height="25px"
+                    class="mx-2"
+                  />
+                ))}
+              </div>
+            </div>
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="flex items-center mt-6 relative justify-end view-project ">
+              <small class="inline-block mr-2">View More...</small>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                color="currentColor"
+                fill="none">
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+                <path
+                  d="M14.7731 9.22687L9 15M14.7731 9.22687C14.2678 8.72156 11.8846 9.21665 11.1649 9.22687M14.7731 9.22687C15.2784 9.73219 14.7834 12.1154 14.7731 12.8351"
+                  stroke="#fff"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      ))
+    }
+
+  </div>
+</div>
