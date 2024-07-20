@@ -3,9 +3,8 @@ layout: ../../layouts/BlogPost.astro
 title: Stop using default notes Make better use of this tool
 description: ""
 slug: stop-default-notes-tool
-image:
-  url: /images/opennotas.png
-pubDate: 24-06-02
+image: /images/opennotas.png
+date: "2024-06-02"
 tags: []
 type: default
 ---

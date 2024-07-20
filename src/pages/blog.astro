@@ -2,6 +2,8 @@
 import MainLayout from "../layouts/MainLayout.astro";
 
 const allPosts = await Astro.glob("../pages/posts/*.md");
+
+allPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 ---
 
 <style>
@@ -68,8 +70,8 @@ const allPosts = await Astro.glob("../pages/posts/*.md");
               href={post.url}
               class="relative overflow-x-hidden top-0 left-0 w-full min-h-[260px]  block ring-1 ring-primary/5 rounded-3xl shadow-xl dark:shadow-thick break-words hover:ring-primary/5 dark:hover:ring-white/20 dark:ring-white/10 ring-primary/5">
               <img
-                class="absolute top-0 left-0 h-full w-full -z-10 rounded-3xl object-cover "
-                src={post.frontmatter.image.url}
+                class="absolute top-0 left-0 h-full w-full -z-10 rounded-3xl object-cover"
+                src={post.frontmatter.image}
                 alt=""
               />
               <div class="bg-black/80 text-white h-full w-full relative  top-0 left-0 lg:h-full z-20 flex flex-col-reverse justify-between rounded-3xl px-4 pt-8 pb-4 flex-wrap text-wrap break-words ">
@@ -77,7 +79,7 @@ const allPosts = await Astro.glob("../pages/posts/*.md");
                   {post.frontmatter.title}
                 </h2>
                 <div class="px-4 bg-purple-400 w-[160px] text-center rounded-lg">
-                  {post.frontmatter.pubDate}
+                  {post.frontmatter.date}
                 </div>
               </div>
             </a>

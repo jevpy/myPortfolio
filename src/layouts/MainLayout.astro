@@ -43,23 +43,12 @@ const { description, title } = Astro.props;
       href="https://fonts.cdnfonts.com/css/nevermind-semi-serif"
       rel="stylesheet"
     />
-    <style>
-      .wrapper {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-
-      .main {
-        flex-grow: 1;
-      }
-    </style>
   </head>
 
   <body>
-    <div class="container mx-auto wrapper">
+    <div class="container mx-auto flex flex-col">
       <Header />
-      <section class="main">
+      <section class="flex-grow">
         <slot />
       </section>
       <Footer />

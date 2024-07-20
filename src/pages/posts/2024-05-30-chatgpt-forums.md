@@ -3,9 +3,8 @@ layout: ../../layouts/BlogPost.astro
 title: ChatGPT vs Forums
 description:
 slug: chatgpt-forums
-image:
-  url: /images/openaivsforums.png
-pubDate: 24-05-30
+image: /images/openaivsforums.png
+date: "2024-05-30"
 tags: []
 type: default
 coverImage: ../../assets/images/8log.png

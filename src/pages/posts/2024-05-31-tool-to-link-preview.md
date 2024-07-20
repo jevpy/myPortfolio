@@ -3,9 +3,8 @@ layout: ../../layouts/BlogPost.astro
 title: Tool to link preview
 description: ""
 slug: tool-link-preview
-image:
-  url: /images/maxfocus.png
-pubDate: 24-05-31
+image: /images/maxfocus.png
+date: "2024-05-31"
 tags: []
 type: default
 ---

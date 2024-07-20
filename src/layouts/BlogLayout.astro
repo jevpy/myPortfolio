@@ -47,8 +47,15 @@ const { title, description } = Astro.props;
     />
     <link rel="stylesheet" href="assets/hugeicons/hugeicons-font.css" />
     <style>
+      ul,
+      ol {
+        padding: 0;
+        margin: 0;
+      }
+
       .wrapper {
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         min-height: 100vh;
       }
@@ -60,9 +67,9 @@ const { title, description } = Astro.props;
   </head>
 
   <body>
-    <div class="space-y-3.5 px-4 pb-0 md:px-8 group-[h2]:my-8 wrapper">
+    <div class="space-y-3.5 px-4 pb-0 md:px-8 group-[h2]:my-8">
       <Header />
-      <section class="main mx-auto">
+      <section class="main w-full ">
         <slot />
       </section>
       <Footer />
