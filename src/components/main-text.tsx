@@ -1,6 +1,6 @@
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
-const words = `Thinking, Smilling and Coding
+const words = `Thinking, Smiling and Coding
 `;
 
 export function MainText() {
