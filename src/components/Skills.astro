@@ -1,10 +1,24 @@
+---
+import skills from "../data/skills.json";
+
+const classNameSkills = "mx-10 inline h-[35px]";
+---
+
 <style>
   div {
-    background-color: #0d0714ff;
+    /* background-color: #0d0714ff; */
+    /* background-color: #6100ffff; */
+    /* background-color: #4f00ff; */
+    /* background-color: #6700ffff; */
+    /* background-color: #6900ffff; */
   }
 </style>
 
 <style>
+  .icon svg {
+    width: 1.5rem;
+  }
+
   .img-skills {
     display: flex;
     flex-wrap: wrap;
@@ -36,12 +50,107 @@
 </style>
 
 <div
-  class="lg:row-span-2 lg:-mt-[750px] xl:-mt-[620px]  ring-1 dark:ring-white/10 ring-primary/5 hover:ring-primary/5 dark:bg-secondary dark:hover:ring-white/20 overflow-hidden duration-300 shadow-xl dark:shadow-thick rounded-3xl p-8">
-  <h2
-    class=" font-normal tracking-tight text-primary dark:text-white ">
+  class="lg:row-span-2 ring-1 ring-white/10 ring-primary/5 hover:ring-white/20 hover:ring-primary/5 shadow-xl shadow-thick overflow-hidden duration-300 rounded-3xl p-8 relative bg-black">
+  <h3 class="flex items-center justify-center gap-4 mb-4">
+    <div class="relative flex icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="48"
+        height="48"
+        color="#ffffff"
+        fill="none">
+        <path
+          d="M5.22576 11.3294L12.224 2.34651C12.7713 1.64397 13.7972 2.08124 13.7972 3.01707V9.96994C13.7972 10.5305 14.1995 10.985 14.6958 10.985H18.0996C18.8729 10.985 19.2851 12.0149 18.7742 12.6706L11.776 21.6535C11.2287 22.356 10.2028 21.9188 10.2028 20.9829V14.0301C10.2028 13.4695 9.80048 13.015 9.3042 13.015H5.90035C5.12711 13.015 4.71494 11.9851 5.22576 11.3294Z"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="48"
+        height="48"
+        color="#ffffff"
+        fill="none"
+        class="absolute duration-1000 animate-ping text-[#b61bffff]">
+        <path
+          d="M5.22576 11.3294L12.224 2.34651C12.7713 1.64397 13.7972 2.08124 13.7972 3.01707V9.96994C13.7972 10.5305 14.1995 10.985 14.6958 10.985H18.0996C18.8729 10.985 19.2851 12.0149 18.7742 12.6706L11.776 21.6535C11.2287 22.356 10.2028 21.9188 10.2028 20.9829V14.0301C10.2028 13.4695 9.80048 13.015 9.3042 13.015H5.90035C5.12711 13.015 4.71494 11.9851 5.22576 11.3294Z"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="48"
+        height="48"
+        color="#ffffff"
+        fill="none"
+        class="absolute duration-1000 animate-ping text-[#b61bffff]">
+        <path
+          d="M5.22576 11.3294L12.224 2.34651C12.7713 1.64397 13.7972 2.08124 13.7972 3.01707V9.96994C13.7972 10.5305 14.1995 10.985 14.6958 10.985H18.0996C18.8729 10.985 19.2851 12.0149 18.7742 12.6706L11.776 21.6535C11.2287 22.356 10.2028 21.9188 10.2028 20.9829V14.0301C10.2028 13.4695 9.80048 13.015 9.3042 13.015H5.90035C5.12711 13.015 4.71494 11.9851 5.22576 11.3294Z"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </div>
     Skills
-  </h2>
-  <div class="img-skills md:mt-8">
+  </h3>
+
+  <section class='py-8"'>
+    <div
+      class="logos group relative overflow-hidden whitespace-nowrap py-10 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
+      <div
+        class="animate-slide-left-infinite group-hover:animation-pause inline-block w-max">
+        {
+          skills[0].map((skill) => (
+            <img class={classNameSkills} src={skill.url} alt={skill.name} />
+          ))
+        }
+      </div>
+
+      <!-- Duplicate of the above for infinite effect (you can use javascript to duplicate this too) -->
+      <div
+        class="animate-slide-left-infinite group-hover:animation-pause inline-block w-max">
+        {
+          skills[0].map((skill) => (
+            <img class={classNameSkills} src={skill.url} alt={skill.name} />
+          ))
+        }
+      </div>
+    </div>
+
+    <div
+      class="logos group relative overflow-hidden whitespace-nowrap py-6 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
+      <div
+        class="animate-slide-right-infinite group-hover:animation-pause inline-block w-max">
+        {
+          skills[1]
+            .toReversed()
+            .map((skill) => (
+              <img class={classNameSkills} src={skill.url} alt={skill.name} />
+            ))
+        }
+      </div>
+
+      <!-- Duplicate of the above for infinite effect (you can use javascript to duplicate this too) -->
+      <div
+        class="animate-slide-right-infinite group-hover:animation-pause inline-block w-max">
+        {
+          skills[1]
+            .toReversed()
+            .map((skill) => (
+              <img class={classNameSkills} src={skill.url} alt={skill.name} />
+            ))
+        }
+      </div>
+    </div>
+  </section>
+  <!-- <div class="img-skills md:mt-8">
     <img src="/javascript.svg" alt="javascript" />
     <img src="/php.svg" alt="php" />
     <img src="/git.svg" alt="git" />
@@ -56,5 +165,5 @@
     <img src="/tailwindcss.svg" alt="tailwindcss" />
     <img src="/mysql.svg" alt="mysql" />
     <img src="/mongodb.svg" alt="mongodb" />
-  </div>
+  </div> -->
 </div>

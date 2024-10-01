@@ -1,7 +1,9 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import "../styles/global.css";
+import "../styles/globals.css";
+import "../styles/styles.css";
+import { SparklesCore } from "@/components/ui/sparkles";
 
 const { description, title } = Astro.props;
 ---
@@ -46,12 +48,27 @@ const { description, title } = Astro.props;
   </head>
 
   <body>
-    <div class="container mx-auto flex flex-col">
-      <Header />
-      <section class="flex-grow">
-        <slot />
-      </section>
-      <Footer />
-    </div>
+    <main class="relative">
+      <div class="w-full absolute inset-0 h-full left-0">
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+          client:idle
+        />
+      </div>
+
+      <div class="container mx-auto min-h-[80dvh] mb-[78px]">
+        <Header />
+        <section class="">
+          <slot />
+        </section>
+        <!-- <Footer /> -->
+      </div>
+    </main>
   </body>
 </html>

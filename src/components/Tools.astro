@@ -1,0 +1,73 @@
+---
+import tools from "../data/tools.json";
+import { HeroCodingTool } from "./hero-coding-tool";
+---
+
+<style>
+  svg {
+    width: 35px;
+    margin-left: auto;
+    opacity: 0.8;
+  }
+
+  a:hover h4 {
+    text-decoration-line: underline;
+    text-decoration-color: purple;
+    text-decoration-thickness: 14px;
+    text-decoration-skip-ink: none;
+    text-underline-offset: -4px;
+  }
+
+  a:hover svg {
+    transform: rotate(45deg);
+  }
+</style>
+
+<div class="my-8">
+  <h1>Daily Tools</h1>
+  <p>
+    Make every day more efficient with our essential daily tools designed to
+    simplify your routine and enhance productivity. Discover how our daily tools
+    can transform your workflow and elevate your everyday tasks!
+  </p>
+</div>
+
+<div
+  class="grid grid-cols-1 md:grid-cols-3 gap-4 align-center items-center relative bg-black">
+  {
+    tools["tools"].toReversed().map(
+      (tool) =>
+        tool.field == "daily" && (
+          <a
+            href={tool.link}
+            target="_blank"
+            class="flex flex-col justify-between ring-1 ring-white/10 ring-primary/5 hover:ring-white/20 hover:ring-primary/5 shadow-xl shadow-thick bg-secondary rounded-3xl p-4 h-full gap-4">
+            <div>
+              <h4>{tool.name.toLowerCase()}</h4>
+              <p class="mt-2">{tool.description}</p>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              color="#ffffff"
+              fill="none">
+              <path
+                d="M14.7731 9.22687L9 15M14.7731 9.22687C14.2678 8.72156 11.8846 9.21665 11.1649 9.22687M14.7731 9.22687C15.2784 9.73219 14.7834 12.1154 14.7731 12.8351"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+            </svg>
+          </a>
+        )
+    )
+  }
+</div>

@@ -1,0 +1,237 @@
+{
+  "tools": [
+    {
+      "name": "Portfolio4Me",
+      "link": "https://portfolio4me.com/",
+      "description": "Portfolio4Me provides a quick, intuitive platform to build and manage diverse investment portfolios with smart, tailored strategies for every kind of investor.",
+      "category": ["Design", "Productivity"],
+      "field": "tech"
+    },
+    {
+      "name": "Compose Icons",
+      "link": "https://composeicons.com/ui-actions",
+      "description": "Boost your app's UX with a library of reactive icons designed for seamless UI actions. Perfect for developers wanting to save time without compromising on style.",
+      "category": ["Design", "Productivity", "Development"],
+      "field": "tech"
+    },
+    {
+      "name": "hCaptcha for WP",
+      "link": "https://kagg.eu/why-choose-hcaptcha-for-wp/",
+      "description": "hCaptcha for WordPress empowers site owners to easily implement a robust, privacy-focused security layer that keeps bots at bay while respecting user data. Say goodbye to spam and focus on your content!",
+      "category": ["WordPress", "Plugins"],
+      "field": "tech"
+    },
+
+    {
+      "name": "Nkhili CSS Framework",
+      "link": "https://nkhilicss.web.app/",
+      "description": "NkhiliCSS is a lightweight CSS framework that simplifies creating stunning, responsive web designs. It's easy to learn, customizable, and works well with any project size.",
+      "category": ["CSS Framework", "Web Development", "Responsive Design"],
+      "field": "tech"
+    },
+
+    {
+      "name": "Authentik",
+      "link": "https://goauthentik.io/",
+      "description": "Explore the future of secure digital identities with GoAuthentik. Simplify user authentication with our intuitive platform, and keep your data safe without the hassle.",
+      "category": ["Open-Source", "Authentication"],
+      "field": "tech"
+    },
+    {
+      "name": "CloneWebX",
+      "link": "https://softlite.io/clonewebx/",
+      "description": "CloneWebX lets you duplicate any website with ease, offering full customization tools for personal tweaks and enhancements. Perfect for developers and designers looking to save time and effort while maintaining quality.",
+      "category": ["Web Development", "Design Tools", "Productivity"],
+      "field": "tech"
+    },
+    {
+      "name": "Tailwind Gennie",
+      "link": "https://tailwindgenie.com/",
+      "description": "Tailwind Genie is your new design wizard for creating sleek, responsive UIs. Generate Tailwind CSS code instantly from visual designs and bring your ideas to life with ease.",
+      "category": ["Web Development", "CSS"],
+      "field": "tech"
+    },
+    {
+      "name": "Stack Auth",
+      "link": "https://stack-auth.com/",
+      "description": "StackAuth is the ultimate firewall for your apps. Seamlessly safeguard against data breaches with easy integration and robust features. Elevate your application's security without complicating your workflow.",
+      "category": ["Authentication", "SaaS"],
+      "field": "tech"
+    },
+    {
+      "name": "ProdBrief Generator",
+      "link": "https://www.prodbrief.com/",
+      "description": "ProdBrief makes product development a breeze. Create, manage, and share project briefs in minutes — perfect for teams looking to streamline communication and bring ideas to life effortlessly.",
+      "category": ["Design Tools", "Productivity", "User Experience"],
+      "field": "tech"
+    },
+    {
+      "name": "Converter Code",
+      "link": "https://convertercode.com/",
+      "description": "Simplify coding tasks with ConverterCode. Transform snippets, streamline ideas, and kick-start development without breaking a sweat. Perfect for coders seeking quick solutions.",
+      "category": ["Coding Tools", "Productivity", "Software Development"],
+      "field": "tech"
+    },
+    {
+      "name": "Formity",
+      "link": "https://www.formity.app/",
+      "description": "Formity streamlines the process of building, deploying, and managing forms for your business. Customize with ease, integrate seamlessly, and collect data efficiently without needing technical expertise.",
+      "category": ["Productivity", "SaaS", "No-Code"],
+      "field": "tech"
+    },
+    {
+      "name": "Eldora UI",
+      "link": "https://eldoraui.site/",
+      "description": "Eldora UI Kit provides designers with a powerful suite of tools to create stunning, user-friendly interfaces quickly.Fast to set up, intuitive to use, and beautiful in execution.",
+      "category": ["Design Tools", "User Interface", "Productivity"],
+      "field": "tech"
+    },
+    {
+      "name": "Chart AI",
+      "link": "https://www.chart-ai.app/",
+      "description": "Chart AI brings your data to life by creating stunning charts and graphs instantly. No technical skills required, just upload your dataset and watch automation magic create detailed visuals that tell your data's story.",
+      "category": ["Data Visualization", "AI Tools", "Productivity"],
+      "field": "tech"
+    },
+    {
+      "name": "Component Wizard",
+      "link": "https://componentwizard.com/",
+      "description": "Component Wizard transforms design ideas into functional web app components effortlessly. Just drag, drop, and connect—no coding required. Ideal for founders ready to launch ideas fast.",
+      "category": ["Web Development", "No Code", "Design Tools"],
+      "field": "tech"
+    },
+    {
+      "name": "PalForm",
+      "link": "https://palform.app/",
+      "description": "PalForm is your go-to tool for creating easy and interactive forms. Streamline data collection, enhance user experience, and save time. Perfect for feedback, registration, or surveys.",
+      "category": ["Web Development", "Productivity", "Design Tools"],
+      "field": "tech"
+    },
+    {
+      "name": "TinyWow",
+      "link": "https://tinywow.cc/",
+      "description": "TinyWow makes everyday digital tasks easy and fast. Whether it's converting files, editing videos, or creating quick graphics, these tools help you get things done without fuss.",
+      "category": ["Productivity", "Tools", "Tech"],
+      "field": "tech"
+    },
+    {
+      "name": "Indie Starter UI",
+      "link": "https://ui.indie-starter.dev/",
+      "description": "Indie Starter UI is your go-to design toolkit for creating stunning websites. With zero code templates and vibrant layouts, launch impressive digital products effortlessly.",
+      "category": ["Design Tools", "library"],
+      "field": "tech"
+    },
+    {
+      "name": "LibSwitch",
+      "link": "https://www.libswitch.dev/",
+      "description": "LibSwitch simplifies library management by automating book tracking, lending, and returns. Save time, and reduce errors, ideal for schools and community libraries.",
+      "category": ["Design Tools"],
+      "field": "tech"
+    },
+    {
+      "name": "URLtoText",
+      "link": "https://urltotext.com/",
+      "description": "URLtoText instantly converts any web page into clean, easy-to-edit text. Ideal for creators looking to repurpose content or boost productivity.",
+      "category": ["Productivity"],
+      "field": "tech"
+    },
+    {
+      "name": "Domain Explorer",
+      "link": "https://domain-explorer.ingeniousclan.com/",
+      "description": "Domain Explorer is your go-to tool for discovering, analyzing, and comparing domain names. Find the perfect domain that matches your brand's vision with ease and precision.",
+      "category": ["Web Tools"],
+      "field": "tech"
+    },
+    {
+      "name": "Popify",
+      "link": "https://www.popify.dev/",
+      "description": "Popify helps websites capture audience attention with smart and customizable pop-ups. From lead generation to announcements, it aims to enhance user interaction without being intrusive.",
+      "category": ["Design Tools"],
+      "field": "tech"
+    },
+    {
+      "name": "TTS Maker",
+      "link": "https://ttsmaker.com/",
+      "description": "Need a voiceover without the fuss? TTS Maker does the job! Convert your text into lifelike audio clips with a variety of voices. Easy to use, perfect for podcasts, videos, and more.",
+      "category": ["text-to-Speech"],
+      "field": "daily"
+    },
+    {
+      "name": "CoolMindMaps",
+      "link": "https://www.coolmindmaps.com/",
+      "description": "CoolMindMaps is a tool for creators looking to convert their ideas into dynamic visual mind maps. Unleash your creativity, organize thoughts, and collaborate effortlessly.",
+      "category": ["Productivity"],
+      "field": "daily"
+    },
+    {
+      "name": "VideoDubber AI",
+      "link": "https://videodubber.ai/",
+      "description": "VideoDubber AI transforms videos by dubbing spoken words into multiple languages, using advanced AI for seamless and synchronized voiceovers. Perfect for content creators aiming for global reach.",
+      "category": ["Language Translation"],
+      "field": "daily"
+    },
+    {
+      "name": "MemFree",
+      "link": "https://www.memfree.me/es",
+      "description": "MemFree is an innovative tool that allows users to search anything instantly and receive accurate answers from various sources including the internet, bookmarks, notes, and documents. It also offers a one-click indexing feature for your bookmarks and web pages, enhancing your search experience.",
+      "category": ["Productivity"],
+      "field": ""
+    },
+    {
+      "name": "Venice AI",
+      "link": "https://venice.ai/es",
+      "description": "Venice is an innovative, permissionless alternative to mainstream AI applications, designed to respect user privacy and provide uncensored, unbiased machine intelligence. Unlike other AI apps, Venice does not violate your privacy or censor AI responses, making it a reliable and trustworthy tool for all your AI needs.",
+      "category": ["Productivity", "AI Tools"],
+      "field": "daily"
+    },
+    {
+      "name": "Humanizar Texto",
+      "link": "https://humanizartexto.cc/en",
+      "description": "Humanizar Texto transforms complex text into relatable, humanized content. Perfect for connecting emotionally with your audience while maintaining clarity and authenticity.",
+      "category": ["AI Tools"],
+      "field": ""
+    },
+    {
+      "name": "AI Translator",
+      "link": "https://www.aitranslator.com/es",
+      "description": "AITranslator is a comprehensive tool that leverages advanced artificial intelligence to translate, analyze, and suggest optimal translations. It supports a vast array of languages, from widely spoken ones like English and Spanish to less common ones like Aymara and Zulu. ",
+      "category": ["AI Tools"],
+      "field": "daily"
+    },
+    {
+      "name": "Learn Opal",
+      "link": "https://learnopal.com/",
+      "description": "Opal is an AI-powered study tool designed to supercharge your studying process. It offers a range of powerful tools including AI-generated notes, flashcards, quizzes, and more. Opal is built by students, for students, and allows you to upload any kind of document for efficient studying.",
+      "category": ["Productivity"],
+      "field": "daily"
+    },
+    {
+      "name": "PsyPM",
+      "link": "https://psy.pm/",
+      "description": "PsyPM equips you to master your mind with personalized mental wellness tools. Designed for efficiency and effectiveness, our platform helps you track, understand, and improve your mental health seamlessly.",
+      "category": ["Mental Health", "Productivity"],
+      "field": "daily"
+    },
+    {
+      "name": "Keo",
+      "link": "https://www.keo.dev/",
+      "description": "Keo is a dedicated AI assistant designed to help you stay organised and focused on your tasks. The AI assistant learns and understands your tasks, providing you with the best help possible.",
+      "category": ["Productivity"],
+      "field": "tech"
+    },
+    {
+      "name": "AI Signature Generator",
+      "link": "https://ai-signaturegenerator.com/en",
+      "description": "Ditch the boring email signatures! AI Signature Generator helps you craft personalized, eye-catching signatures that impress. Simply input your info, choose from stunning designs, and let AI do the rest.",
+      "category": ["Productivity", "AI Tools"],
+      "field": "daily"
+    },
+    {
+      "name": "AI Photo Enhancer",
+      "link": "https://photo.55ai.store/",
+      "description": "Enhance your photos instantly with advanced AI technology. Elevate your photography game with just one click, improving clarity, colors, and details effortlessly.",
+      "category": ["AI Tools", "Photo Editing"],
+      "field": "daily"
+    }
+  ]
+}

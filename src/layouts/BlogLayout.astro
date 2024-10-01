@@ -1,7 +1,8 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import "../styles/global.css";
+import "../styles/globals.css";
+import "../styles/styles.css";
 
 const { title, description } = Astro.props;
 ---
@@ -67,12 +68,13 @@ const { title, description } = Astro.props;
   </head>
 
   <body>
-    <div class="space-y-3.5 px-4 pb-0 md:px-8 group-[h2]:my-8">
+    <div
+      class="space-y-3.5 px-4 pb-0 md:px-8 group-[h2]:my-8 min-h-[80dvh] mb-[78px]">
       <Header />
-      <section class="main w-full ">
+      <section class="main w-full">
         <slot />
       </section>
-      <Footer />
+      <!-- <Footer /> -->
     </div>
   </body>
 </html>

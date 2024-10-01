@@ -1,0 +1,66 @@
+[
+    [
+      {
+        "name": "javascript",
+        "url": "/javascript.svg"
+      },
+      {
+        "name": "php",
+        "url": "/php.svg"
+      },
+      {
+        "name": "git",
+        "url": "/git.svg"
+      },
+      {
+        "name": "github",
+        "url": "/github.svg"
+      },
+      {
+        "name": "nextjs",
+        "url": "/nextjs.svg"
+      },
+      {
+        "name": "node",
+        "url": "/node.svg"
+      },
+      {
+        "name": "expressjs",
+        "url": "/expressjs.svg"
+      }
+    ],
+    [
+      {
+        "name": "laravel",
+        "url": "/laravel.svg"
+      },
+      {
+        "name": "react",
+        "url": "/react.svg"
+      },
+      {
+        "name": "typescript",
+        "url": "/typescript.svg"
+      },
+      {
+        "name": "astro",
+        "url": "/astro.svg"
+      },
+      {
+        "name": "tailwindcss",
+        "url": "/tailwindcss.svg"
+      },
+      {
+        "name": "mysql",
+        "url": "/mysql.svg"
+      },
+      {
+        "name": "mongodb",
+        "url": "/mongodb.svg"
+      },
+      {
+        "name": "prisma",
+        "url": "/prisma.svg"
+      }
+    ]
+]

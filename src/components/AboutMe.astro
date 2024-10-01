@@ -1,23 +1,370 @@
 ---
-import Description from "./DescriptionAbout.astro";
 import Projects from "./Projects.astro";
 import Resume from "./Resume.astro";
-import SocialContact from "./SocialContact.astro";
 import Skills from "./Skills.astro";
-import Phrase from "./Phrase.astro";
-import ContactForm from "./ContactForm.astro";
+import DescriptionAbout from "./DescriptionAbout.astro";
+import Phrases from "./Phrases.astro";
+import CodeDescription from "./CodeDescription.astro";
+// import { AuroraBackground } from "./ui/aurora-background";
+import { MainText } from "./main-text";
 ---
 
+<style>
+  .hero-section {
+    /* background-image: url("/public/laptop_with_coffee.png"); */
+    /* background-repeat: no-repeat; */
+    /* background-position: center center; */
+    width: auto;
+    height: 80vh;
+    /* margin: 0; */
+    overflow-x: hidden;
+    /* margin: 2rem; */
+    position: relative;
+    display: flex;
+    align-items: end;
+  }
+
+  .hero-section svg {
+    width: 50px;
+    border: medium solid #fff;
+    border-radius: 50%;
+    padding: 0.25rem;
+  }
+
+  .hero-video {
+    /* width: 100%; */
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    overflow-x: hidden;
+    border-radius: 2rem;
+  }
+
+  .hero-content {
+    width: 88%;
+    height: 75%;
+    padding: 1rem 0.5rem;
+    background-color: #000;
+    z-index: 999;
+    position: relative;
+    /* border-top-left-radius: -2rem; */
+    border-radius: 0 2rem 0 1.5rem;
+  }
+
+  .hero-content:before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    background-color: transparent;
+    z-index: 999;
+    /* border-radius of pseudo element */
+    border-bottom-left-radius: 50%;
+
+    /* box shadow to give the shadow of the pseudo-element the same color as the background */
+    box-shadow: 0 20px 0 0 #05010d;
+    /* box-shadow: 0 20px 0 0 red; */
+  }
+
+  .hero-content:after {
+    content: "";
+    position: absolute;
+    right: -50px;
+    bottom: 0;
+    height: 40px;
+    width: 50px;
+    background: transparent;
+
+    /* border-radius of pseudo element */
+    border-bottom-left-radius: 50%;
+
+    /* box shadow to give the shadow of the pseudo-element the same color as the background */
+    box-shadow: 0 20px 0 0 #05010d;
+  }
+
+  #text-container {
+    /* font-size: 3rem; */
+    line-height: 1.5;
+    /* text-align: center; */
+  }
+  .word {
+    display: inline-block;
+    opacity: 1;
+  }
+
+  .letter {
+    opacity: 0;
+    transition: opacity 0.1s;
+  }
+
+  .letter.visible {
+    opacity: 1;
+  }
+
+  .hero {
+    margin: 2rem;
+  }
+
+  .menu {
+    margin-top: 2rem;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar a {
+    min-height: calc(65vh / 3);
+    padding: 1rem;
+    background-color: #b61bffff;
+
+    /* background-color: #2e0343ff; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2rem;
+  }
+
+  .navbar svg {
+    width: 60px;
+  }
+
+  .navbar span {
+    font-size: 3rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    h1 {
+      /* max-width: max-content; */
+      /* padding: 1rem; */
+      /* font-size: 7.5vw; */
+      word-break: break-word;
+    }
+
+    .hero-content {
+      width: 60%;
+      /* height: 50%; */
+    }
+
+    .navbar svg {
+      width: 100px;
+    }
+
+    .navbar a:hover svg {
+      transform: rotate(45deg);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .hero-section {
+      max-width: 100%;
+      margin-bottom: 4rem;
+      /* height: 100vh; */
+    }
+
+    .hero-video {
+      width: 100%;
+    }
+
+    .hero-content {
+      /* width: 40%; */
+      height: min-content;
+      padding-block: 0;
+    }
+
+    h1 {
+      font-size: 3.5vw;
+      /* font-size: 90px; */
+      /* max-width: 960px; */
+      /* word-break: break-word; */
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .menu {
+      margin-top: 0;
+    }
+
+    .navbar:hover a {
+      filter: blur(5px);
+    }
+
+    .navbar a:hover {
+      filter: none;
+      box-shadow: 0px 4px 20px 0px #c755ffff;
+    }
+
+    .menu svg {
+      width: 100px;
+    }
+
+    .menu span {
+      font-size: 5vw;
+    }
+
+    .menu a:hover span {
+      transform: skew(-10deg);
+    }
+  }
+</style>
+
+<section class="hero">
+  <section class="hero-section">
+    
+    <video class="hero-video z-[999]" autoplay loop muted playsinline>
+     
+      <source src="public/hero_video.mp4" type="video/mp4" />
+     
+    </video>
+    <div
+      class="hero-content overflow-hidden flex flex-col justify-between gap-8">
+      <MainText client:idle />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+        color="#ffffff"
+        fill="none"
+        class="animate-bounce">
+        <path
+          d="M12 20L12 4"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M17 15C17 15 13.3175 20 11.9999 20C10.6823 20 6.99997 15 6.99997 15"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- <article class="menu">
+    <h2 class="text-6xl mb-4">Menu</h2>
+    <div class="navbar">
+      <a href="">
+        <span class="">Blog</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="90"
+          height="90"
+          color="#ffffff"
+          fill="none"
+          class="animate-spin">
+          <path
+            d="M21.9999 12C21.9999 17.5228 17.5228 22 11.9999 22C6.47709 22 1.99994 17.5228 1.99994 12C1.99994 6.47715 6.47709 2 11.9999 2C17.5228 2 21.9999 6.47715 21.9999 12Z"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"></path>
+          <path
+            d="M14.9999 9L7.99994 16"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"></path>
+          <path
+            d="M9.99994 8.11274C9.99994 8.11274 14.8287 7.70569 15.5615 8.43847C16.2943 9.17125 15.8872 14 15.8872 14"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
+      <a href="">
+        <span class="">Tech Tools</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="90"
+          height="90"
+          color="#ffffff"
+          fill="none"
+          class="animate-spin">
+          <path
+            d="M21.9999 12C21.9999 17.5228 17.5228 22 11.9999 22C6.47709 22 1.99994 17.5228 1.99994 12C1.99994 6.47715 6.47709 2 11.9999 2C17.5228 2 21.9999 6.47715 21.9999 12Z"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"></path>
+          <path
+            d="M14.9999 9L7.99994 16"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"></path>
+          <path
+            d="M9.99994 8.11274C9.99994 8.11274 14.8287 7.70569 15.5615 8.43847C16.2943 9.17125 15.8872 14 15.8872 14"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
+      <a href="">
+        <span class="">AI Tools</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="90"
+          height="90"
+          color="#ffffff"
+          fill="none"
+          class="animate-spin">
+          <path
+            d="M21.9999 12C21.9999 17.5228 17.5228 22 11.9999 22C6.47709 22 1.99994 17.5228 1.99994 12C1.99994 6.47715 6.47709 2 11.9999 2C17.5228 2 21.9999 6.47715 21.9999 12Z"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"></path>
+          <path
+            d="M14.9999 9L7.99994 16"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"></path>
+          <path
+            d="M9.99994 8.11274C9.99994 8.11274 14.8287 7.70569 15.5615 8.43847C16.2943 9.17125 15.8872 14 15.8872 14"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </a>
+    </div>
+    </article> -->
+  <CodeDescription />
+</section>
+
 <section>
-  <div class="p-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 list-none lg:grid-cols-4">
-      <Description />
-      <ContactForm />
-      <Projects />
-      <Resume />
-      <SocialContact />
-      <Skills />
-      <Phrase />
+  <div class="">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <!-- center -->
+      <div class="lg:col-start-1">
+        <DescriptionAbout />
+      </div>
+
+      <!-- left -->
+      <div class="lg:col-start-2 flex flex-col gap-4">
+        <Resume />
+        <Projects />
+      </div>
+
+      <!-- right -->
+      <div class="lg:grid lg:col-span-2 lg:grid-cols-2 flex flex-col gap-4">
+        <Skills />
+        <Phrases />
+      </div>
+
     </div>
   </div>
 </section>
+
+

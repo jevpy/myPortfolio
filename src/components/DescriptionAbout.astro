@@ -1,8 +1,22 @@
 ---
 import CodeDescription from "./CodeDescription.astro";
+import { AuroraBackground } from "./ui/aurora-background";
+import { Spotlight } from "./ui/spotlight";
 ---
 
 <style>
+  @keyframes vibrate-1 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-0.5rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
   @keyframes pulsate-bck {
     0% {
       transform: scale(1);
@@ -17,7 +31,18 @@ import CodeDescription from "./CodeDescription.astro";
   }
 
   div {
-    background-color: #0d0714ff;
+    /* background-color: #8907f0ff; */
+    /* background-color: #6900ffff; */
+    /* background-color: #4f00ff; */
+    /* background-color: #8f00ffff; */
+  }
+
+  .avaliable {
+    padding: 0.25rem 0.5rem;
+    border: thin solid rgb(74, 233, 122);
+    border-radius: 1rem;
+    background-color: rgba(46, 125, 70, 0.5);
+    color: rgb(167, 237, 186);
   }
 
   .avaliable::before {
@@ -30,18 +55,195 @@ import CodeDescription from "./CodeDescription.astro";
     margin-right: 5px;
     animation: pulsate-bck 1.5s ease-in-out infinite both;
   }
+
+  .user {
+    display: flex;
+    gap: 10px;
+  }
+
+  .img {
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    border: 1px solid #1877f2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+  }
+
+  .name {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1877f2;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    color: #fff;
+  }
+
+  .about {
+    color: #ccc;
+    padding-top: 5px;
+  }
+
+  img {
+    /* filter: drop-shadow(-2px -3px 70px rgb(174, 0, 255)); */
+    filter: drop-shadow(-2px -3px 250px #9914d8ff);
+  }
+
+  .vibrate-1 {
+    animation: vibrate-1 3s linear infinite both;
+  }
+
+  .social-media a:hover {
+    border-radius: 50%;
+    transform: scale(0.9);
+    animation:
+      border-radius,
+      5s transform 0.5s;
+  }
 </style>
 
 <div
-  class="lg:row-span-1 lg:col-span-3 ring-1 ring-primary/5 shadow-xl rounded-3xl p-8 md:col-span-2 hover:ring-primary/5 dark:hover:ring-white/20 dark:ring-white/10 ring-primary/5">
+  class="ring-1 ring-white/10 ring-primary/5 hover:ring-white/20 hover:ring-primary/5 shadow-thick bg-secondary rounded-3xl relative top-0 left-0 overflow-x-hidden p-8 bg-black">
+  <!-- <AuroraBackground className="bg-black relative p-8 w-full h-full -z-20 rounded-3xl">
+    <div class="">
+      <div
+        class="flex flex-col md:flex-row md:items-center justify-between gap-x-4">
+        <div class="relative flex items-center gap-x-4">
+          <div class="text-sm leading-6">
+            <p class="font-semibold text-primary dark:text-white">
+              Jean Pierre Ayala Viera
+            </p>
+            <p class="text-zinc-500 dark:text-zinc-400">
+              Fullstack &amp; Web developer
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap mt-4">
+          <small class="avaliable">Avaliable for working</small>
+        </div>
+      </div>
+      <p
+        class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white">
+        About Me
+      </p>
+      <p class="mt-4 text-zinc-300 font-light lg:text-xl">
+        Since the beginning, I've been deeply passionate about computer science,
+        starting with no-code tools back in 2018. This early fascination led me
+        to teach myself how to code, and over the years, I've honed my skills
+        across various programming languages and technologies.
+        <br />
+        <br />
+        I've had the privilege of working in a web development company, and now,
+        I'm eager to build innovative projects, automate tasks, and push the boundaries
+        in Web & Mobile Development, Open Source, and Competitive Programming.
+      </p>
+
+      <div
+        class="flex flex-col md:flex-row md:justify-between md:items-center max-w-[500px] mt-4">
+        <div class="flex w-[130px] justify-between">
+          <a href="" class="bg-[#17012dff] p-2 rounded-lg"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              color="#ffffff"
+              fill="none">
+              <path
+                d="M7 10V17"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M11 13V17M11 13C11 11.3431 12.3431 10 14 10C15.6569 10 17 11.3431 17 13V17M11 13V10"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M7.00801 7L6.99902 7"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+              <path
+                d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linejoin="round"></path>
+            </svg></a
+          >
+          <a href="" class="bg-[#17012dff] p-2 rounded-lg"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              color="#ffffff"
+              fill="none">
+              <path
+                d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linejoin="round"></path>
+              <path
+                d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z"
+                stroke="currentColor"
+                stroke-width="1.5"></path>
+              <path
+                d="M17.5078 6.5L17.4988 6.5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg></a
+          >
+          <a href="" class="bg-[#17012dff] p-2 rounded-lg"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              color="#ffffff"
+              fill="none">
+              <path
+                d="M6.51734 17.1132C6.91177 17.6905 8.10883 18.9228 9.74168 19.2333M9.86428 22C8.83582 21.8306 2 19.6057 2 12.0926C2 5.06329 8.0019 2 12.0008 2C15.9996 2 22 5.06329 22 12.0926C22 19.6057 15.1642 21.8306 14.1357 22C14.1357 22 13.9267 18.5826 14.0487 17.9969C14.1706 17.4113 13.7552 16.4688 13.7552 16.4688C14.7262 16.1055 16.2043 15.5847 16.7001 14.1874C17.0848 13.1032 17.3268 11.5288 16.2508 10.0489C16.2508 10.0489 16.5318 7.65809 15.9996 7.56548C15.4675 7.47287 13.8998 8.51192 13.8998 8.51192C13.4432 8.38248 12.4243 8.13476 12.0018 8.17939C11.5792 8.13476 10.5568 8.38248 10.1002 8.51192C10.1002 8.51192 8.53249 7.47287 8.00036 7.56548C7.46823 7.65809 7.74917 10.0489 7.74917 10.0489C6.67316 11.5288 6.91516 13.1032 7.2999 14.1874C7.79575 15.5847 9.27384 16.1055 10.2448 16.4688C10.2448 16.4688 9.82944 17.4113 9.95135 17.9969C10.0733 18.5826 9.86428 22 9.86428 22Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"></path>
+            </svg></a
+          >
+        </div>
+        <a
+          href="mailto:jean.ayala.viera@gmail.com"
+          class="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#48006bff,45%,#b61bffff,55%,#48006bff)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 mt-4 md:mt-0">
+          Let's talk!
+        </a>
+      </div>
+
+      <img
+        class="block md:mx-auto vibrate-1 md:w-[400px] xl:w-[470px] lg:w-[400px]"
+        src="laptopImage.png"
+        alt="Laptop Image"
+      />
+    </div>
+  </AuroraBackground>  -->
+
+  <Spotlight className="-top-20 left-0 md:left-8 w-[500px]" fill="white" />
   <div
     class="flex flex-col md:flex-row md:items-center justify-between gap-x-4">
     <div class="relative flex items-center gap-x-4">
-      <img
-        src="profile.jpg"
-        alt="profile"
-        class="h-10 w-10 rounded-full ring-1 dark:ring-white/10 ring-primary/5"
-      />
       <div class="text-sm leading-6">
         <p class="font-semibold text-primary dark:text-white">
           Jean Pierre Ayala Viera
@@ -52,21 +254,124 @@ import CodeDescription from "./CodeDescription.astro";
       </div>
     </div>
 
-    <div class="flex flex-wrap mt-4 ">
+    <div class="flex flex-wrap mt-4">
       <small class="avaliable">Avaliable for working</small>
     </div>
   </div>
   <p
     class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white">
-    Hey, welcome to my site!
+    About Me
   </p>
   <p class="mt-4 text-zinc-300 font-light lg:text-xl">
-    I'm a frontend developer, fullstack and gamer from Peru. In the digital
-    world, I create interfaces and dive into beautiful coding world.
-    <br />
-    <br />
-    Beyond screens, I find solace and joy plays soccer and videogames. My life blends
-    tech, finance, coding sessions and spending time with family and my pets.
+    Driven by a deep passion for technology, I am a self-taught programmer with
+    skills to create innovative solutions. I love spending time with my pets and
+    family. I believe this time is unique and irreplaceable.
   </p>
-  <CodeDescription />
+  <p class="mt-4 text-zinc-300 font-light lg:text-xl">
+    I am disciplined, adaptable and always willing to keep up with industry
+    trends. My goal is to leverage my skills in a collaborative environment
+    where I can contribute to impactful projects and drive meaningful results.
+  </p>
+
+  <div
+    class="flex flex-col md:flex-row md:justify-between md:items-center max-w-[500px] mt-4">
+    <div class="flex w-[130px] justify-between social-media">
+      <a
+        href="https://www.linkedin.com/in/jean-pierre-ayala-viera/"
+        target="_blank"
+        class="bg-[#40045b] p-2 rounded-lg"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          color="#ffffff"
+          fill="none">
+          <path
+            d="M7 10V17"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M11 13V17M11 13C11 11.3431 12.3431 10 14 10C15.6569 10 17 11.3431 17 13V17M11 13V10"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M7.00801 7L6.99902 7"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"></path>
+        </svg></a
+      >
+      <a
+        href="https://www.instagram.com/id.olts/"
+        target="_blank"
+        class="bg-[#40045b] p-2 rounded-lg"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          color="#ffffff"
+          fill="none">
+          <path
+            d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linejoin="round"></path>
+          <path
+            d="M16.5 12C16.5 14.4853 14.4853 16.5 12 16.5C9.51472 16.5 7.5 14.4853 7.5 12C7.5 9.51472 9.51472 7.5 12 7.5C14.4853 7.5 16.5 9.51472 16.5 12Z"
+            stroke="currentColor"
+            stroke-width="1.5"></path>
+          <path
+            d="M17.5078 6.5L17.4988 6.5"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg></a
+      >
+      <a
+        href="https://github.com/jevpy"
+        target="_blank"
+        class="bg-[#40045b] p-2 rounded-lg"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          color="#ffffff"
+          fill="none">
+          <path
+            d="M6.51734 17.1132C6.91177 17.6905 8.10883 18.9228 9.74168 19.2333M9.86428 22C8.83582 21.8306 2 19.6057 2 12.0926C2 5.06329 8.0019 2 12.0008 2C15.9996 2 22 5.06329 22 12.0926C22 19.6057 15.1642 21.8306 14.1357 22C14.1357 22 13.9267 18.5826 14.0487 17.9969C14.1706 17.4113 13.7552 16.4688 13.7552 16.4688C14.7262 16.1055 16.2043 15.5847 16.7001 14.1874C17.0848 13.1032 17.3268 11.5288 16.2508 10.0489C16.2508 10.0489 16.5318 7.65809 15.9996 7.56548C15.4675 7.47287 13.8998 8.51192 13.8998 8.51192C13.4432 8.38248 12.4243 8.13476 12.0018 8.17939C11.5792 8.13476 10.5568 8.38248 10.1002 8.51192C10.1002 8.51192 8.53249 7.47287 8.00036 7.56548C7.46823 7.65809 7.74917 10.0489 7.74917 10.0489C6.67316 11.5288 6.91516 13.1032 7.2999 14.1874C7.79575 15.5847 9.27384 16.1055 10.2448 16.4688C10.2448 16.4688 9.82944 17.4113 9.95135 17.9969C10.0733 18.5826 9.86428 22 9.86428 22Z"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg></a
+      >
+    </div>
+    <a
+      href="mailto:jean.ayala.viera@gmail.com"
+      class="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#48006bff,45%,#b61bffff,55%,#48006bff)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 mt-4 md:mt-0">
+      Let's talk!
+    </a>
+  </div>
+
+  <img
+    class="block md:mx-auto vibrate-1 md:w-[400px] xl:w-[470px] lg:w-[400px]"
+    src="laptopImage.png"
+    alt="Laptop Image"
+  />
+
+  <!-- <CodeDescription /> -->
 </div>

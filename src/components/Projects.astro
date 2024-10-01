@@ -1,34 +1,190 @@
 ---
 import projects from "../data/projects.json";
+import { Meteors } from "./ui/meteors";
 ---
 
+<!-- class="absolute duration-1000 animate-ping text-[#b61bffff]"> -->
 <style>
-  div {
-    background-color: #0d0714ff;
+  .projects {
+    /* background-color: #0d0714ff; */
+    /* background-color: #6100ffff; */
+    /* background-color: #5205ffff; */
+    /* background-color: #4f00ff; */
   }
 
-
-
-  .view-project:hover  small{
+  .view-project:hover small {
     text-decoration: underline;
   }
 
-
-  .view-project:hover svg{
+  .view-project:hover svg {
     transform: rotate(45deg);
   }
 
+  .projects-link {
+    /* background-color: rgb(79, 0, 255, 0.7); */
+    backdrop-filter: blur(16px) saturate(0%);
+    -webkit-backdrop-filter: blur(16px) saturate(0%);
+  }
+
+  .icon svg {
+    width: 1.5rem;
+  }
+
+  /* From Uiverse.io by adamgiebl */
+  .cssbuttons-io {
+    position: relative;
+    /* right: 0; */
+    margin-top: 1rem;
+    margin-left: auto;
+    /* margin-right: auto; */
+    font-family: inherit;
+    font-weight: 500;
+    /* font-size: 18px; */
+    width: 100px;
+    letter-spacing: 0.05em;
+    border-radius: 0.8em;
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    color: ghostwhite;
+    overflow: hidden;
+  }
+
+  .cssbuttons-io svg {
+    width: 1.2em;
+    height: 1.2em;
+    margin-right: 0.5em;
+  }
+
+  .cssbuttons-io span {
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 0.9rem;
+  }
+
+  .cssbuttons-io::before,
+  .cssbuttons-io::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .cssbuttons-io::before {
+    content: "";
+    background: #000;
+    width: 120%;
+    left: -10%;
+    transform: skew(30deg);
+    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  }
+
+  .cssbuttons-io:hover::before {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  .cssbuttons-io:active {
+    transform: scale(0.95);
+  }
 </style>
 
 <div
-  class="ring-1 lg:row-span-1 flex flex-col hover:ring-primary/10 dark:hover:ring-white/20 duration-300 dark:ring-white/10 ring-primary/5 lg:row-start-2 lg:gap-4 lg:grid-cols-none lg:col-start-2 md:col-span-2 rounded-3xl px-8 pb-8 pt-5 dark:bg-secondary shadow-xl dark:shadow-thick">
-  <h2 class="text-left mb-2">Projects</h2>
-  <div class="w-full grid md:grid-cols-2 gap-4">
-
-
+  class="ring-1 ring-white/10 ring-primary/5 hover:ring-white/20 hover:ring-primary/5 shadow-xl shadow-thick bg-secondary lg:row-span-1 grid grid-rows-[auto_1fr_auto] flex-grow duration-300 lg:row-start-2 lg:gap-4 lg:grid-cols-none lg:col-start-2 md:col-span-2 rounded-3xl px-8 py-5 projects h-auto w-full relative overflow-x-hidden bg-black">
+  <h3 class="flex items-center justify-center gap-4 mb-4">
+    <div class="relative flex icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="48"
+        height="48"
+        color="#ffffff"
+        fill="none">
+        <path
+          d="M17 8L18.8398 9.85008C19.6133 10.6279 20 11.0168 20 11.5C20 11.9832 19.6133 12.3721 18.8398 13.1499L17 15"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M7 8L5.16019 9.85008C4.38673 10.6279 4 11.0168 4 11.5C4 11.9832 4.38673 12.3721 5.16019 13.1499L7 15"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M14.5 4L9.5 20"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="48"
+        height="48"
+        color="#ffffff"
+        fill="none"
+        class="absolute duration-1000 animate-ping text-[#b61bffff]">
+        <path
+          d="M17 8L18.8398 9.85008C19.6133 10.6279 20 11.0168 20 11.5C20 11.9832 19.6133 12.3721 18.8398 13.1499L17 15"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M7 8L5.16019 9.85008C4.38673 10.6279 4 11.0168 4 11.5C4 11.9832 4.38673 12.3721 5.16019 13.1499L7 15"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M14.5 4L9.5 20"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="48"
+        height="48"
+        color="#ffffff"
+        fill="none"
+        class="absolute duration-1000 animate-ping text-[#b61bffff]">
+        <path
+          d="M17 8L18.8398 9.85008C19.6133 10.6279 20 11.0168 20 11.5C20 11.9832 19.6133 12.3721 18.8398 13.1499L17 15"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M7 8L5.16019 9.85008C4.38673 10.6279 4 11.0168 4 11.5C4 11.9832 4.38673 12.3721 5.16019 13.1499L7 15"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M14.5 4L9.5 20"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </div>
+    Projects
+  </h3>
+  <div class="w-full grid md:grid-cols-2 lg:grid-cols-2 gap-4">
     {
       projects.map((project) => (
-        <div class="hover:ring-primary/10 dark:hover:ring-white/20 duration-300 dark:ring-white/10 ring-primary/5 shadow-thick rounded-3xl ring-1 p-4 flex flex-col justify-between">
+        <div class="ring-1 ring-white/10 ring-primary/5 hover:ring-white/20 hover:ring-primary/5 shadow-xl shadow-thick  bg-secondary duration-300 rounded-3xl p-4 flex flex-col justify-between projects-link z-40 ">
           <h4 class="text-purple-300">{project.name}</h4>
           <small class="text-zinc-400">{project.description}</small>
           <div class="flex flex-col w-full justify-between ">
@@ -47,38 +203,55 @@ import projects from "../data/projects.json";
               </div>
             </div>
             <a
+              class="cssbuttons-io"
               href={project.url}
               target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center mt-6 relative justify-end view-project ">
-              <small class="inline-block mr-2">View More...</small>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                width="20"
-                height="20"
-                color="currentColor"
-                fill="none">
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                />
-                <path
-                  d="M14.7731 9.22687L9 15M14.7731 9.22687C14.2678 8.72156 11.8846 9.21665 11.1649 9.22687M14.7731 9.22687C15.2784 9.73219 14.7834 12.1154 14.7731 12.8351"
-                  stroke="#fff"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+              rel="noopener noreferrer">
+              <span>
+                <svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+                    fill="currentColor"
+                  />
+                </svg>
+                Code
+              </span>
             </a>
           </div>
         </div>
       ))
     }
-
   </div>
+
+  <div
+    class="relative w-[200px] inline-flex h-10 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 mx-auto mt-4">
+    <span
+      class="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#b61bffff_0%,#b61bffff_50%,#e6b4ffff_100%)]"
+    ></span>
+    <a
+      href="https://github.com/jevpy?tab=repositories"
+      target="_blank"
+      class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-2 py-1 text-sm font-medium text-white backdrop-blur-3xl mb-4 gap-2">
+      <span> Explore More </span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="20"
+        height="20"
+        color="#ffffff"
+        fill="none">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"
+        ></circle>
+        <path
+          d="M14.7731 9.22687L9 15M14.7731 9.22687C14.2678 8.72156 11.8846 9.21665 11.1649 9.22687M14.7731 9.22687C15.2784 9.73219 14.7834 12.1154 14.7731 12.8351"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </a>
+  </div>
+
+  <Meteors number={20} />
 </div>

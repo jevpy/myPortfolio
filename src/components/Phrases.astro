@@ -1,0 +1,30 @@
+---
+import { FlipWord } from "./flip-word";
+---
+
+<style>
+  h2 {
+    /* color: #333; */
+    text-align: center;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  div {
+    /* background-color: #0d0714ff; */
+    /* background-color: #6100ffff; */
+    /* background-color: #6900ffff; */
+    /* background-color: #4f00ff; */
+  }
+</style>
+
+<!-- <div
+  class="lg:row-span-2 ring-1 ring-white/10 ring-primary/5 hover:ring-white/20 hover:ring-primary/5 shadow-xl shadow-thick bg-secondary overflow-hidden duration-300 rounded-3xl p-8">
+  <h2 id="changing-text" class="lg:text-6xl lg:mt-[10%]">
+    Welcome to our website!
+  </h2>
+</div> -->
+
+<div
+  class="lg:row-span-2 ring-1 ring-white/10 ring-primary/5 hover:ring-white/20 hover:ring-primary/5 shadow-xl shadow-thick bg-secondary overflow-hidden duration-300 rounded-3xl p-8 relative flex justify-center items-center bg-black">
+  <FlipWord client:idle />
+</div>

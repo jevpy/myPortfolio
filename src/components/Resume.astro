@@ -1,32 +1,185 @@
 <style>
   div {
-    background-color: #0d0714ff;
+    /* background-color: #0d0714ff; */
+    /* background-color: #6900ffff; */
+    /* background-color: #4f00ff; */
+  }
+
+  .resume-link {
+    display: grid;
+    grid-template-columns: calc(100% / 2) calc(100% / 2);
+  }
+
+  .resume-link a:hover {
+    backdrop-filter: blur(16px) saturate(0%);
+    -webkit-backdrop-filter: blur(16px) saturate(0%);
+    background-color: rgba(166, 0, 255, 0.7);
+  }
+
+  .title svg {
+    /* filter: drop-shadow(5px 5px 10px #4f00ff);
+    transform: scale(3); */
+  }
+
+  .icon svg {
+    width: 1.5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    .resume-link a {
+      padding: 1rem 3rem;
+    }
   }
 </style>
 
 <div
-  class="ring-1 ring-primary/5 flex flex-col items-center rounded-3xl shadow-xl dark:shadow-thick p-8 dark:bg-secondary overflow-hidden text-center lg:text-left lg:row-start-1 lg:col-start-4 lg:h-[400px] hover:ring-primary/5 dark:hover:ring-white/20 dark:ring-white/10 ring-primary/5">
-  <div>
-    <p class="lg:text-4xl text-primary dark:text-white tracking-tight">
-      Grab my résumé!
-    </p>
-    <p class="mt-4 text-sm text-zinc-300 md:max-w-xs lg:max-w-none">
+  class="ring-1 ring-white/10 ring-primary/5 hover:ring-white/20 hover:ring-primary/5 shadow-xl shadow-thick grid grid-rows-[auto_1fr_auto] flex-grow rounded-3xl p-4 text-center lg:text-left lg:row-start-1 lg:col-start-4 md:py-8 max-h-[300px] relative bg-black">
+  <div class="">
+    <h3 class="title flex items-center justify-center gap-4">
+      <div class="relative flex icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="1em"
+          height="1em"
+          color="#ffffff"
+          fill="none">
+          <path
+            d="M20.4999 10.5V10C20.4999 6.22876 20.4999 4.34315 19.3284 3.17157C18.1568 2 16.2712 2 12.4999 2H11.5C7.72883 2 5.84323 2 4.67166 3.17156C3.50009 4.34312 3.50007 6.22872 3.50004 9.99993L3.5 14.5C3.49997 17.7874 3.49996 19.4312 4.40788 20.5375C4.57412 20.7401 4.75986 20.9258 4.96242 21.0921C6.06877 22 7.71249 22 10.9999 22"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M7.5 7H16.5"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M7.5 12H13.5"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M20.5 20L20.5 17C20.5 15.5706 19.1569 14 17.5 14C15.8431 14 14.5 15.5706 14.5 17L14.5 20.5C14.5 21.3284 15.1716 22 16 22C16.8284 22 17.5 21.3284 17.5 20.5V17"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="1em"
+          height="1em"
+          color="#ffffff"
+          fill="none"
+          class="absolute duration-1000 animate-ping text-[#b61bffff]">
+          <path
+            d="M20.4999 10.5V10C20.4999 6.22876 20.4999 4.34315 19.3284 3.17157C18.1568 2 16.2712 2 12.4999 2H11.5C7.72883 2 5.84323 2 4.67166 3.17156C3.50009 4.34312 3.50007 6.22872 3.50004 9.99993L3.5 14.5C3.49997 17.7874 3.49996 19.4312 4.40788 20.5375C4.57412 20.7401 4.75986 20.9258 4.96242 21.0921C6.06877 22 7.71249 22 10.9999 22"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M7.5 7H16.5"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M7.5 12H13.5"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M20.5 20L20.5 17C20.5 15.5706 19.1569 14 17.5 14C15.8431 14 14.5 15.5706 14.5 17L14.5 20.5C14.5 21.3284 15.1716 22 16 22C16.8284 22 17.5 21.3284 17.5 20.5V17"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="1em"
+          height="1em"
+          color="#ffffff"
+          fill="none"
+          class="absolute duration-1000 animate-ping text-[#b61bffff]">
+          <path
+            d="M20.4999 10.5V10C20.4999 6.22876 20.4999 4.34315 19.3284 3.17157C18.1568 2 16.2712 2 12.4999 2H11.5C7.72883 2 5.84323 2 4.67166 3.17156C3.50009 4.34312 3.50007 6.22872 3.50004 9.99993L3.5 14.5C3.49997 17.7874 3.49996 19.4312 4.40788 20.5375C4.57412 20.7401 4.75986 20.9258 4.96242 21.0921C6.06877 22 7.71249 22 10.9999 22"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M7.5 7H16.5"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M7.5 12H13.5"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M20.5 20L20.5 17C20.5 15.5706 19.1569 14 17.5 14C15.8431 14 14.5 15.5706 14.5 17L14.5 20.5C14.5 21.3284 15.1716 22 16 22C16.8284 22 17.5 21.3284 17.5 20.5V17"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </div>
+      Resume
+    </h3>
+    <p class="mt-4 text-sm text-zinc-300 lg:max-w-none text-center">
       To explore my professional trajectory using 2 ways: online version or in
       pdf format .
     </p>
   </div>
-  <div class="w-full mt-2 xl:mt-6 md:max-w-xs lg:max-w-none">
+  <div class="w-full mt-2 xl:mt-6 lg:max-w-none resume-link">
     <a
       href="https://drive.google.com/file/d/1x3Ieu8HLCqAFHF5E5VD_KAoEhH6wW4Ff/view"
       target="_blank"
       rel="noopener noreferrer"
-      class="mb-6 py-2 w-full px-4 lg:pl-2 h-12 font-semibold focus:ring-2 rounded-lg bg-primary dark:text-primary dark:hover:text-white hover:text-primary dark:hover:bg-white/5 hover:bg-primary/10 text-white flex duration-200 focus:ring-offset-2 focus:ring-inline-flex items-center justify-between mt-2">
-      <p class="text-[14px]">See Online CV</p>
+      class="mb-6 py-2 px-4 lg:pl-2 h-12 font-semibold focus:ring-2 rounded-lg bg-primary dark:text-primary dark:hover:text-white hover:text-primary dark:hover:bg-white/5 hover:bg-primary/10 text-white flex duration-200 focus:ring-offset-2 focus:ring-inline-flex items-center justify-between mt-2">
+      <p class="text-[14px]">Resume(en)</p>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-world"
-        width="18"
-        height="18"
+        class="icon icon-tabler icon-tabler-world animate-pulse"
+        width="25"
+        height="25"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#ffffff"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"></path>
+        <path d="M3.6 9h16.8"></path>
+        <path d="M3.6 15h16.8"></path>
+        <path d="M11.5 3a17 17 0 0 0 0 18"></path>
+        <path d="M12.5 3a17 17 0 0 1 0 18"></path>
+      </svg>
+    </a>
+    <a
+      href="https://drive.google.com/file/d/1WD_s35WhqezybwXzl1yVdiiX9O7jsx1_/view"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mb-6 py-2 px-4 lg:pl-2 h-12 font-semibold focus:ring-2 rounded-lg bg-primary dark:text-primary dark:hover:text-white hover:text-primary dark:hover:bg-white/5 hover:bg-primary/10 text-white flex duration-200 focus:ring-offset-2 focus:ring-inline-flex items-center justify-between mt-2">
+      <p class="text-[14px]">Resume(es)</p>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="icon icon-tabler icon-tabler-world animate-pulse"
+        width="25"
+        height="25"
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="#ffffff"
@@ -43,16 +196,44 @@
     </a>
     <a
       href="resume.pdf"
-      class="mb-2 py-2 w-full px-4 lg:pl-2 h-12 font-semibold focus:ring-2 rounded-lg bg-primary dark:text-primary dark:hover:text-white hover:text-primary dark:hover:bg-white/5 hover:bg-primary/10 text-white flex duration-200 focus:ring-offset-2 focus:ring-inline-flex items-center justify-between"
+      class="mb-2 py-2 px-4 lg:pl-2 h-12 font-semibold focus:ring-2 rounded-lg bg-primary dark:text-primary dark:hover:text-white hover:text-primary dark:hover:bg-white/5 hover:bg-primary/10 text-white flex duration-200 focus:ring-offset-2 focus:ring-inline-flex items-center justify-between"
       download>
-      <p class="text-[14px]">Download CV</p>
+      <p class="text-[14px]">Resume(en)</p>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        width="20"
-        height="20"
+        width="25"
+        height="25"
         color="#ffffff"
-        fill="none">
+        fill="none"
+        class="animate-bounce">
+        <path
+          d="M12 14.5L12 4.5M12 14.5C11.2998 14.5 9.99153 12.5057 9.5 12M12 14.5C12.7002 14.5 14.0085 12.5057 14.5 12"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M20 16.5C20 18.982 19.482 19.5 17 19.5H7C4.518 19.5 4 18.982 4 16.5"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </a>
+    <a
+      href="resume_es.pdf"
+      class="mb-2 py-2 px-4 lg:pl-2 h-12 font-semibold focus:ring-2 rounded-lg bg-primary dark:text-primary dark:hover:text-white hover:text-primary dark:hover:bg-white/5 hover:bg-primary/10 text-white flex duration-200 focus:ring-offset-2 focus:ring-inline-flex items-center justify-between"
+      download>
+      <p class="text-[14px]">Resume(es)</p>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="25"
+        height="25"
+        color="#ffffff"
+        fill="none"
+        class="animate-bounce">
         <path
           d="M12 14.5L12 4.5M12 14.5C11.2998 14.5 9.99153 12.5057 9.5 12M12 14.5C12.7002 14.5 14.0085 12.5057 14.5 12"
           stroke="currentColor"

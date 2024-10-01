@@ -2,29 +2,29 @@
   {
     "name": "Health System",
     "description":
-      "This is an MVC system designed to assist staff in informing patients about the treatment of their disease.",
+      "System that inform patients about their treatment.",
     "techs": ["php", "javascript", "mysql"],
     "url": "https://github.com/jevpy/system-health"
   },
   {
     "name": "Hotel System",
     "description":
-      "This was created for to manage rooms of a hotel. This system consists of admin page and website.",
+      "System that manage rooms of a hotel. It has admin page and website.",
     "techs": ["laravel", "mysql", "tailwindcss"],
     "url": "https://github.com/jevpy/system-hotel"
   },
   {
-    "name": "Gallery Photos",
+    "name": "Education Website",
     "description":
-      "Application to upload, edit, and delete photos. Here you can save the most important photos.",
-    "techs": ["nextjs", "tailwindcss", "typescript"],
-    "url": "https://github.com/jevpy/gallery-photos"
+      "Website was inspired for communicate clearly and efficiently to schools' clients.",
+    "techs": ["react", "tailwindcss", "typescript"],
+    "url": "https://github.com/jevpy/education-website"
   },
   {
-    "name": "Found Dev",
+    "name": "Budget Platform",
     "description":
-      "Application to search for developers. Here you can meet with other developers",
-    "techs": ["nextjs", "tailwindcss", "typescript"],
-    "url": "https://github.com/jevpy/found-dev"
+      "Application to manage expenses and incomes. It has admin panel and mobile app.",
+    "techs": ["nextjs", "tailwindcss", "prisma"],
+    "url": "https://github.com/jevpy/budget-platform"
   }
 ]
