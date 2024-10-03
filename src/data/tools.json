@@ -232,6 +232,27 @@
       "description": "Enhance your photos instantly with advanced AI technology. Elevate your photography game with just one click, improving clarity, colors, and details effortlessly.",
       "category": ["AI Tools", "Photo Editing"],
       "field": "daily"
+    },
+    {
+      "name": "Chat PDF",
+      "link": "https://www.chatpdf.com/",
+      "description":"Bring your PDFs to life by interacting directly with them. Extract insights, ask questions, and engage with your documents like never before. Perfect for students, researchers, and busy professionals.",
+      "category": ["Productivity", "PDF"],
+      "field": "daily"
+    },
+    {
+      "name": "AnySummary",
+      "link": "https://www.anysummary.app/",
+      "description":"Meet AnySummary, your one-stop app for creating concise, insightful summaries from long articles, reports, or videos. Perfect for busy professionals and avid learners.",
+      "category": ["Productivity", "PDF"],
+      "field": "daily"
+    },
+    {
+      "name": "NoteGPT",
+      "link": "https://notegpt.io/",
+      "description":"NoteGPT is your AI-powered tool for capturing and organizing ideas, notes, and tasks in a flash. Work smarter, not harder, with efficient summaries and auto-categorization, so you can focus on what truly matters.",
+      "category": ["Productivity", "PDF"],
+      "field": "daily"
     }
   ]
 }
