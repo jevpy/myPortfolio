@@ -1,0 +1,119 @@
+name: Update editorial reading
+
+on:
+  schedule:
+    - cron: '37 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: hacker-news-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    # Manual runs on other branches are deliberately skipped.
+    if: >-
+      github.ref ==
+      format('refs/heads/{0}', github.event.repository.default_branch)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    env:
+      DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+    steps:
+      - name: Checkout default branch
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 1
+      - name: Set up Node
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: '22'
+      - name: Install locked dependencies without lifecycle scripts
+        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Test updater, sources, presentation and workflow
+        run: >-
+          node --test tests/hacker-news.test.mjs tests/news-sources.test.mjs
+          tests/editorial-blog.test.mjs tests/hacker-news-workflow.test.mjs
+      - name: Refresh editorial sources
+        run: node scripts/update-hacker-news.mjs
+      - name: Commit and push only the snapshot
+        id: publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          git check-ref-format "refs/heads/$DEFAULT_BRANCH"
+          base_tip=$(git rev-parse HEAD)
+          remote_tip=$(
+            git ls-remote --exit-code origin "refs/heads/$DEFAULT_BRANCH" |
+              cut -f1
+          )
+          if [ "$base_tip" != "$remote_tip" ]; then
+            echo 'Default branch advanced; retry in a fresh run.' >&2
+            exit 1
+          fi
+          git add -- src/data/hacker-news.json
+          if git diff --cached --quiet; then
+            echo 'pushed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git -c user.name='github-actions[bot]' \
+            -c \
+            user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -m 'chore: refresh editorial reading snapshot'
+          remote_tip=$(
+            git ls-remote --exit-code origin "refs/heads/$DEFAULT_BRANCH" |
+              cut -f1
+          )
+          if [ "$base_tip" != "$remote_tip" ]; then
+            echo \
+              'Default branch advanced during refresh; no push attempted.' >&2
+            exit 1
+          fi
+          git push origin "HEAD:refs/heads/$DEFAULT_BRANCH"
+          echo 'pushed=true' >> "$GITHUB_OUTPUT"
+      - name: Optional Vercel deploy hook
+        if: steps.publish.outputs.pushed == 'true'
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          node --input-type=module <<'NODE'
+          const hook = process.env.VERCEL_DEPLOY_HOOK;
+          if (!hook) {
+            console.log(
+              'No deploy hook configured: Git integration only; ' +
+              'deployment activation is not guaranteed.'
+            );
+          } else {
+            try {
+              const url = new URL(hook);
+              if (
+                url.protocol !== 'https:' ||
+                url.hostname !== 'api.vercel.com' || url.port ||
+                url.username || url.password || url.search || url.hash ||
+                !/^\/v1\/integrations\/deploy\/[^/]+\/[^/]+$/.test(url.pathname)
+              ) {
+                throw new Error('Invalid hook');
+              }
+              const response = await fetch(url, {
+                method: 'POST', redirect: 'error',
+                signal: AbortSignal.timeout(30000),
+              });
+              if (!response.ok) throw new Error('Hook failed');
+              console.log(
+                'Deploy hook accepted; verify deployment separately.'
+              );
+            } catch {
+              console.error(
+                'Deploy hook failed or invalid; snapshot push succeeded. ' +
+                'Check configuration privately.'
+              );
+              process.exitCode = 1;
+            }
+          }
+          NODE
