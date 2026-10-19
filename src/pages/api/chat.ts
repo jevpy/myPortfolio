@@ -6,12 +6,17 @@ import { createChatService } from '../../lib/chatbot/server.mjs';
 export const prerender = false;
 
 // Server-only environment values never enter the shared public projection.
+// Vercel's runtime environment wins, so changing a value only needs a restart;
+// the build-time value is the fallback for hosts without process.env.
+const env = (name: string): string | undefined =>
+  (typeof process !== 'undefined' ? process.env[name] : undefined) ?? import.meta.env[name];
+
 const handleChat = createChatService({
   knowledge: createKnowledge({ homeCopy, projects }),
   config: {
-    enabled: import.meta.env.PORTFOLIO_CHAT_AI_ENABLED === 'true',
-    apiKey: import.meta.env.GROQ_API_KEY,
-    model: import.meta.env.GROQ_MODEL || 'openai/gpt-oss-20b',
+    enabled: env('PORTFOLIO_CHAT_AI_ENABLED') === 'true',
+    apiKey: env('GROQ_API_KEY'),
+    model: env('GROQ_MODEL') || 'openai/gpt-oss-20b',
   },
 });
 
