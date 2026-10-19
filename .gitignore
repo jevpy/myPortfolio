@@ -22,3 +22,11 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+# Local Pi runtime state
+.atl/
+
+# Build output, nested worktrees and local tool state
+.vercel/
+worktrees/
+__pycache__/
+.playwright-cli/
