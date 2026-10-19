@@ -3,6 +3,19 @@ import { chatbotCopy } from '../i18n/chatbot.mjs';
 import { DAILY_QUOTA_KEY } from './chatbot-daily-quota.mjs';
 
 // Plain text only: blank lines become native paragraphs, never parsed markup.
+// The one exception is the model's **bold** marker, rebuilt as a native
+// <strong> through textContent; an unpaired marker stays literal.
+function appendInline(doc, parent, paragraph) {
+  const parts = paragraph.split(/\*\*(?=\S)([^*]+?)(?<=\S)\*\*/);
+  if (parts.length === 1) { parent.textContent = paragraph; return; }
+  parts.forEach((part, index) => {
+    if (!part) return;
+    const node = doc.createElement(index % 2 ? 'strong' : 'span');
+    node.textContent = part;
+    parent.append(node);
+  });
+}
+
 export function renderChatMessage(doc, message, copy) {
   const item = doc.createElement('div');
   item.className = `chatbot-message chatbot-message--${message.role}`;
@@ -17,7 +30,7 @@ export function renderChatMessage(doc, message, copy) {
     ? copy.welcomeIntro : message.text;
   for (const paragraph of content.replace(/\r\n?/g, '\n').split(/\n[\t ]*\n(?:[\t ]*\n)*/)) {
     const text = doc.createElement('p');
-    text.textContent = paragraph;
+    appendInline(doc, text, paragraph);
     item.append(text);
   }
   // Links already passed the controller's exact public URL + label allowlist.

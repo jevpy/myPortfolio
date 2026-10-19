@@ -457,3 +457,14 @@ test('CV preset renders in both locales and offers Spanish and English PDF downl
   const page = renderChatMessage(dom, { id: 3, role: 'assistant', text: 'x', links: knowledge.en.links.slice(0, 1) }, chatbotCopy.en);
   assert.equal(page.children.find(child => child.tagName === 'a').attributes.download, undefined);
 });
+test('assistant **bold** markers render as native strong text, never as parsed HTML', async () => {
+  const { renderChatMessage } = await import('../src/scripts/portfolio-chatbot.mjs');
+  const text = 'The **Course Notes Generator** is a CLI and **AI Learning** is a <b>platform</b>.\n\nUnclosed **marker stays literal.';
+  const item = renderChatMessage(dom, { id: 3, role: 'assistant', text, links: [] }, chatbotCopy.en);
+  const [first, second] = item.children.filter(child => child.tagName === 'p');
+  assert.equal(first.textContent, 'The Course Notes Generator is a CLI and AI Learning is a <b>platform</b>.');
+  assert.deepEqual(first.children.filter(c => c.tagName === 'strong').map(c => c.textContent), ['Course Notes Generator', 'AI Learning']);
+  assert.ok(first.children.every(c => ['span', 'strong'].includes(c.tagName) && c.children.length === 0));
+  assert.equal(second.textContent, 'Unclosed **marker stays literal.');
+  assert.equal(second.children.length, 0);
+});

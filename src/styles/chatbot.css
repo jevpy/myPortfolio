@@ -76,6 +76,7 @@
 .portfolio-chatbot .chatbot-message strong { display: block; margin-bottom: 6px; font-family: var(--font-mono, monospace); font-weight: 400; font-size: 11px; color: var(--chatbot-accent); }
 .portfolio-chatbot .chatbot-message p { margin: 0; white-space: pre-wrap; line-height: 1.7; }
 .portfolio-chatbot .chatbot-message p + p { margin-top: 12px; }
+.portfolio-chatbot .chatbot-message p strong { display: inline; margin: 0; font-family: inherit; font-size: inherit; font-weight: 650; color: inherit; }
 .portfolio-chatbot .chatbot-message a { display: inline-flex; align-items: center; min-height: 44px; margin: 4px 14px 0 0; color: var(--chatbot-accent); text-decoration: underline; text-underline-offset: 4px; }
 .portfolio-chatbot .chatbot-presets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .portfolio-chatbot .chatbot-presets button { text-align: left; background: #19181e; }
