@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175 42" width="175" height="42" role="img" aria-label="Meta">
+  <defs><linearGradient id="m" x1="0" x2="1"><stop offset="0" stop-color="#0064E1"/><stop offset="1" stop-color="#0866FF"/></linearGradient></defs>
+  <path d="M30 34c-7 0-11-7-11-13S23 8 30 8c8 0 13 11 20 13s12 13 20 13c7 0 11-7 11-13S77 8 70 8c-8 0-13 11-20 13S38 34 30 34z" transform="translate(-2 0)" fill="none" stroke="url(#m)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="98" y="29" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="600" fill="#0866FF">Meta</text>
+</svg>

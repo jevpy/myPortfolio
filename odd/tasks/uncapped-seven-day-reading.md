@@ -1,0 +1,22 @@
+# Uncapped seven-day reading
+
+## Goal
+User explicitly rejected the ten-article cap and authorized removing it. Show ALL valid articles found across HN, DEV.to/Forem and InfoQ in the rolling last seven days, using the six current categories, deduplication and article-only destinations. No total, category or source quotas. Discovery remains finite (existing queries/pages/feed sizes/HTTP limits), not exhaustive all-provider indexing.
+
+## Tasks
+- [x] U1 Remove selection/validation quota using schema4 with strict historical migration; replace mutable-count tests with deterministic fixtures; update current guide. Worker multi-file, observed RED/GREEN.
+- [x] U2 Independently test/build, refresh allthree live providers and validate fresh snapshot/SSR/category totals/new-tab links. Verifier commands. No commits/publishing.
+
+## Constraints
+Schema4 exact selection contract maxArticles absent (no implicit10). Historical schema3 independently retains original maxArticles10/count<=10 validation, every original row/envelope/order/date/source/metadata validated before filtering exclusions and strictschema4revalidation. Schema2 supported honestmigration returns4. Valid oldsnapshots migrate offline with unchanged retained URLs/articles/timestamp; firstrefreshfailure must notemptyUIexcept genuineTTL expiry. All-source-failure preserves bytes, zeroresultsuccess permitted. Network bounds unchanged: HN25queries2pages100/maxScan5000;DEV9tags2pages100;InfoQ3feeds500items;stream1MiB5s3attempts. Six categories/classifier2, source dates, URLdedup and article-only screening preserved. Unknown publisher content/redirects notverifiedbyURLheuristics.
+
+UI already maps all articles; preserveENES/chrome/filterqueryaliases/authoredMarkdown/internaldestinations/newtabnotices. No redesign/paginationnewproductchoice. No unrelatedsource ordependency changes/installs/commits/push/deploy/secrets/workflowactivation. Generatedbuild .astro/dist/.vercel/output/srcenv approved; no manualartifactcleanup/processkill. PriorEPERM finalbuildpassedwithoutcleanup;diagnose incident separately ifrecurs.
+
+## Verification
+Deterministic >10mixedsourcefixtures preserveALLeligible entries after dedup chronologicalsort, global/source/category nocap. Current schema4 admits11+validrows, historical3overflowstillinvalid; invalidexcludedhistoricalrow invalidateswhole; schema2/3offline migration/timestamp retained; bytepreservationfailure/sparse/future TTL unchanged. Mutablelive seed tests onlyvalidateinvariants no8/10/IDs/timestamp hardcodes; explicit historicalfixtures carryspecificcounts. FourNodesuites/mjs syntax/build/YAMLscripts existingchecks. Live node scripts/update-hacker-news.mjs authorized atU2 withsanitizedcountsperproviderselected only; no claimsraweligiblebeforeselectionunlessactualmeasured. Re-runtestsAFTERrefresh catchesmutablefixturebugs. SSR2blogs sixcategoryqueries bothlocales primarycountsumactualeligible/allcards present/newtabrel/notices; tenauthoreddetailsread-only. Browserpending no historicENOENTretry. Nativepreflight mayblocked mixeduntrackedwork; noapprovalclaimed.
+
+## Progress
+U1complete: schema4/no maxArticles/no slice/currentcountcap; historicalschema3PINNEDmax10 validatesALLrows beforefilter/strict4migration, schema2honestmigrationreturns4, failedrefreshpreservation. Observed6REDfailures then37testsGREEN,5mjschecks/buildpassed. Deterministic35mixedsource/sixcategoryfixture returns34unique(noquota); historicalinvalidoverflow/excludedrow tests retained. Seedofflinechangedonlyschema/selection retained10articleobjectsandtimestamp2026-10-11T05:09:06.242Z. Currentguideupdatedfinite-discovery/allfound/noquotas; mutablefeedtestsinvariantsonly. U2 reconciledthrough superseding odd/tasks/dev-weekly-popularity-pagination.md P2 receipts: originalverifiercancelledandneverclaimedfinalacceptance. Newallthree refresh2026-10-11T06:11:19.728Z produced1425uniquevalidschema4articles(HN388DEV1026InfoQ11) withoutglobalquota, DEVnativeweeklypopular nowrequested;39tests/build31.89spass afterauthorizedgeneratedoutputcleanup, JSONhashunchanged duringbuild. Latestauthorizedproductchange SSR12/page notallcards-on-one-page;10ENESHTTPpagination/filtercases392newtabanchorspassed showingall1425through119pages withfulltotals. Humanbrowser/nativeapprovalpending no publishing.
+
+## Next
+SinglewriterU1 thenindependentverifierU2. Updatefile/mirror/todo pertransition. Work-unit commits pending explicit authorization.

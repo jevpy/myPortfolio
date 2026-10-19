@@ -7,6 +7,8 @@ import Phrases from "./Phrases.astro";
 import CodeDescription from "./CodeDescription.astro";
 // import { AuroraBackground } from "./ui/aurora-background";
 import { MainText } from "./main-text";
+import type { Locale } from '../i18n/routes';
+const { locale = 'en' } = Astro.props as { locale?: Locale };
 ---
 
 <style>
@@ -221,12 +223,12 @@ import { MainText } from "./main-text";
     
     <video class="hero-video z-[999]" autoplay loop muted playsinline>
      
-      <source src="hero_video.mp4" type="video/mp4" />
+      <source src="/hero_video.mp4" type="video/mp4" />
      
     </video>
     <div
       class="hero-content overflow-hidden flex flex-col justify-between gap-8">
-      <MainText client:idle />
+      <MainText locale={locale} client:idle />
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -348,19 +350,19 @@ import { MainText } from "./main-text";
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
       <!-- center -->
       <div class="lg:col-start-1">
-        <DescriptionAbout />
+        <DescriptionAbout locale={locale} />
       </div>
 
       <!-- left -->
       <div class="lg:col-start-2 flex flex-col gap-4">
-        <Resume />
-        <Projects />
+        <Resume locale={locale} />
+        <Projects locale={locale} />
       </div>
 
       <!-- right -->
       <div class="lg:grid lg:col-span-2 lg:grid-cols-2 flex flex-col gap-4">
-        <Skills />
-        <Phrases />
+        <Skills locale={locale} />
+        <Phrases locale={locale} />
       </div>
 
     </div>

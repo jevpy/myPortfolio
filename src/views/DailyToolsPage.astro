@@ -1,0 +1,11 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Tools from '../components/Tools.astro';
+import { legacy } from '../i18n/legacy';
+import type { Locale } from '../i18n/routes';
+const { locale = 'en' } = Astro.props as { locale?: Locale };
+const t = legacy[locale];
+---
+<MainLayout locale={locale} title={t.toolsTitle} description={locale === 'en' ? t.aboutDescription : t.dailyIntro}>
+  <Tools locale={locale} />
+</MainLayout>

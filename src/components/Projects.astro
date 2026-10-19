@@ -1,6 +1,11 @@
 ---
 import projects from "../data/projects.json";
 import { Meteors } from "./ui/meteors";
+import type { Locale } from '../i18n/routes';
+import { legacy } from '../i18n/legacy';
+import { projectsEs } from '../i18n/content';
+const { locale = 'en' } = Astro.props as { locale?: Locale };
+const t = legacy[locale];
 ---
 
 <!-- class="absolute duration-1000 animate-ping text-[#b61bffff]"> -->
@@ -179,17 +184,17 @@ import { Meteors } from "./ui/meteors";
           stroke-linejoin="round"></path>
       </svg>
     </div>
-    Projects
+    {t.projects}
   </h3>
   <div class="w-full grid md:grid-cols-2 lg:grid-cols-2 gap-4">
     {
       projects.map((project) => (
         <div class="ring-1 ring-white/10 ring-primary/5 hover:ring-white/20 hover:ring-primary/5 shadow-xl shadow-thick  bg-secondary duration-300 rounded-3xl p-4 flex flex-col justify-between projects-link z-40 ">
-          <h4 class="text-purple-300">{project.name}</h4>
-          <small class="text-zinc-400">{project.description}</small>
+          <h4 class="text-purple-300">{locale === 'es' ? projectsEs[project.name].name : project.name}</h4>
+          <small class="text-zinc-400">{locale === 'es' ? projectsEs[project.name].description : project.description}</small>
           <div class="flex flex-col w-full justify-between ">
             <div class="flex items-center mt-4">
-              <small class="text-fuchsia-200">techs:</small>
+              <small class="text-fuchsia-200">{t.techs}</small>
               <div class="flex justify-between">
                 {project.techs.map((tech) => (
                   <img
@@ -215,7 +220,7 @@ import { Meteors } from "./ui/meteors";
                     fill="currentColor"
                   />
                 </svg>
-                Code
+                {t.code}
               </span>
             </a>
           </div>
@@ -233,7 +238,7 @@ import { Meteors } from "./ui/meteors";
       href="https://github.com/jevpy?tab=repositories"
       target="_blank"
       class="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-black px-2 py-1 text-sm font-medium text-white backdrop-blur-3xl mb-4 gap-2">
-      <span> Explore More </span>
+      <span>{t.explore}</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"

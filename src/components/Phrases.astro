@@ -1,5 +1,7 @@
 ---
 import { FlipWord } from "./flip-word";
+import type { Locale } from '../i18n/routes';
+const { locale = 'en' } = Astro.props as { locale?: Locale };
 ---
 
 <style>
@@ -26,5 +28,5 @@ import { FlipWord } from "./flip-word";
 
 <div
   class="lg:row-span-2 ring-1 ring-white/10 ring-primary/5 hover:ring-white/20 hover:ring-primary/5 shadow-xl shadow-thick bg-secondary overflow-hidden duration-300 rounded-3xl p-8 relative flex justify-center items-center bg-black">
-  <FlipWord client:idle />
+  <FlipWord locale={locale} client:idle />
 </div>

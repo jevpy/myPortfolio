@@ -5,6 +5,8 @@
  **/
 
 import { cn } from "@/lib/utils";
+import type { Locale } from '../../i18n/routes';
+import { legacy } from '../../i18n/legacy';
 import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import {
   AnimatePresence,
@@ -22,14 +24,16 @@ export const FloatingDock = ({
   items,
   desktopClassName,
   mobileClassName,
+  locale = 'en',
 }: {
+  locale?: Locale;
   items: { title: string; icon: React.ReactNode; href: string }[];
   desktopClassName?: string;
   mobileClassName?: string;
 }) => {
   return (
     <>
-      <FloatingDockDesktop items={items} className={desktopClassName} />
+      <FloatingDockDesktop items={items} className={desktopClassName} label={legacy[locale].navigation} />
       {/* <FloatingDockMobile items={items} className={mobileClassName} /> */}
     </>
   );
@@ -68,6 +72,7 @@ const FloatingDockMobile = ({
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}>
                 <a
                   href={item.href}
+                  aria-label={item.title}
                   key={item.title}
                   className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center">
                   <div className="h-4 w-4">{item.icon}</div>
@@ -89,13 +94,16 @@ const FloatingDockMobile = ({
 const FloatingDockDesktop = ({
   items,
   className,
+  label,
 }: {
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
+  label: string;
 }) => {
   let mouseX = useMotionValue(Infinity);
   return (
     <motion.div
+      aria-label={label}
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
@@ -164,7 +172,7 @@ function IconContainer({
 
   return (
     <>
-      <a href={href}>
+      <a href={href} aria-label={title} onFocus={() => setHovered(true)} onBlur={() => setHovered(false)}>
         <motion.div
           ref={ref}
           style={{ width, height }}

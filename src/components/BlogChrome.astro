@@ -1,0 +1,69 @@
+---
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import BrandSphere from './BrandSphere.astro';
+import { localizedPath, type Locale } from '../i18n/routes';
+import { blogCopy } from '../i18n/blog';
+import { homeCopy } from '../i18n/home';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = homeCopy[locale];
+const b = blogCopy[locale];
+const route = (path: string) => localizedPath(path, locale);
+const links = [
+  { href: route('/#proyectos'), label: t.projects },
+  { href: route('/#habilidades'), label: t.capabilities },
+  { href: route('/blog'), label: t.blog, active: true },
+  { href: route('/#contacto'), label: t.contact },
+];
+// Same Bootstrap Icons v1.11.3 (MIT) paths as the portfolio footer.
+const socials = [
+  { name: 'GitHub', url: 'https://github.com/jevpy', path: 'M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2-.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/jean-pierre-ayala-viera/', path: 'M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z' },
+];
+---
+<a class="blog-skip" href="#blog-content">{b.skip}</a>
+<header class="topnav blog-topnav">
+  <div class="container topnav-inner">
+    <a class="brand" href={route('/#inicio')} aria-label={`Jean Pierre Ayala Viera · ${b.home}`}>
+      <span class="brand-mark" aria-hidden="true">
+        <BrandSphere />
+      </span>
+      <span class="brand-text"><span class="brand-name">Jean Pierre</span><span class="brand-sub">{t.role}</span></span>
+    </a>
+    <nav class="nav-center blog-desktop-nav" aria-label={t.mainNav}>
+      {links.slice(0, 3).map(link => <a href={link.href} aria-current={link.active ? 'page' : undefined}>{link.label}</a>)}
+    </nav>
+    <div class="nav-actions">
+      <LanguageSwitcher locale={locale} />
+      <a class="btn-contact" href={route('/#contacto')}>{t.contact}<svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.5 7.5h8v8"/></svg></a>
+    </div>
+    <details class="blog-mobile-nav">
+      <summary>{t.menu}<span aria-hidden="true"> +</span></summary>
+      <nav aria-label={t.mainNav}>
+        {links.map((link, index) => <a href={link.href} aria-current={link.active ? 'page' : undefined}><span class="blog-nav-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>{link.label}</a>)}
+      </nav>
+    </details>
+  </div>
+</header>
+<main id="blog-content" class="blog-container" tabindex="-1"><slot /></main>
+<footer class="pagefoot"><div class="container row-between">
+  <p class="meta">{t.footerSignature}</p>
+  <nav class="footer-links" aria-label={t.contactLinks}>
+    <a href="mailto:jean.ayala.viera@gmail.com"><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>{t.email}</a>
+    {socials.map(social => <a href={social.url} target="_blank" rel="noopener noreferrer"><svg class="icon icon-social" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d={social.path}/></svg>{social.name}</a>)}
+    <a href={route('/blog')}><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4.5h9.5L19 9v10.5H5z"/><path d="M14.5 4.5V9H19"/><path d="M8 12h8M8 15.5h8"/></svg>{t.blog}</a>
+    <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">{t.cvEnglish}</a><a href="/resume_es.pdf" target="_blank" rel="noopener noreferrer">{t.cvSpanish}</a>
+  </nav>
+</div></footer>
+<script>
+  // Native disclosure remains usable without JS; Escape closes and restores focus.
+  document.querySelectorAll<HTMLDetailsElement>('.blog-mobile-nav').forEach(menu => {
+    menu.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.open) {
+        menu.open = false;
+        menu.querySelector('summary')?.focus();
+        event.preventDefault();
+      }
+    });
+  });
+</script>

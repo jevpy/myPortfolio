@@ -1,6 +1,7 @@
 ---
 import { Navbar } from "./navbar.tsx";
-import { FloatingDock } from "./ui/floating-dock";
+import type { Locale } from '../i18n/routes';
+const { locale = 'en' } = Astro.props as { locale?: Locale };
 ---
 
 <style>
@@ -26,7 +27,7 @@ import { FloatingDock } from "./ui/floating-dock";
       height="100%"
     />
   </a> -->
-  <Navbar client:idle />
+  <Navbar locale={locale} client:idle />
   <!-- <NavBar /> -->
 </header>
 

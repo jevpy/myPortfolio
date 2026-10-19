@@ -1,0 +1,92 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro';
+import { blogCopy, blogDate, blogTopics, resolveBlogTopic, filterBlogArticles, blogTagLabel } from '../i18n/blog';
+import { postSummaries } from '../i18n/content';
+import type { Locale } from '../i18n/routes';
+import snapshotData from '../data/hacker-news.json';
+import { getRecentArticles } from '../data/hacker-news.mjs';
+import { paginateBlogArticles, readingPageHref, readingTopicHref } from '../data/blog-pagination.mjs';
+import { displayArticleTitle, articleHostname } from '../data/article-presentation.mjs';
+const { locale = 'en' } = Astro.props as { locale?: Locale };
+const t = blogCopy[locale];
+const englishPosts = await Astro.glob('../pages/posts/*.md');
+const spanishPosts = await Astro.glob('../pages/es/posts/*.md');
+const allPosts = (locale === 'es' ? spanishPosts : englishPosts).sort(
+  (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
+);
+const recent = getRecentArticles(snapshotData, new Date());
+const selected = resolveBlogTopic(Astro.url.searchParams.get('topic'));
+const articles = filterBlogArticles(recent, selected);
+const pagination = paginateBlogArticles(articles, Astro.url.searchParams.get('page'));
+const topicHref = (key?: string) => readingTopicHref(Astro.url, key);
+const pageHref = (page: number) => readingPageHref(Astro.url, page);
+const topicLabel = (category: string) => blogTopics.find(topic => topic.category === category)?.[locale] ?? category;
+---
+<BlogLayout locale={locale} title={t.title} description={t.description}>
+  <header class="editorial-masthead">
+    <div><p class="blog-eyebrow">{t.eyebrow}</p><h1>{t.title}<span aria-hidden="true">.</span></h1></div>
+    <p class="editorial-thesis">{t.lead}</p>
+    <div class="editorial-sign" data-blog-figure><svg class="editorial-sign-fallback" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><circle cx="50" cy="50" r="38"/><path d="M12 50h76M50 12v76M23 23l54 54M23 77l54-54"/><circle cx="50" cy="50" r="16"/></svg></div>
+  </header>
+  <section class="editorial-reading" id="reading" aria-labelledby="reading-heading">
+    <div class="blog-section-head">
+      <div><p class="blog-eyebrow">01 / {t.recent}</p><h2 id="reading-heading">{selected ? selected[locale] : t.recent}</h2></div>
+    </div>
+    <nav class="editorial-topics" aria-label={t.topics}>
+      <a href={topicHref()} aria-current={!selected ? 'page' : undefined}>{t.all}<span>{recent.length}</span></a>
+      {blogTopics.map(topic => <a href={topicHref(topic.key)} aria-current={selected?.key === topic.key ? 'page' : undefined}>{topic[locale]}<span>{filterBlogArticles(recent, topic).length}</span></a>)}
+    </nav>
+    {articles.length === 0 ? <p class="blog-notice">{selected ? t.emptyCategory : t.empty}</p> : (
+      <ol class="editorial-stories" start={pagination.offset + 1}>
+        {pagination.items.map((article, index) => (
+          <li class:list={['editorial-story', { 'editorial-story-lead': index === 0 }]} data-topic={blogTopics.find(topic => topic.category === article.primaryCategory)?.key}>
+            <article>
+              <div class="editorial-story-top"><span class="editorial-number" aria-hidden="true">{String(pagination.offset + index + 1).padStart(2, '0')}</span><ul class="editorial-tags" aria-label={t.topics}><li>{topicLabel(article.primaryCategory)}</li>{article.tags.map(tag => <li>{blogTagLabel(tag, locale)}</li>)}</ul></div>
+              {index === 0 && <div class="editorial-story-art" data-story-art><svg class="editorial-story-art-fallback" viewBox="0 0 240 140" aria-hidden="true" focusable="false"><path d="m40 110 80-80 80 80M40 80l80-60 80 60M40 50l80-40 80 40M120 10v120M20 130h200"/><circle cx="120" cy="70" r="42"/></svg></div>}
+              <h3><a href={article.url} target="_blank" rel="noopener noreferrer">{displayArticleTitle(article.title)}<span class="editorial-arrow" aria-hidden="true"> ↗</span><span class="blog-sr-only"> {t.newTab}</span></a></h3>
+              <div class="editorial-source"><a href={article.url} target="_blank" rel="noopener noreferrer">{articleHostname(article.url)}<span class="blog-sr-only"> {t.newTab}</span></a><span>{article.dateKind === 'published' ? t.published : t.shared} <time datetime={article.eventAt}>{blogDate(article.eventAt, locale)}</time></span></div>
+              <a class="editorial-source-link" href={article.url} target="_blank" rel="noopener noreferrer">{t.original}<span aria-hidden="true"> ↗</span><span class="blog-sr-only"> {t.newTab}</span></a>
+            </article>
+          </li>
+        ))}
+      </ol>
+    )}
+    <p class="blog-pagination-range">{t.range(pagination.range[0], pagination.range[1], articles.length)}</p>
+    {pagination.pageCount > 1 && <nav class="blog-pagination" aria-label={t.pagination}>
+      {pagination.page > 1 && <a href={pageHref(pagination.page - 1)} rel="prev">{t.previous}</a>}
+      {pagination.windowTokens.map(token => token === 'ellipsis' ? <span class="blog-pagination-ellipsis" aria-hidden="true">…</span> :
+        <a href={pageHref(token)} aria-label={`${t.page} ${token}`} aria-current={token === pagination.page ? 'page' : undefined}>{token}</a>)}
+      {pagination.page < pagination.pageCount && <a href={pageHref(pagination.page + 1)} rel="next">{t.next}</a>}
+    </nav>}
+  </section>
+  <section class="blog-authored" aria-labelledby="authored-heading">
+    <div class="blog-section-head">
+      <div><p class="blog-eyebrow">02 / Jean Pierre</p><h2 id="authored-heading">{t.authored}</h2><p class="blog-lead">{t.notebookLead}</p></div>
+      <p class="blog-meta">{allPosts.length} {t.posts}</p>
+    </div>
+    <div class="blog-post-grid">
+      {allPosts.map(post => (
+        <article class="blog-card">
+          <a class="blog-card-link" href={post.url} target="_blank" rel="noopener noreferrer">
+            <div class="blog-card-image"><img src={post.frontmatter.image} alt="" loading="lazy" decoding="async" /></div>
+            <div class="blog-card-copy">
+              <time class="blog-meta" datetime={post.frontmatter.date}>{blogDate(post.frontmatter.date, locale)}</time>
+              <h3>{post.frontmatter.title}</h3>
+              <p>{post.frontmatter.description || postSummaries[locale][post.url?.split('/').pop() ?? '']}</p>
+              <span class="blog-read">{t.read} <span aria-hidden="true">↗</span></span>
+              <span class="blog-sr-only"> {t.newTab}</span>
+            </div>
+          </a>
+        </article>
+      ))}
+    </div>
+  </section>
+</BlogLayout>
+<script>
+  import { mountBlogFigure } from '../scripts/blog-figure.mjs';
+  import { mountStoryArt } from '../scripts/blog-story-art.mjs';
+  const host = document.querySelector<HTMLElement>('[data-blog-figure]');
+  if (host) mountBlogFigure(host);
+  const art = document.querySelector<HTMLElement>('[data-story-art]');
+  if (art) mountStoryArt(art);
+</script>

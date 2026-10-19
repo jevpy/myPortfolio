@@ -1,5 +1,9 @@
 ---
 import skills from "../data/skills.json";
+import type { Locale } from '../i18n/routes';
+import { legacy } from '../i18n/legacy';
+const { locale = 'en' } = Astro.props as { locale?: Locale };
+const t = legacy[locale];
 
 const classNameSkills = "mx-10 inline h-[35px]";
 ---
@@ -98,7 +102,7 @@ const classNameSkills = "mx-10 inline h-[35px]";
           stroke-linejoin="round"></path>
       </svg>
     </div>
-    Skills
+    {t.skills}
   </h3>
 
   <section class='py-8"'>

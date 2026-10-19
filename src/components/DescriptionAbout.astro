@@ -2,6 +2,10 @@
 import CodeDescription from "./CodeDescription.astro";
 import { AuroraBackground } from "./ui/aurora-background";
 import { Spotlight } from "./ui/spotlight";
+import type { Locale } from '../i18n/routes';
+import { legacy } from '../i18n/legacy';
+const { locale = 'en' } = Astro.props as { locale?: Locale };
+const t = legacy[locale];
 ---
 
 <style>
@@ -249,28 +253,24 @@ import { Spotlight } from "./ui/spotlight";
           Jean Pierre Ayala Viera
         </p>
         <p class="text-zinc-500 dark:text-zinc-400">
-          Fullstack &amp; Web developer
+          {t.role}
         </p>
       </div>
     </div>
 
     <div class="flex flex-wrap mt-4">
-      <small class="avaliable">Avaliable for working</small>
+      <small class="avaliable">{t.available}</small>
     </div>
   </div>
   <p
     class="text-3xl mt-6 font-medium lg:text-4xl tracking-tight text-primary dark:text-white">
-    About Me
+    {t.aboutMe}
   </p>
   <p class="mt-4 text-zinc-300 font-light lg:text-xl">
-    Driven by a deep passion for technology, I am a self-taught programmer with
-    skills to create innovative solutions. I love spending time with my pets and
-    family. I believe this time is unique and irreplaceable.
+    {t.bio}
   </p>
   <p class="mt-4 text-zinc-300 font-light lg:text-xl">
-    I am disciplined, adaptable and always willing to keep up with industry
-    trends. My goal is to leverage my skills in a collaborative environment
-    where I can contribute to impactful projects and drive meaningful results.
+    {t.goals}
   </p>
 
   <div
@@ -278,6 +278,7 @@ import { Spotlight } from "./ui/spotlight";
     <div class="flex w-[130px] justify-between social-media">
       <a
         href="https://www.linkedin.com/in/jean-pierre-ayala-viera/"
+        aria-label="LinkedIn"
         target="_blank"
         class="bg-[#40045b] p-2 rounded-lg"
         ><svg
@@ -314,6 +315,7 @@ import { Spotlight } from "./ui/spotlight";
       >
       <a
         href="https://www.instagram.com/id.olts/"
+        aria-label="Instagram"
         target="_blank"
         class="bg-[#40045b] p-2 rounded-lg"
         ><svg
@@ -342,6 +344,7 @@ import { Spotlight } from "./ui/spotlight";
       >
       <a
         href="https://github.com/jevpy"
+        aria-label="GitHub"
         target="_blank"
         class="bg-[#40045b] p-2 rounded-lg"
         ><svg
@@ -363,14 +366,14 @@ import { Spotlight } from "./ui/spotlight";
     <a
       href="mailto:jean.ayala.viera@gmail.com"
       class="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#48006bff,45%,#b61bffff,55%,#48006bff)] bg-[length:200%_100%] px-6 font-medium text-white transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 mt-4 md:mt-0">
-      Let's talk!
+      {t.talk}
     </a>
   </div>
 
   <img
     class="block md:mx-auto vibrate-1 md:w-[400px] xl:w-[470px] lg:w-[400px]"
-    src="laptopImage.png"
-    alt="Laptop Image"
+    src="/laptopImage.png"
+    alt={t.laptop}
   />
 
   <!-- <CodeDescription /> -->

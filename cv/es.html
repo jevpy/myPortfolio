@@ -1,0 +1,93 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><link rel="stylesheet" href="style.css"><title>Jean Pierre Ayala Viera - CV</title></head><body><div class="page">
+<header class="top">
+  <h1>Jean Pierre André Ayala Viera</h1>
+    <div class="role">Full-Stack Developer &amp; AI Engineer · Laravel · React · RAG</div>
+</header>
+<main>
+  <h2>Perfil</h2>
+  <p class="summary">Desarrollador Full-Stack con <b>más de 3 años de experiencia</b>, ganador de <b>Startup Perú 2025</b> y <b>responsable de punta a punta</b> del diseño, desarrollo y despliegue de los sistemas de Maia Consultores: trazabilidad alimentaria, optimización de rutas, CRM integrado con Google y operaciones de campo. Construyo <b>software robusto y auditable</b> con Laravel, React/Next.js y SQL, y desarrollo <b>aplicaciones con LLM</b> con certificaciones IBM en IA generativa y RAG.</p>
+
+  <h2>Logros destacados</h2>
+  <div class="wins">
+    <div class="win"><div class="t">Ganador Startup Perú 2025</div>Gané el concurso nacional con Maia Plagas, plataforma de operaciones que desarrollé.</div>
+    <div class="win"><div class="t">Meta Tech Provider</div>Llevé a Maia Consultores a convertirse en Meta Tech Provider oficial.</div>
+  </div>
+
+  <h2>Experiencia</h2>
+  <div class="job"><div class="head"><span class="title">Desarrollador de Software Full-Stack <span class="sub">— Maia Consultores</span></span><span class="date">2024 – Actualidad</span></div></div>
+  <div class="item">
+    <div class="head"><span class="title">Sistema de Trazabilidad Alimentaria <span class="sub">— Centro Carnes · Industria alimentaria</span></span></div>
+    <ul>
+      <li>Ante <b>11 formatos oficiales aislados</b> sin trazabilidad de lotes, diseñé un modelo documental con <b>proyección normalizada</b> y <b>propagación de lotes</b> en <b>transacciones atómicas</b> con auditoría antes/después, logrando <b>registros trazables por lote y listos para auditoría</b>.</li>
+      <li>Firmas múltiples con <b>reautenticación y bloqueos a nivel de fila</b>; evidencias validadas por <b>MIME real y SHA-256</b> y XLSX a PDF con <b>LibreOffice aislado</b>.</li>
+    </ul>
+    <div class="stack">Laravel 13 · PHP 8.3 · Livewire 4 · MySQL · Spatie Permission · PhpSpreadsheet · LibreOffice</div>
+  </div>
+  <div class="item">
+    <div class="head"><span class="title">CRM Maia Consultores <span class="sub">— Operaciones comerciales</span></span></div>
+    <ul>
+      <li>Ante correos y agendas dispersos, integré <b>Gmail API con OAuth 2.0 por usuario</b>, <b>colas con estado</b> y <b>claves de idempotencia</b>: <b>un registro comercial único y auditable</b>.</li>
+      <li>Sincronización con <b>Google Calendar vía webhooks</b> y conciliación de eventos; <b>motor de automatización por eventos</b> con jobs y protección contra ciclos.</li>
+    </ul>
+    <div class="stack">Laravel · Livewire · MySQL · Google APIs · Colas · Spatie Permission/Activitylog</div>
+  </div>
+  <div class="item">
+    <div class="head"><span class="title">Huracorp <span class="sub">— Gestión de residuos</span></span></div>
+    <ul>
+      <li>Para rutas con ventanas horarias, conductores y vehículos, implementé <b>k-means con distancia Haversine</b> y una <b>heurística VRP de vecino más cercano</b>, generando <b>rutas con horarios y alertas automáticas de límites</b>.</li>
+    </ul>
+    <div class="stack">Laravel 12 · MySQL · PHPUnit · AdminLTE</div>
+  </div>
+  <div class="item">
+    <div class="head"><span class="title">Maia Plagas <span class="sub">— Control de plagas · Startup Perú 2025</span></span></div>
+    <ul>
+      <li>Para dejar de armar informes a mano, construí <b>cotizaciones con ingeniería de costos</b> (insumos, mano de obra, margen), servicios multifecha e <b>inventario por lotes y vencimientos</b>, evidencias GPS/fotos en <b>AWS S3</b>: <b>certificados PDF generados desde datos de campo</b>.</li>
+      <li>Desarrollé el <b>backend PHP: API REST offline-first</b> para la app móvil.</li>
+    </ul>
+    <div class="stack">Laravel 12 · MySQL · AWS S3 · Dompdf · Laravel Excel · Chart.js</div>
+  </div>
+    <div class="item">
+    <div class="head"><span class="title">Chatbot con IA para Hortifruit <span class="sub">— Prototipo · propuesta comercial</span></span></div>
+    <ul><li>Para uno de los mayores productores de berries del mundo, desarrollé un <b>chatbot con IA generativa</b> adaptado a su operación agroexportadora.</li></ul>
+  </div>
+  <div class="job"><div class="head"><span class="title">Desarrollador Freelance <span class="sub">— Independiente</span></span><span class="date">2022 – 2023</span></div>
+    <p class="free"><b>Esaalud Neuro</b> (PHP, MySQL, API RENIEC) · <b>Bodega Don Pedro</b> (Next.js, MongoDB) · <b>Pizzería Elena</b> (React, MongoDB)</p>
+  </div>
+
+  <h2>Proyectos personales de IA</h2>
+  <div class="item ai">
+    <ul>
+      <li><b>Asistente IA del portafolio — en vivo, probalo en onecodesite.vercel.app:</b> chatbot bilingüe que responde a reclutadores sobre mi trabajo, <b>anclado a una base de conocimiento curada</b> para evitar alucinaciones, con <b>alta disponibilidad</b>: failover entre 3 LLMs en Groq, rate limiting y respaldo local. <span class="stack">Astro · TypeScript · Groq API · Vercel</span></li>
+      <li><b>AI Learning — en desarrollo:</b> plataforma de aprendizaje con IA y <b>arquitectura limpia</b> (11 módulos de dominio, 4 capas), login con Google y <b>adaptador Gemini</b> probado offline. <span class="stack">Next.js · TypeScript · PostgreSQL · Drizzle · Auth.js · Docker</span></li>
+      <li><b>Course Notes Generator:</b> CLI en Python que reemplaza la toma manual de apuntes generando apuntes editables mediante un <b>pipeline con LLM</b> (MiniMax). <span class="stack">Python 3.12 · odfpy</span></li>
+    </ul>
+  </div>
+</main>
+<aside>
+  <h2>Contacto</h2>
+  <ul>
+    <li><span class="lbl">Email</span><a href="mailto:jean.ayala.viera@gmail.com">jean.ayala.viera@gmail.com</a></li>
+    <li><span class="lbl">Teléfono</span>+51 985 413 220</li>
+    <li><span class="lbl">Ubicación</span>Perú</li>
+    <li><span class="lbl">LinkedIn</span><a href="https://www.linkedin.com/in/jean-pierre-ayala-viera/">in/jean-pierre-ayala-viera</a></li>
+    <li><span class="lbl">GitHub</span><a href="https://github.com/jevpy">github.com/jevpy</a></li>
+  </ul>
+  <h2>Ingeniería de IA</h2>
+  <div class="tags"><span>IA generativa</span><span>RAG</span><span>Bases vectoriales</span><span>Apps con LLM</span><span>Python</span><span>Automatización n8n</span><span>Agentes de IA (multiagente)</span></div>
+  <h2>Backend</h2>
+  <div class="tags"><span>PHP</span><span>Laravel 12/13</span><span>Livewire 4</span><span>Node.js</span><span>Express</span><span>REST / OAuth</span></div>
+  <h2>Frontend</h2>
+  <div class="tags"><span>JavaScript</span><span>TypeScript</span><span>React</span><span>Next.js</span><span>Astro</span><span>Tailwind</span><span>HTML / CSS</span></div>
+  <h2>Datos y DevOps</h2>
+  <div class="tags"><span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>SQL</span><span>Modelado de datos</span><span>Docker</span><span>Git / GitHub</span><span>AWS S3</span><span>PHPUnit</span></div>
+  <h2>Certificaciones</h2>
+  <ul class="certs">
+    <li><b>IBM · IA Generativa y RAG</b> <i>2026</i><br>6 cursos: aplicaciones RAG, bases vectoriales, apps con IA generativa, Python para IA</li>
+    <li><b>University of Colorado</b> <i>2026</i><br>Ingeniería de requisitos para software seguro (2 cursos)</li>
+    <li><b>Google</b> <i>2026</i><br>Foundations of Project Management</li>
+    <li><b>Google</b> · Desarrollo web<br><b>Udemy</b> · React, PHP, Laravel</li>
+  </ul>
+  <h2>Idiomas</h2>
+  <ul><li>Español — Nativo</li><li>Inglés — Avanzado</li></ul>
+</aside>
+</div></body></html>

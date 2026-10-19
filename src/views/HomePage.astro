@@ -1,0 +1,495 @@
+---
+import PortfolioLayout from '../layouts/PortfolioLayout.astro';
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import BrandSphere from '../components/BrandSphere.astro';
+import { homeCopy, projects, projectCount } from '../i18n/home';
+import { localizedPath, type Locale } from '../i18n/routes';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = homeCopy[locale];
+const route = (path: string) => localizedPath(path, locale);
+// Published Bootstrap Icons v1.11.3 (MIT); provenance remains in the layout.
+const socialPaths = {
+  github: 'M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2-.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8',
+  linkedin: 'M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z',
+  instagram: 'M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334',
+};
+const socials = [
+  { id: 'github' as const, name: 'GitHub', url: 'https://github.com/jevpy', handle: 'jevpy', contact: 'github.com/jevpy' },
+  { id: 'linkedin' as const, name: 'LinkedIn', url: 'https://www.linkedin.com/in/jean-pierre-ayala-viera/', handle: t.connect, contact: 'in/jean-pierre-ayala-viera' },
+  { id: 'instagram' as const, name: 'Instagram', url: 'https://www.instagram.com/id.olts/', handle: 'id.olts', contact: 'instagram.com/id.olts' },
+];
+const posts = [
+  { id: 'chatgpt-forums', path: '/posts/2024-05-30-chatgpt-forums' },
+  { id: 'tool-for-notes', path: '/posts/2024-06-02-tool-for-notes' },
+  { id: 'microsoft-outages', path: '/posts/2024-07-19-microsoft-windows-outages' },
+];
+const skills = [
+  { id: 'interfaz', anchor: 'cap-anchor-interfaces', title: t.interfaces, text: t.interfacesText, stack: ['React', 'Next.js', 'JavaScript', 'TypeScript'] },
+  { id: 'servidor', anchor: 'cap-anchor-servers', title: t.servers, text: t.serversText, stack: ['Express', 'PHP', 'Laravel', 'n8n'] },
+  { id: 'datos', anchor: 'cap-anchor-data', title: t.data, text: t.dataText, stack: ['MongoDB', 'MySQL', 'PostgreSQL', 'Prisma'] },
+  { id: 'cloud', anchor: 'cap-anchor-cloud', title: t.cloud, text: t.cloudText, stack: ['AWS', 'Google Cloud', 'Docker'] },
+];
+---
+<PortfolioLayout locale={locale}>
+  <!-- One transparent shared WebGL scene, with the original smoke fallback. -->
+  <div class="bg-art" aria-hidden="true">
+    <canvas id="scene-canvas" class="scene-canvas" aria-hidden="true"></canvas>
+    <canvas id="smoke-canvas" class="bg-art__smoke" width="176" height="99"></canvas>
+    <div class="bg-art__fallback"></div><div class="bg-art__scrim"></div>
+  </div>
+  <canvas id="figure-canvas" class="figure-canvas" aria-hidden="true"></canvas>
+  <header class="topnav" data-od-id="topnav">
+    <div class="container topnav-inner">
+      <a class="brand" href="#inicio" data-od-id="nav-logo">
+        <span class="brand-mark" aria-hidden="true">
+          <BrandSphere />
+        </span>
+        <span class="brand-text"><span class="brand-name">Jean Pierre</span><span class="brand-sub">{t.role}</span></span>
+      </a>
+      <nav id="nav-principal" class="nav-center" aria-label={t.mainNav} data-od-id="nav-principal">
+        <a href="#proyectos" data-od-id="nav-proyectos"><span class="nav-index" aria-hidden="true">01</span>{t.projects}</a>
+        <a href="#habilidades" data-od-id="nav-habilidades"><span class="nav-index" aria-hidden="true">02</span>{t.capabilities}</a>
+        <a href="#blog" data-od-id="nav-blog"><span class="nav-index" aria-hidden="true">03</span>{t.blog}</a>
+        <a class="nav-contact-link" href="#contacto" data-od-id="nav-contacto"><span class="nav-index" aria-hidden="true">04</span>{t.contact}</a>
+        <span class="nav-indicator" aria-hidden="true"></span>
+        <div class="nav-socials">
+          {socials.map((social) => <a href={social.url} target="_blank" rel="noopener noreferrer" data-od-id={`nav-social-${social.id}`}>
+            <svg class="icon icon-social" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d={socialPaths[social.id]}/></svg>{social.name}
+          </a>)}
+        </div>
+      </nav>
+      <div class="nav-actions">
+        <LanguageSwitcher locale={locale} />
+        <a class="btn-contact" href="#contacto" data-od-id="nav-cta-contacto">{t.contact}<svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.5 16.5 16.5 7.5"/><path d="M8.5 7.5h8v8"/></svg></a>
+        <button class="nav-toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="nav-principal" aria-label={t.openMenu} data-od-id="nav-toggle">
+          <span class="nav-toggle-bars" aria-hidden="true"><span></span><span></span></span><span class="nav-toggle-label" data-od-id="nav-toggle-label">{t.menu}</span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+  <main id="content">
+    <section class="section section-hero" id="inicio" data-od-id="hero">
+      <div class="container">
+        <div class="hero-stage">
+          <div class="hero-copy" data-od-id="hero-intro">
+            <p class="available-badge entrance entrance-1" data-od-id="hero-available"><span class="available-dot" aria-hidden="true"></span>{t.available}</p>
+            <p class="eyebrow kicker entrance entrance-1" data-od-id="hero-eyebrow">{t.role}</p>
+            <h1 class="h1 display" data-od-id="hero-title" data-hero-title><span class="display-line" data-title-line>{t.heroFirst}</span> <span class="display-line" data-title-line>{t.heroInto} <em>{t.heroEmphasis}</em>.</span></h1>
+            <p class="lead masthead-lead entrance entrance-4" data-od-id="hero-lead">{t.heroLead}</p>
+            <div class="hero-cta entrance entrance-5" data-od-id="hero-cta">
+              <a class="btn btn-primary btn-arrow" href="#proyectos" data-od-id="hero-cta-proyectos"><span class="magnet-inner" data-magnet>{t.viewWork}</span></a>
+              <a class="hero-link btn-arrow" href="#contacto" data-od-id="hero-cta-contacto">{t.contact}</a>
+            </div>
+            <p class="meta hero-signature entrance entrance-5" data-od-id="hero-firma">Jean Pierre Ayala Viera · jean.ayala.viera@gmail.com</p>
+          </div>
+          <div class="hero-visual entrance entrance-3" data-od-id="hero-visual">
+            <div class="orb-anchor" id="hero-orb-anchor">
+              <canvas id="orb-canvas" class="orb-canvas" aria-hidden="true"></canvas>
+              <div class="figure-target figure-target--round" hidden tabindex="-1" role="group" data-object-target="hero" aria-label={t.sphereObject} aria-describedby="figure-hint-hero"><span class="sr-only" id="figure-hint-hero">{t.interactionHint}</span></div>
+            </div>
+            <div class="orb-foot">
+              <button class="btn btn-ghost btn-sm icon-label" type="button" id="orb-pausa" aria-pressed="false" aria-label={t.pauseInitial} data-od-id="hero-visual-pausa">
+                <svg class="icon icon-solid icon-pause" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="7" y="5" width="3.5" height="14" rx="1.2"/><rect x="13.5" y="5" width="3.5" height="14" rx="1.2"/></svg>
+                <svg class="icon icon-solid icon-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5.2 18.6 12 8 18.8z"/></svg>
+                <span id="orb-pausa-label" data-od-id="hero-visual-pausa-label">{t.pause}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="hero-belt">
+          <div class="belt-item belt-about" data-reveal data-od-id="hero-about"><h2 class="tile-title" data-od-id="hero-about-title">{t.about}</h2><p class="tile-text" data-od-id="hero-about-text">{t.aboutText}</p></div>
+          <div class="belt-item belt-stack" data-reveal data-reveal-delay="70" data-od-id="hero-stack">
+            <h2 class="tile-title" data-od-id="hero-stack-title">{t.stack}</h2>
+            <div class="chips" data-od-id="hero-stack-chips">{['React', 'Next.js', 'TypeScript', 'Express', 'Laravel', 'MongoDB', 'PHP', 'MySQL', 'PostgreSQL', 'Docker', 'n8n'].map((name) => <span class="tag">{name}</span>)}</div>
+          </div>
+          <div class="belt-item belt-social" data-reveal data-reveal-delay="140" data-od-id="hero-social">
+            <h2 class="tile-title" data-od-id="hero-social-title">{t.elsewhere}</h2>
+            <div class="social-row">{socials.map((social) => <a class="social-link" href={social.url} target="_blank" rel="noopener noreferrer" data-od-id={social.id === 'instagram' ? 'footer-instagram' : `hero-social-${social.id}`}>
+              <svg class="icon icon-social" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d={socialPaths[social.id]}/></svg>
+              <span class="social-name" data-od-id={social.id === 'instagram' ? undefined : `hero-social-${social.id}-label`}>{social.name}</span><span class="social-handle">{social.handle}</span>
+            </a>)}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-achievements" id="achievements" aria-labelledby="achievements-title" data-achievements-motion>
+      <div class="container">
+        <div class="achievement-heading">
+          <p class="eyebrow eyebrow-tile">{t.achievementsLabel}</p>
+          <h2 class="h2" id="achievements-title">{t.achievementsTitle}</h2>
+        </div>
+        <div class="achievement-grid">
+          {t.achievements.map((achievement) => <article class={`achievement-panel achievement-panel--${achievement.kind}`} data-achievement-panel aria-labelledby={`achievement-title-${achievement.id}`}>
+            <div class="achievement-depth" data-achievement-depth aria-hidden="true">
+              <div class="achievement-orbit" data-achievement-orbit aria-hidden="true">
+                <span class="achievement-ring achievement-ring--outer"></span>
+                <span class="achievement-ring achievement-ring--inner"></span>
+                <span class="achievement-node achievement-node--a"></span>
+                <span class="achievement-node achievement-node--b"></span>
+                <span class="achievement-node achievement-node--c"></span>
+              </div>
+            </div>
+            <div class="achievement-masthead">
+              <p class="achievement-category" data-achievement-copy>{achievement.kind === 'award' ? t.achievementRecognition : t.achievementTransformation}</p>
+              <div class="achievement-logo-surface" data-achievement-logo>
+                {achievement.kind === 'award'
+                  ? <img class="achievement-logo" src="/startup-peru.png" width="175" height="42" alt="Startup Perú" loading="lazy" decoding="async" />
+                  : <img class="achievement-logo" src="/meta-logo.svg" width="175" height="42" alt="Meta" loading="lazy" decoding="async" />}
+              </div>
+            </div>
+            <div class="achievement-attribution">
+              <p class="achievement-brand" data-achievement-copy>{achievement.brand}</p>
+              {achievement.kind === 'award' && <p class="achievement-year" data-achievement-year>{t.achievementWinner} <span>{achievement.highlight}</span></p>}
+            </div>
+            <h3 class="achievement-title" id={`achievement-title-${achievement.id}`} data-achievement-type={achievement.kind === 'transformation' ? true : undefined}>{achievement.title}</h3>
+            <p class="achievement-statement" data-achievement-copy>{achievement.statement}</p>
+            {/* The work section remains reachable even when a category hides app cards. */}
+            <a class="achievement-link" href="#proyectos" data-achievement-copy>{t.viewWork}<span aria-hidden="true">↗</span></a>
+          </article>)}
+        </div>
+      </div>
+    </section>
+    <section class="section section-work" id="proyectos" data-od-id="proyectos">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div><p class="eyebrow eyebrow-tile" data-od-id="proyectos-eyebrow">{t.selectedWork}</p><h2 class="h2" data-od-id="proyectos-title">{t.workTitle}</h2></div>
+          <div class="filters" role="group" aria-label={t.filterLabel} data-od-id="proyectos-filtros">
+            <button class="btn btn-filter" type="button" data-filter="todos" aria-pressed="true" data-od-id="filtro-todos">{t.all}</button>
+            <button class="btn btn-filter" type="button" data-filter="app" aria-pressed="false" data-od-id="filtro-aplicaciones">{t.apps}</button>
+            <button class="btn btn-filter" type="button" data-filter="web" aria-pressed="false" data-od-id="filtro-web">{t.web}</button>
+          </div>
+        </div>
+        <p class="meta" id="projects-count" role="status" aria-live="polite" data-reveal data-reveal-delay="80" data-od-id="proyectos-cuenta">{projectCount(projects.length, t)}</p>
+        <div class="work-grid">{projects.map((project, index) => {
+          const copy = project[locale];
+          const displayName = copy.displayName ?? project.name;
+          return <article class="proj" data-cat={project.type} data-reveal="left" data-od-id={`proyecto-${project.id}`} aria-labelledby={`project-title-${project.id}`}>
+            <div class="proj-cover" data-cover={project.id} aria-hidden="true">
+              <span class="proj-number">{String(index + 1).padStart(2, '0')}</span>
+              <svg class="proj-architecture" viewBox="0 0 480 240" fill="none" focusable="false">
+                <path class="proj-datum" d="M32 204h416M48 28v192M432 28v192"/>
+                {project.id === 'crm-consultores' && <>
+                  <path d="m120 160 120-64 120 64-120 64zM120 128l120-64 120 64-120 64zM120 96l120-64 120 64-120 64zM120 96v64m120 0v64m120-128v64"/>
+                  <path class="proj-architecture-accent" d="m180 128 60-32 60 32-60 32zM240 96V32"/>
+                </>}
+                {project.id === 'centro-carnes' && <>
+                  <path d="m96 164 64-36 64 36-64 36zM96 164V84l64-36 64 36v80M160 120v80m-64-116 64 36 64-36M256 164l64-36 64 36-64 36zM256 164V84l64-36 64 36v80m-128-80 64 36 64-36M320 120v80"/>
+                  <path class="proj-architecture-accent" d="M160 48v-16h160v16M224 164h32M224 84h32"/>
+                </>}
+                {project.id === 'huracorp' && <>
+                  <path d="m112 92 128-60 128 60v64l-128 60-128-60zM112 92l128 60 128-60M240 152v64M144 108v64m32-48v64m128-64v64m32-80v64"/>
+                  <path class="proj-architecture-accent" d="m176 92 64-30 64 30-64 30zM240 122v30"/>
+                </>}
+                {project.id === 'maia-plagas' && <>
+                  <path d="m112 176 128-64 128 64-128 64zM112 144l128-64 128 64M112 112l128-64 128 64M112 176v-64m256 64v-64M240 112V48"/>
+                  <ellipse cx="240" cy="112" rx="64" ry="32"/>
+                  <path class="proj-architecture-accent" d="M240 80v64m-32-32h64M240 176v64"/>
+                </>}
+                {project.id === 'license-server' && <>
+                  <path d="m160 76 80-44 80 44v88l-80 44-80-44zM160 76l80 44 80-44M240 120v88M192 60v88l80 44M288 60v88l-80 44"/>
+                  <path class="proj-architecture-accent" d="m208 102 32-18 32 18v36l-32 18-32-18z"/>
+                </>}
+                {project.id === 'maia-website' && <>
+                  <path d="m96 160 192-96 96 48-192 96zM96 128l192-96 96 48-192 96zM96 128v32m96 16v32m192-128v32M144 104l96 48m-48-72 96 48m-48-72 96 48"/>
+                  <path class="proj-architecture-accent" d="m144 136 144-72M192 160l144-72"/>
+                </>}
+                {project.id === 'course-notes' && <>
+                  <path d="m144 152 112-56 80 40-112 56zM144 120l112-56 80 40-112 56zM144 88l112-56 80 40-112 56zM144 88v64m80-24v64m112-120v64"/>
+                  <path class="proj-architecture-accent" d="m192 88 64-32M208 96l64-32M224 104l64-32"/>
+                </>}
+                {project.id === 'ai-learning' && <>
+                  <path d="m112 168 64-32 64 32-64 32zM240 104l64-32 64 32-64 32zM176 72l64-32 64 32-64 32zM112 168v-48l64-32 64 32v48m0-64V56l64-32 64 32v48M176 72v48m128-48v48"/>
+                  <path class="proj-architecture-accent" d="M176 200v16h128v-80M240 168h64v-32M240 104v64"/>
+                </>}
+              </svg>
+            </div>
+            <div class="proj-head"><p class="meta proj-cat">{copy.category}</p><h3 class="proj-title" id={`project-title-${project.id}`}>{displayName}</h3></div>
+            <div class="proj-body">
+              <p class="proj-desc">{copy.description}</p>
+              <dl class="proj-brief" aria-label={t.projectBrief}>
+                <div><dt>{t.problemLabel}</dt><dd>{copy.problem}</dd></div>
+                <div><dt>{t.solutionLabel}</dt><dd>{copy.solution}</dd></div>
+                <div><dt>{t.impactLabel}</dt><dd>{copy.impact}</dd></div>
+              </dl>
+              <div class="proj-stack">
+                <h4 class="proj-stack-title">{project.id === 'license-server' ? t.verifiedComponents : t.technologyStack}</h4>
+                <ul class="chips">{project.stack.map((name) => <li class="tag">{name}</li>)}</ul>
+              </div>
+              <details class="proj-details">
+                <summary>{t.engineeringDetails}<span class="proj-disclosure-mark" aria-hidden="true"></span></summary>
+                <ul class="proj-features" aria-label={t.features}>{copy.features.map((feature) => <li>{feature}</li>)}</ul>
+              </details>
+              {project.id === 'maia-website' && <div class="proj-actions"><a class="link-ext" href="https://www.maiaconsultoresperu.com/" target="_blank" rel="noopener noreferrer" aria-label={t.visitWebsiteLabel}>
+                <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14.5V19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 19V7.5A1.5 1.5 0 0 1 5.5 6H10"/></svg>{t.visitWebsite}
+              </a></div>}
+            </div>
+          </article>;
+        })}</div>
+      </div>
+    </section>
+    <section class="section section-stack" id="habilidades" data-od-id="habilidades">
+      <div class="container">
+        <p class="eyebrow eyebrow-tile" data-reveal data-od-id="habilidades-eyebrow">{t.capabilities}</p>
+        <h2 class="h2" data-reveal data-reveal-delay="60" data-od-id="habilidades-title">{t.skillsTitle}</h2>
+        <p class="lead lead-row" data-reveal data-reveal-delay="120" data-od-id="habilidades-lead">{t.skillsLead}</p>
+        <div class="grid-3-tile capabilities-grid" data-od-id="habilidades-scene">
+          {skills.map((skill) => <div class="capability">
+          <div class="skills-scene__slot" id={skill.anchor}>
+            <div class="figure-target" hidden tabindex="-1" role="group" data-object-target={skill.id} aria-label={skill.title} aria-describedby={`figure-hint-${skill.id}`}><span class="sr-only" id={`figure-hint-${skill.id}`}>{t.interactionHint}</span></div>
+            {skill.id === 'interfaz' && <svg class="skills-scene__svg" viewBox="0 0 120 92" aria-hidden="true" focusable="false">
+              <path class="skills-scene__rear" d="M30 18h66v50H30zM22 26l8-8m58 8 8-8M22 76l8-8m58 8 8-8"/>
+              <path d="M22 26h66v50H22zM22 38h66"/><path class="decoration-accent" d="m56 44-14 18h28zm0 0 5 25-19-7m19 7 9-7"/>
+              <circle class="decoration-accent" cx="56" cy="44" r="2.5"/><circle cx="42" cy="62" r="2"/><circle cx="70" cy="62" r="2"/>
+            </svg>
+            }
+            {skill.id === 'servidor' && <svg class="skills-scene__svg" viewBox="0 0 120 92" aria-hidden="true" focusable="false">
+              <g class="skills-scene__rear"><path d="m28 24 12-9h52l-12 9M80 24l12-9v15l-12 9m-52 9 12-9h52l-12 9m0 0 12-9v15l-12 9m-52 9 12-9h52l-12 9m0 0 12-9v15l-12 9"/></g>
+              <path d="M28 24h52v15H28zM28 48h52v15H28zM28 72h52v15H28z"/><path class="decoration-accent" d="M52 31h18M52 55h18M52 79h18"/>
+              <circle class="decoration-accent" cx="38" cy="31.5" r="2.5"/><circle class="decoration-accent" cx="38" cy="55.5" r="2.5"/><circle class="decoration-accent" cx="38" cy="79.5" r="2.5"/>
+            </svg>
+            }
+            {skill.id === 'datos' && <svg class="skills-scene__svg" viewBox="0 0 120 92" aria-hidden="true" focusable="false">
+              <path class="skills-scene__rear" d="M27 28v40m66-40v40M60 40v40"/><ellipse cx="60" cy="28" rx="33" ry="12"/>
+              <ellipse class="decoration-accent" cx="60" cy="48" rx="33" ry="12"/><ellipse cx="60" cy="68" rx="33" ry="12"/>
+              <circle cx="27" cy="28" r="2"/><circle class="decoration-accent" cx="93" cy="48" r="2.5"/><circle cx="60" cy="80" r="2"/>
+            </svg>
+            }
+            {skill.id === 'cloud' && <svg class="skills-scene__svg" viewBox="0 0 120 92" aria-hidden="true" focusable="false">
+              <path class="skills-scene__rear" d="M35 63C17 63 17 40 34 38C32 19 62 12 70 32C91 22 108 49 88 63Z"/>
+              <path d="M29 73C11 73 11 50 28 48C26 29 56 22 64 42C85 32 102 59 82 73ZM29 73l6-10M28 48l6-10M64 42l6-10M82 73l6-10"/>
+              <path class="decoration-accent" d="M29 73l18-19 17-12 18 31M47 54l-19-6m19 6 17 19m-17-19 8-21"/>
+              <circle cx="29" cy="73" r="2"/><circle class="decoration-accent" cx="47" cy="54" r="2.5"/><circle cx="64" cy="42" r="2"/>
+            </svg>}
+          </div>
+          <div class="feature" data-reveal="scale" data-reveal-delay="180" data-od-id={`habilidad-${skill.id}`} role="group" aria-label={skill.title}>
+            <div class="feature-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false">
+              {skill.id === 'interfaz' && <><path d="M3 6h18v12H3z"/><path d="M3 10h18"/></>}
+              {skill.id === 'servidor' && <><rect x="4" y="4" width="16" height="6.5" rx="2"/><rect x="4" y="13.5" width="16" height="6.5" rx="2"/><path d="M8 7.25h.01M8 16.75h.01"/></>}
+              {skill.id === 'datos' && <><ellipse cx="12" cy="6.5" rx="7" ry="3"/><path d="M5 6.5v11c0 1.66 3.13 3 7 3s7-1.34 7-3v-11"/></>}
+              {skill.id === 'cloud' && <path d="M6.5 18h11a4.5 4.5 0 0 0 .5-8.97A6 6 0 0 0 6.3 8.5 4.75 4.75 0 0 0 6.5 18Z"/>}
+            </svg></div>
+            <h3 data-od-id={`habilidad-${skill.id}-titulo`}>{skill.title}</h3><p data-od-id={`habilidad-${skill.id}-texto`}>{skill.text}</p>
+            <ul class="spec-list" data-od-id={`habilidad-${skill.id}-chips`}>{skill.stack.map((name) => <li>{name}</li>)}</ul>
+
+          </div>
+          </div>)}
+        </div>
+      </div>
+    </section>
+    <section class="section" id="blog" data-od-id="blog">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div><p class="eyebrow eyebrow-tile" data-od-id="blog-eyebrow">{t.blog}</p><h2 class="h2" data-od-id="blog-title">{t.blogTitle}</h2></div>
+          <div class="blog-scene" id="blog-scene" data-od-id="blog-scene">
+            {[0].map((index) => <div class="blog-scene__plane">
+              <svg class="blog-scene__svg" viewBox="0 0 40 60" aria-hidden="true" focusable="false"><rect x="6" y="4" width="26" height="46" rx="1"/><rect x="10" y="9" width="26" height="46" rx="1"/><rect x="14" y="14" width="26" height="46" rx="1"/></svg>
+              <div class="figure-target" hidden tabindex="-1" role="group" data-object-target={`book-${index}`} aria-label={t.postTitles[index]} aria-describedby={`figure-hint-book-${index}`}><span class="sr-only" id={`figure-hint-book-${index}`}>{t.interactionHint}</span></div>
+            </div>)}
+          </div>
+          <a class="btn btn-secondary icon-label" href={route('/blog')} data-od-id="blog-todos">
+            <svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14.5V19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 19V7.5A1.5 1.5 0 0 1 5.5 6H10"/></svg>{t.fullBlog}
+          </a>
+        </div>
+        <div>{posts.map((post, index) => <article class="log-row-2" data-reveal data-reveal-delay={index ? String(index * 80) : undefined} data-od-id={`post-${post.id}`}>
+          <span class="meta num" data-od-id={`post-${post.id}-fecha`}>{t.postDates[index]}</span>
+          <h3 data-od-id={`post-${post.id}-titulo`}><a href={route(post.path)} data-od-id={`post-${post.id}-enlace`}>{t.postTitles[index]}</a><span class="row-underline" aria-hidden="true"></span></h3>
+
+          <span class="log-arrow" aria-hidden="true"><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14.5V19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 19V7.5A1.5 1.5 0 0 1 5.5 6H10"/></svg></span>
+        </article>)}</div>
+      </div>
+    </section>
+    <section class="section section-contact" id="contacto" data-od-id="contacto">
+      <div class="container"><div class="bento">
+        <div class="tile-cta c7" data-reveal data-od-id="contacto-cta">
+          <div class="contact-orb" id="contact-orb-anchor">
+            <div class="figure-target" hidden tabindex="-1" role="group" data-object-target="contact" aria-label={t.contactObject} aria-describedby="figure-hint-contact"><span class="sr-only" id="figure-hint-contact">{t.interactionHint}</span></div>
+            <svg class="contact-orb__svg" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+              <path class="contact-orb__rear" d="M20 35h80v52H20zM18 33l2 2m82-2-2 2m2 50-2 2m-82-2 2 2"/>
+              <path d="M18 33h84v50H18z"/><path class="decoration-accent" d="m18 33 42 30 42-30"/>
+            </svg>
+          </div>
+          <p class="eyebrow eyebrow-tile" data-od-id="contacto-eyebrow">{t.contact}</p>
+          <h2 class="h2" data-od-id="contacto-title">{t.contactFirst} <em>{t.contactEmphasis}</em>?</h2>
+          <p class="lead" data-od-id="contacto-lead">{t.contactLead}</p>
+          <div class="hero-cta">
+            <button class="btn btn-primary icon-label" type="button" id="abrir-contacto" data-od-id="contacto-abrir"><span class="magnet-inner" data-magnet>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>{t.writeEmail}
+            </span></button>
+            <a class="contact-mail" href="mailto:jean.ayala.viera@gmail.com" data-od-id="contacto-mailto">{t.directEmail}</a>
+          </div>
+
+          <p class="meta" data-od-id="contacto-nota">{t.contactNote}</p>
+        </div>
+        <div class="contact-panel c5" data-reveal="right" data-reveal-delay="120" data-od-id="contacto-enlaces">
+          <h3 class="tile-title" data-od-id="contacto-enlaces-title">{t.contactDetails}</h3>
+          <ul class="contact-list" data-od-id="contacto-lista">
+            <li><span class="meta icon-label"><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>{t.email}</span><a href="mailto:jean.ayala.viera@gmail.com" data-od-id="contacto-lista-mail">jean.ayala.viera@gmail.com</a></li>
+            {['linkedin', 'github', 'instagram'].map((id) => {
+              const social = socials.find((entry) => entry.id === id)!;
+              return <li><span class="meta icon-label"><svg class="icon icon-social" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d={socialPaths[social.id]}/></svg>{social.name}</span>
+                <a href={social.url} target="_blank" rel="noopener noreferrer" data-od-id={`contacto-lista-${social.id}`}>{social.contact}<svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14.5V19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 19V7.5A1.5 1.5 0 0 1 5.5 6H10"/></svg></a>
+              </li>;
+            })}
+          </ul>
+          <div class="row row-wrap">
+            <button class="btn btn-secondary btn-sm icon-label" type="button" id="copiar-email" data-od-id="contacto-copiar"><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M15 6H6.5A2.5 2.5 0 0 0 4 8.5V15"/></svg>{t.copyEmail}</button>
+            <a class="btn btn-secondary btn-sm icon-label" href="/resume_es.pdf" target="_blank" rel="noopener noreferrer" data-od-id="contacto-cv"><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3h7.5l4 4v13.5h-11.5z"/><path d="M14 3v4.2h4"/><path d="M9.5 13h5.5M9.5 16.5h4"/></svg>{t.viewCV}</a>
+            <a class="btn btn-secondary btn-sm icon-label" href="/resume.pdf" target="_blank" rel="noopener noreferrer" data-od-id="contacto-cv-en"><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3h7.5l4 4v13.5h-11.5z"/><path d="M14 3v4.2h4"/><path d="M9.5 13h5.5M9.5 16.5h4"/></svg>{t.viewCVEn}</a>
+          </div>
+          <p class="meta" id="copy-status" role="status" aria-live="polite" data-od-id="contacto-copy-status"></p>
+        </div>
+      </div></div>
+    </section>
+  </main>
+  <dialog id="contacto-dialog" class="dialog" aria-labelledby="dialog-titulo" data-od-id="dialog-contacto">
+    <form id="contacto-form" class="dialog-form">
+      <div class="row-between"><h2 class="dialog-title" id="dialog-titulo" data-od-id="dialog-titulo">{t.writeEmail}</h2><button class="btn btn-ghost btn-sm" type="button" id="cerrar-contacto" aria-label={t.closeForm} data-od-id="dialog-cerrar">{t.close}</button></div>
+      <div class="field"><label for="f-nombre" data-od-id="dialog-label-nombre">{t.name} <span class="req">{t.required80}</span></label><input class="input" id="f-nombre" name="nombre" type="text" required minlength="2" maxlength="80" autocomplete="name" autofocus data-od-id="dialog-input-nombre" /></div>
+      <div class="field"><label for="f-correo" data-od-id="dialog-label-correo">{t.yourEmail} <span class="req">{t.required120}</span></label><input class="input" id="f-correo" name="correo" type="email" required maxlength="120" autocomplete="email" data-od-id="dialog-input-correo" /></div>
+      <div class="field"><label for="f-asunto" data-od-id="dialog-label-asunto">{t.subject} <span class="req">{t.max120}</span></label><input class="input" id="f-asunto" name="asunto" type="text" maxlength="120" value={t.defaultSubject} data-od-id="dialog-input-asunto" /></div>
+      <div class="field"><label for="f-mensaje" data-od-id="dialog-label-mensaje">{t.message} <span class="req">{t.required600}</span></label><textarea class="textarea" id="f-mensaje" name="mensaje" required minlength="10" maxlength="600" aria-describedby="f-mensaje-ayuda" data-od-id="dialog-input-mensaje"></textarea><p class="field-help" id="f-mensaje-ayuda" data-od-id="dialog-ayuda-mensaje">{t.messageHelp}</p></div>
+      <div class="dialog-actions">
+        <button class="btn btn-primary icon-label" type="submit" data-od-id="dialog-enviar"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>{t.openEmailApp}</button>
+        <a class="btn btn-ghost icon-label" href="/resume_es.pdf" target="_blank" rel="noopener noreferrer" data-od-id="dialog-cv"><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.5 3h7.5l4 4v13.5h-11.5z"/><path d="M14 3v4.2h4"/><path d="M9.5 13h5.5M9.5 16.5h4"/></svg>{t.viewCV}</a>
+      </div>
+      <p class="meta" id="form-status" role="status" aria-live="polite" data-od-id="dialog-status"></p>
+    </form>
+  </dialog>
+  <footer class="pagefoot" data-od-id="footer"><div class="container row-between">
+    <p class="meta" data-od-id="footer-firma">{t.footerSignature}</p>
+    <nav class="footer-links" aria-label={t.contactLinks} data-od-id="footer-enlaces">
+      <a href="mailto:jean.ayala.viera@gmail.com" data-od-id="footer-mail"><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3.5 7l8.5 6 8.5-6"/></svg>{t.email}</a>
+      {socials.slice(0, 2).map((social) => <a href={social.url} target="_blank" rel="noopener noreferrer" data-od-id={`footer-${social.id}`}><svg class="icon icon-social" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" focusable="false"><path d={socialPaths[social.id]}/></svg>{social.name}</a>)}
+      <a href={route('/blog')} data-od-id="footer-blog"><svg class="icon icon-sm" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 4.5h9.5L19 9v10.5H5z"/><path d="M14.5 4.5V9H19"/><path d="M8 12h8M8 15.5h8"/></svg>{t.blog}</a>
+      <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">{t.cvEnglish}</a><a href="/resume_es.pdf" target="_blank" rel="noopener noreferrer">{t.cvSpanish}</a>
+    </nav>
+  </div></footer>
+</PortfolioLayout>
+
+<script>
+  import '../scripts/achievements-motion.mjs';
+</script>
+
+<style>
+  .achievement-heading { max-width: 52ch; margin-bottom: clamp(24px, 4vw, 48px); }
+  .achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+    border-block: 1px solid var(--border);
+    background: rgb(14 14 18 / .94);
+  }
+  .achievement-panel {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    padding: clamp(24px, 3vw, 44px);
+  }
+  .achievement-panel + .achievement-panel { border-inline-start: 1px solid var(--border); }
+  .achievement-masthead {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 42px;
+    width: 100%;
+    margin-bottom: 28px;
+  }
+  .achievement-category {
+    margin: 0;
+    color: var(--lavender);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: .06em;
+  }
+  .achievement-logo-surface { max-width: 100%; flex: 0 1 175px; }
+  .achievement-logo { display: block; width: 175px; max-width: 100%; height: auto; }
+  .achievement-attribution {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px 16px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .achievement-brand {
+    margin: 0;
+    color: var(--fg);
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    overflow-wrap: anywhere;
+  }
+  .achievement-year {
+    margin: 0;
+    color: var(--lavender);
+    font-family: var(--font-mono);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .achievement-year span { margin-inline-start: 4px; font-weight: 600; }
+  /* Local atmosphere and fine geometry only; no emblem or credential. */
+  .achievement-depth {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: radial-gradient(ellipse at 100% 100%, rgb(187 165 219 / .07), transparent 65%);
+  }
+  .achievement-orbit { position: absolute; width: 280px; height: 280px; right: -180px; bottom: -110px; }
+  .achievement-ring { position: absolute; inset: 0; border: 1px solid rgb(187 165 219 / .16); border-radius: 50%; }
+  .achievement-ring--inner { inset: 36px; }
+  .achievement-node { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: rgb(187 165 219 / .35); }
+  .achievement-node--a { left: 38px; top: 42px; }
+  .achievement-node--b { left: 6px; top: 116px; }
+  .achievement-node--c { left: 82px; top: 94px; }
+  .achievement-title {
+    margin: 0 0 20px;
+    color: var(--fg);
+    font-family: var(--font-display);
+    font-size: clamp(38px, 4vw, 52px);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -.035em;
+    overflow-wrap: anywhere;
+    text-wrap: balance;
+  }
+  .achievement-statement {
+    max-width: 36ch;
+    margin: 0 0 28px;
+    color: var(--fg);
+    font-size: var(--fs-lead);
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+  .achievement-link {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap-sm);
+    min-height: 44px;
+    max-width: 100%;
+    padding: var(--gap-xs) 0;
+    color: var(--fg);
+    font-family: var(--font-mono);
+    font-size: var(--fs-meta);
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    transition: color var(--dur-micro) ease;
+  }
+  .achievement-link:hover { color: var(--lavender); }
+  .achievement-link:focus-visible { outline: 2px solid var(--lavender); outline-offset: 4px; }
+  @media (max-width: 760px) {
+    .achievement-grid { grid-template-columns: 1fr; }
+    .achievement-panel + .achievement-panel { border-inline-start: 0; border-block-start: 1px solid var(--border); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .achievement-link { transition: none; }
+  }
+</style>

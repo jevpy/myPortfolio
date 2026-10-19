@@ -5,10 +5,13 @@ import "../styles/globals.css";
 import "../styles/styles.css";
 import { SparklesCore } from "@/components/ui/sparkles";
 
-const { description, title } = Astro.props;
+import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import type { Locale } from '../i18n/routes';
+const { description, title, locale = 'en' } = Astro.props as { description: string; title: string; locale?: Locale };
+const pageUrl = new URL(Astro.url.pathname, 'https://onecodesite.vercel.app').href;
 ---
 
-<html lang="en">
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.png" />
@@ -22,7 +25,8 @@ const { description, title } = Astro.props;
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://onecodesite.vercel.app" />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:locale" content={locale === 'es' ? 'es_ES' : 'en_US'} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta
@@ -32,7 +36,7 @@ const { description, title } = Astro.props;
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://onecodesite.vercel.app" />
+    <meta property="twitter:url" content={pageUrl} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta
@@ -40,7 +44,6 @@ const { description, title } = Astro.props;
       content="https://onecodesite.vercel.app/public/logo.png"
     />
 
-    <link rel="stylesheet" href="assets/hugeicons/hugeicons-font.css" />
     <link
       href="https://fonts.cdnfonts.com/css/nevermind-semi-serif"
       rel="stylesheet"
@@ -63,7 +66,8 @@ const { description, title } = Astro.props;
       </div>
 
       <div class="container mx-auto min-h-[80dvh] mb-[78px]">
-        <Header />
+        <div class="px-4 py-2"><LanguageSwitcher locale={locale} /></div>
+        <Header locale={locale} />
         <section class="">
           <slot />
         </section>

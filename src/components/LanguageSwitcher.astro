@@ -1,0 +1,27 @@
+---
+import { localizedPath, type Locale } from '../i18n/routes';
+interface Props { locale: Locale; path?: string }
+const { locale, path = Astro.url.pathname + Astro.url.search } = Astro.props;
+---
+<nav class="language-switcher" aria-label={locale === 'es' ? 'Idioma' : 'Language'}>
+  <a href={localizedPath(path, 'en')} lang="en" hreflang="en" aria-current={locale === 'en' ? 'page' : undefined} data-language-link>English</a>
+  <a href={localizedPath(path, 'es')} lang="es" hreflang="es" aria-current={locale === 'es' ? 'page' : undefined} data-language-link>Español</a>
+</nav>
+<script>
+  // Keep the counterpart pathname, carrying current query and client-only fragment.
+  function syncLanguageFragments() {
+    document.querySelectorAll<HTMLAnchorElement>('[data-language-link]').forEach((link) => {
+      const destination = new URL(link.href);
+      destination.search = window.location.search;
+      destination.hash = window.location.hash;
+      link.href = destination.href;
+    });
+  }
+  syncLanguageFragments();
+  window.addEventListener('hashchange', syncLanguageFragments);
+</script>
+<style>
+  .language-switcher { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; }
+  .language-switcher a { display: inline-flex; align-items: center; min-height: 44px; font-size: 13px; }
+  .language-switcher a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
+</style>

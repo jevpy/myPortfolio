@@ -1,80 +1,42 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import "../styles/globals.css";
-import "../styles/styles.css";
-
-const { title, description } = Astro.props;
+import BlogChrome from '../components/BlogChrome.astro';
+import PortfolioChatbot from '../components/PortfolioChatbot.astro';
+import PortfolioMusic from '../components/PortfolioMusic.astro';
+import '../styles/portfolio.css';
+import '../styles/blog.css';
+import { localizedPath, type Locale } from '../i18n/routes';
+interface Props {
+  title: string; description: string; locale?: Locale; image?: string;
+  publishedAt?: string; type?: 'website' | 'article';
+}
+const { title, description, locale = 'en', image, publishedAt, type = 'website' } = Astro.props;
+const origin = 'https://onecodesite.vercel.app';
+const pageUrl = new URL(Astro.url.pathname, origin).href;
+const imageUrl = image ? new URL(image, origin).href : undefined;
 ---
-
-<html lang="en">
+<!doctype html>
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#080910" />
     <link rel="icon" type="image/x-icon" href="/favicon.png" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
-    <meta name="theme-color" content="#110420" />
-
-    <!-- Primary Meta Tags -->
     <title>{title}</title>
-    <meta name="title" content={title} />
     <meta name="description" content={description} />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://onecodesite.vercel.app" />
+    <link rel="canonical" href={pageUrl} />
+    <link rel="alternate" hreflang="en" href={new URL(localizedPath(Astro.url.pathname, 'en'), origin).href} />
+    <link rel="alternate" hreflang="es" href={new URL(localizedPath(Astro.url.pathname, 'es'), origin).href} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:locale" content={locale === 'es' ? 'es_ES' : 'en_US'} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta
-      property="og:image"
-      content="https://onecodesite.vercel.app/public/logo.png"
-    />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://onecodesite.vercel.app" />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta
-      property="twitter:image"
-      content="https://onecodesite.vercel.app/public/logo.png"
-    />
-
-    <link
-      href="https://fonts.cdnfonts.com/css/nevermind-semi-serif"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/hugeicons/hugeicons-font.css" />
-    <style>
-      ul,
-      ol {
-        padding: 0;
-        margin: 0;
-      }
-
-      .wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        min-height: 100vh;
-      }
-
-      .main {
-        flex-grow: 1;
-      }
-    </style>
+    {imageUrl && <meta property="og:image" content={imageUrl} />}
+    {publishedAt && <meta property="article:published_time" content={new Date(publishedAt).toISOString()} />}
+    <meta name="twitter:card" content={imageUrl ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {imageUrl && <meta name="twitter:image" content={imageUrl} />}
   </head>
-
-  <body>
-    <div
-      class="space-y-3.5 px-4 pb-0 md:px-8 group-[h2]:my-8 min-h-[80dvh] mb-[78px]">
-      <Header />
-      <section class="main w-full">
-        <slot />
-      </section>
-      <!-- <Footer /> -->
-    </div>
-  </body>
+  <body class="blog-body"><BlogChrome locale={locale}><slot /></BlogChrome><PortfolioChatbot locale={locale} /><PortfolioMusic locale={locale} /></body>
 </html>

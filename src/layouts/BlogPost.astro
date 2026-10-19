@@ -1,115 +1,24 @@
 ---
-import BlogLayout from "./BlogLayout.astro";
-
+import BlogLayout from './BlogLayout.astro';
+import { localeFromLang, localizedPath } from '../i18n/routes';
+import { postSummaries } from '../i18n/content';
+import { blogCopy, blogDate } from '../i18n/blog';
 const { frontmatter } = Astro.props;
+const locale = localeFromLang(frontmatter.locale ?? 'en');
+const filename = Astro.url.pathname.split('/').filter(Boolean).pop() ?? '';
+const description = frontmatter.description || postSummaries[locale][filename] || '';
+const t = blogCopy[locale];
 ---
-
-<style is:global>
-  strong {
-    color: #e4d1e5;
-  }
-
-  h1 {
-    text-align: center;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin: 1.75rem 0.5rem;
-    color: white;
-  }
-
-  pre {
-    padding: 1rem;
-    max-width: 500px;
-    margin: 2rem auto;
-  }
-
-  blockquote {
-    max-width: 700px;
-    padding: 1rem;
-    border: thin solid purple;
-    border-radius: 0.5rem;
-    margin: 1rem auto;
-  }
-
-  table {
-    padding: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  th {
-    text-align: left;
-  }
-
-  thead th {
-    width: calc(100% / 3);
-  }
-
-  thead th,
-  tbody td {
-    padding: 1rem 0.5rem;
-  }
-
-  tbody > tr:nth-of-type(Odd) {
-    background-color: rgb(30, 13, 34);
-  }
-
-  .blog-post a {
-    text-decoration: underline;
-    color: rgb(244, 188, 244);
-  }
-
-  a > img {
-    width: 500px;
-  }
-
-  ol,
-  ul {
-    width: calc(100% - 4rem);
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  ol {
-    list-style-type: decimal;
-  }
-
-  ul {
-    list-style-type: disc;
-  }
-
-  p {
-    margin: 1rem 0.5rem;
-    opacity: 0.9;
-    line-height: 1.8;
-  }
-
-  @media screen and (min-width: 48em) {
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      margin: 1.75rem 0.25rem;
-    }
-
-    p {
-      margin: 1rem;
-    }
-  }
-</style>
-
-<BlogLayout title={frontmatter.title} description={frontmatter.description}>
-  <section
-    class="blog-post break-words lg:max-w-[1000px] lg:mx-auto  mb-[78px]">
-    <slot />
-  </section>
+<BlogLayout locale={locale} title={frontmatter.title} description={description} image={frontmatter.image} publishedAt={frontmatter.date} type="article">
+  <article class="blog-detail">
+    <div class="blog-detail-meta">
+      <a class="blog-back" href={localizedPath('/blog', locale)}><span aria-hidden="true">←</span> {t.back}</a>
+      <p class="blog-meta">{t.published} <time datetime={frontmatter.date}>{blogDate(frontmatter.date, locale)}</time></p>
+    </div>
+    <!-- The preserved Markdown body owns the only H1 and its original heading IDs. -->
+    <div class="blog-prose"><slot /></div>
+    <nav class="blog-detail-end" aria-label={t.back}>
+      <a class="blog-back" href={localizedPath('/blog', locale)}><span aria-hidden="true">←</span> {t.back}</a>
+    </nav>
+  </article>
 </BlogLayout>

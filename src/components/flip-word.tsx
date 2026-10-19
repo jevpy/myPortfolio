@@ -1,12 +1,10 @@
 import { FlipWords } from "./ui/flip-words";
 
-export function FlipWord() {
-  const words = [
-    "Expert in writing clean, efficient code",
-    "Passionate about delivering high-quality, effective code",
-    "Built scalable solutions that grow with client demands",
-    "Delivered well-structured code that ensures client satisfaction and performance",
-  ];
+import type { Locale } from '../i18n/routes';
+import { legacy } from '../i18n/legacy';
+
+export function FlipWord({ locale = 'en' }: { locale?: Locale }) {
+  const words = legacy[locale].phrases;
 
   return (
     <div className="flex justify-center items-center px-4">
