@@ -1,0 +1,115 @@
+/* Widget-only scope: navigation (40), its backdrop (30), and skip links (50) remain above it. */
+.portfolio-chatbot {
+  --chatbot-viewport-height: 100dvh;
+  --chatbot-keyboard-offset: 0px;
+  --chatbot-ink: var(--fg, #f7f5ef);
+  --chatbot-muted: var(--muted, #cfccd2);
+  --chatbot-accent: var(--lavender, #C4B5FD);
+  --chatbot-base: var(--bg, #080910);
+  position: relative;
+  min-height: 96px; /* End-of-page space keeps the closed launcher off footer links. */
+  color: var(--chatbot-ink);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  pointer-events: none;
+}
+.portfolio-chatbot [hidden] { display: none !important; }
+.portfolio-chatbot button, .portfolio-chatbot input { font: inherit; }
+.portfolio-chatbot button {
+  min-width: 44px; min-height: 44px; padding: 10px 12px;
+  border: 1px solid #4c4957; border-radius: 12px;
+  color: var(--chatbot-ink); background: var(--surface, #202022); cursor: pointer;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+.portfolio-chatbot button:hover { border-color: var(--chatbot-accent); background: #292632; }
+.portfolio-chatbot button:disabled { opacity: .65; cursor: wait; }
+.portfolio-chatbot :is(button, input, a, [tabindex]):focus-visible {
+  outline: 2px solid var(--chatbot-accent); outline-offset: 3px;
+}
+.portfolio-chatbot .chatbot-launcher, .portfolio-chatbot .chatbot-panel {
+  position: fixed; z-index: 20; right: max(16px, env(safe-area-inset-right));
+  bottom: calc(max(16px, env(safe-area-inset-bottom)) + var(--chatbot-keyboard-offset));
+  pointer-events: auto;
+  box-shadow: 0 16px 56px #0008;
+}
+.portfolio-chatbot .chatbot-launcher {
+  display: flex; align-items: center; gap: 10px; border-radius: 28px;
+  min-height: 52px; padding-inline: 18px; background: #1c1a25; border-color: #807499;
+}
+/* Finite decorative turns stay scoped to the widget, never the header marks. */
+.portfolio-chatbot .chatbot-sphere {
+  display: block; flex: 0 0 auto; color: #fff;
+  transform-origin: center; pointer-events: none;
+}
+.portfolio-chatbot .chatbot-sphere--launcher { width: 28px; height: 28px; animation: chatbot-sphere-intro 900ms ease-out 1; }
+.portfolio-chatbot .chatbot-sphere--avatar { width: 44px; height: 44px; }
+.portfolio-chatbot .chatbot-launcher:is(:hover, :focus-visible) .chatbot-sphere,
+.portfolio-chatbot .chatbot-panel:not([hidden]) .chatbot-sphere { animation: chatbot-sphere-turn 900ms ease-out 1; }
+.portfolio-chatbot .chatbot-panel {
+  display: flex; flex-direction: column; gap: 14px;
+  width: min(432px, calc(100vw - 32px));
+  height: min(720px, calc(var(--chatbot-viewport-height) - 112px));
+  min-height: min(320px, calc(var(--chatbot-viewport-height) - 112px));
+  max-height: calc(var(--chatbot-viewport-height) - 112px);
+  padding: 20px; box-sizing: border-box;
+  border: 1px solid #514a63; border-radius: 24px;
+  background: linear-gradient(145deg, #1f1d29, var(--chatbot-base) 42%);
+  overflow: auto; overscroll-behavior: contain;
+  animation: chatbot-enter 220ms ease-out both;
+}
+.portfolio-chatbot .chatbot-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-bottom: 16px; border-bottom: 1px solid #36323f; }
+.portfolio-chatbot .chatbot-brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.portfolio-chatbot .chatbot-brand > div { min-width: 0; overflow-wrap: anywhere; }
+.portfolio-chatbot .chatbot-identity { margin: 0 0 3px; color: var(--chatbot-muted); font-family: var(--font-mono, monospace); font-size: 10px; line-height: 1.5; letter-spacing: .02em; }
+.portfolio-chatbot .chatbot-heading h2 { margin: 0; font-family: var(--font-display, inherit); font-size: 19px; line-height: 1.2; font-weight: 600; letter-spacing: -.02em; }
+.portfolio-chatbot .chatbot-close { display: grid; place-items: center; flex-shrink: 0; padding: 0; background: transparent; border-color: transparent; }
+.portfolio-chatbot .chatbot-welcome p { margin: 0; max-width: 22ch; font-family: var(--font-display, inherit); font-size: 27px; line-height: 1.15; letter-spacing: -.025em; }
+.portfolio-chatbot .chatbot-transcript {
+  flex: 1 1 160px; min-height: 84px; overflow-y: auto;
+  overscroll-behavior: contain; scrollbar-width: thin;
+  scrollbar-color: #635b76 transparent; padding: 4px;
+}
+.portfolio-chatbot .chatbot-message { max-width: 94%; padding: 14px; margin-bottom: 14px; background: #1c1c23; border: 1px solid #35313f; border-radius: 4px 16px 16px; overflow-wrap: anywhere; }
+.portfolio-chatbot .chatbot-message--user { margin-left: auto; background: #2d263e; border-color: #544666; border-radius: 16px 4px 16px 16px; }
+.portfolio-chatbot .chatbot-message--notice { max-width: 100%; padding: 0; color: var(--chatbot-muted); background: transparent; border: 0; }
+.portfolio-chatbot .chatbot-message strong { display: block; margin-bottom: 6px; font-family: var(--font-mono, monospace); font-weight: 400; font-size: 11px; color: var(--chatbot-accent); }
+.portfolio-chatbot .chatbot-message p { margin: 0; white-space: pre-wrap; line-height: 1.7; }
+.portfolio-chatbot .chatbot-message p + p { margin-top: 12px; }
+.portfolio-chatbot .chatbot-message a { display: inline-flex; align-items: center; min-height: 44px; margin: 4px 14px 0 0; color: var(--chatbot-accent); text-decoration: underline; text-underline-offset: 4px; }
+.portfolio-chatbot .chatbot-presets { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.portfolio-chatbot .chatbot-presets button { text-align: left; background: #19181e; }
+.portfolio-chatbot .chatbot-presets button:hover { background: #272330; }
+.portfolio-chatbot .chatbot-preset-label { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-weight: 600; }
+.portfolio-chatbot .chatbot-preset-label > span { color: var(--chatbot-accent); font-weight: 400; }
+.portfolio-chatbot .chatbot-preset-description { display: block; margin-top: 3px; color: var(--chatbot-muted); font-size: 11px; line-height: 1.5; }
+/* Keep the same four local actions available, with more reading space after the first question. */
+.portfolio-chatbot[data-conversation="true"] .chatbot-welcome,
+.portfolio-chatbot[data-conversation="true"] .chatbot-preset-description { display: none; }
+.portfolio-chatbot .chatbot-status { margin: 0; color: var(--chatbot-accent); font-size: 12px; }
+.portfolio-chatbot .chatbot-status:empty { display: none; }
+.portfolio-chatbot .chatbot-contact { display: inline-flex; align-items: center; min-height: 44px; color: var(--chatbot-accent); text-underline-offset: 4px; }
+.portfolio-chatbot input:disabled { opacity: .65; cursor: not-allowed; }
+.portfolio-chatbot .chatbot-form { margin: 0; padding-top: 14px; border-top: 1px solid #36323f; }
+.portfolio-chatbot .chatbot-form label { display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600; }
+.portfolio-chatbot .chatbot-input-row { display: flex; gap: 8px; }
+.portfolio-chatbot .chatbot-input-row input { width: 100%; min-width: 0; min-height: 48px; padding: 10px 12px; box-sizing: border-box; background: var(--chatbot-base); color: var(--chatbot-ink); border: 1px solid #6b617c; border-radius: 12px; font-size: 16px; }
+.portfolio-chatbot .chatbot-input-row input::placeholder { color: #bcb5ca; }
+.portfolio-chatbot .chatbot-input-row button { display: flex; align-items: center; justify-content: center; gap: 6px; color: var(--chatbot-base); background: var(--chatbot-accent); border-color: var(--chatbot-accent); font-weight: 600; }
+.portfolio-chatbot .chatbot-input-row button:hover { background: #ded4ff; }
+@keyframes chatbot-sphere-intro { from { transform: rotate(-90deg); } to { transform: rotate(0deg); } }
+@keyframes chatbot-sphere-turn { from { transform: rotate(0deg); } to { transform: rotate(180deg); } }
+@keyframes chatbot-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 520px) {
+  .portfolio-chatbot .chatbot-launcher { min-height: 48px; padding: 10px 14px; font-size: 12px; }
+  .portfolio-chatbot .chatbot-panel { padding: 16px; gap: 12px; border-radius: 20px; }
+  .portfolio-chatbot .chatbot-identity { font-size: 9px; }
+  .portfolio-chatbot .chatbot-heading h2 { font-size: 17px; }
+}
+@media (max-width: 360px) {
+  .portfolio-chatbot .chatbot-brand { gap: 8px; }
+  .portfolio-chatbot .chatbot-input-row button svg { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-chatbot *, .portfolio-chatbot *::before, .portfolio-chatbot *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

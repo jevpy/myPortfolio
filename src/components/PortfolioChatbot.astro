@@ -1,0 +1,58 @@
+---
+import { homeCopy, projects } from '../i18n/home';
+import type { Locale } from '../i18n/routes';
+import { createKnowledge } from '../lib/chatbot/knowledge.mjs';
+import { chatbotCopy } from '../i18n/chatbot.mjs';
+import BrandSphere from './BrandSphere.astro';
+import '../styles/chatbot.css';
+interface Props { locale?: Locale }
+const { locale = 'en' } = Astro.props;
+const copy = chatbotCopy[locale];
+// Astro escapes attribute values; serialize only this locale's explicit public projection.
+const knowledge = { [locale]: createKnowledge({ homeCopy, projects })[locale] };
+---
+<div class="portfolio-chatbot" data-chatbot data-locale={locale} data-knowledge={JSON.stringify(knowledge)}>
+  <button class="chatbot-launcher" type="button" data-chatbot-launcher aria-label={copy.open} aria-expanded="false" aria-controls="portfolio-chatbot-panel">
+    <BrandSphere class="chatbot-sphere chatbot-sphere--launcher" />
+    <span>{copy.title}</span>
+  </button>
+  <section id="portfolio-chatbot-panel" class="chatbot-panel" data-chatbot-panel role="dialog" aria-modal="false" aria-labelledby="portfolio-chatbot-title" hidden>
+    <header class="chatbot-heading">
+      <div class="chatbot-brand">
+        <BrandSphere class="chatbot-sphere chatbot-sphere--avatar" />
+        <div>
+          <p class="chatbot-identity">{copy.identity}</p>
+          <h2 id="portfolio-chatbot-title">{copy.title}</h2>
+        </div>
+      </div>
+      <button class="chatbot-close" type="button" data-chatbot-close aria-label={copy.close}>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+      </button>
+    </header>
+    <div class="chatbot-welcome">
+      <p>{copy.welcome}</p>
+    </div>
+    <div class="chatbot-transcript" data-chatbot-log role="log" aria-label={copy.transcript} aria-live="polite" aria-relevant="additions" tabindex="0"></div>
+    <div class="chatbot-presets" role="group" aria-label={copy.options}>
+      {copy.presets.map(p => <button type="button" data-chatbot-preset={p.topic}>
+        <span class="chatbot-preset-label">{p.label}<span aria-hidden="true">↗</span></span>
+        <span class="chatbot-preset-description">{p.description}</span>
+      </button>)}
+    </div>
+    <p class="chatbot-status" data-chatbot-status role="status" aria-live="polite"></p>
+    <a class="chatbot-contact" data-chatbot-contact href={`mailto:${knowledge[locale].email}`} hidden>{copy.completion}</a>
+    <form class="chatbot-form" data-chatbot-form aria-busy="false">
+      <label for="portfolio-chatbot-question">{copy.inputLabel}</label>
+      <div class="chatbot-input-row">
+        <input id="portfolio-chatbot-question" data-chatbot-input type="text" maxlength="1000" required autocomplete="off" placeholder={copy.placeholder} />
+        <button type="submit" data-chatbot-send>
+          <span>{copy.send}</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg>
+        </button>
+      </div>
+    </form>
+  </section>
+</div>
+<script>
+  import '../scripts/portfolio-chatbot.mjs';
+</script>
