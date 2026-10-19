@@ -4,7 +4,7 @@ import { blogCopy, blogDate, blogTopics, resolveBlogTopic, filterBlogArticles, b
 import { postSummaries } from '../i18n/content';
 import type { Locale } from '../i18n/routes';
 import snapshotData from '../data/hacker-news.json';
-import { getRecentArticles } from '../data/hacker-news.mjs';
+import { getArticles } from '../data/hacker-news.mjs';
 import { paginateBlogArticles, readingPageHref, readingTopicHref } from '../data/blog-pagination.mjs';
 import { displayArticleTitle, articleHostname } from '../data/article-presentation.mjs';
 const { locale = 'en' } = Astro.props as { locale?: Locale };
@@ -14,7 +14,7 @@ const spanishPosts = await Astro.glob('../pages/es/posts/*.md');
 const allPosts = (locale === 'es' ? spanishPosts : englishPosts).sort(
   (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
 );
-const recent = getRecentArticles(snapshotData, new Date());
+const recent = getArticles(snapshotData, new Date());
 const selected = resolveBlogTopic(Astro.url.searchParams.get('topic'));
 const articles = filterBlogArticles(recent, selected);
 const pagination = paginateBlogArticles(articles, Astro.url.searchParams.get('page'));

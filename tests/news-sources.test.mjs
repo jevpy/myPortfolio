@@ -104,13 +104,13 @@ test('all 35 mixed-source six-category candidates survive except canonical dupli
  assert.deepEqual(normalizeSnapshot(snapshot),snapshot);
  assert.throws(()=>validateSnapshot({...snapshot,selection:{...snapshot.selection,maxArticles:10}}));
  let stored;
- assert.deepEqual(await refreshHackerNews({now:()=>new Date(date),providers,fileSystem:{writeFile:async(_path,bytes)=>{stored=bytes;},rename:async()=>{}}}),snapshot);
+ assert.deepEqual(await refreshHackerNews({now:()=>new Date(date),providers,fileSystem:{readFile:async()=>{throw Object.assign(Error('missing'),{code:'ENOENT'});},writeFile:async(_path,bytes)=>{stored=bytes;},rename:async()=>{}}}),snapshot);
  assert.deepEqual(JSON.parse(stored),snapshot);
 });
 
 test('all source failures preserve exact lastgood bytes, no leaked upstream messages',async()=>{
  for(const failed of ['hn','devto','infoq']){let writes=0;const fs={writeFile:async()=>{writes++;},rename:async()=>{writes++;}};const providers=Object.fromEntries(['hn','devto','infoq'].map(s=>[s,async()=>{if(s===failed)throw Error('secret upstream URL');return [];} ]));await assert.rejects(refreshHackerNews({now:()=>new Date(date),providers,fileSystem:fs}),new RegExp(`^Error: Source ${failed} failed$`));assert.equal(writes,0);}
- let stored;const snapshot=await refreshHackerNews({now:()=>new Date(date),providers:{hn:async()=>[],devto:async()=>[],infoq:async()=>[]},fileSystem:{writeFile:async(_p,b)=>{stored=b;},rename:async()=>{}}});assert.equal(snapshot.articles.length,0);assert.equal(JSON.parse(stored).schemaVersion,4);
+ let stored;const snapshot=await refreshHackerNews({now:()=>new Date(date),providers:{hn:async()=>[],devto:async()=>[],infoq:async()=>[]},fileSystem:{readFile:async()=>{throw Object.assign(Error('missing'),{code:'ENOENT'});},writeFile:async(_p,b)=>{stored=b;},rename:async()=>{}}});assert.equal(snapshot.articles.length,0);assert.equal(JSON.parse(stored).schemaVersion,4);
 });
 test('stream byte cap, pinned hosts, permanent failures, retries and body timeout',async()=>{
  let reads=0;await assert.rejects(requestText('https://dev.to/api/articles',{attempts:3,maxBytes:3,fetchImpl:async()=>({ok:true,body:{getReader:()=>({read:async()=>{reads++;return {done:false,value:new Uint8Array(4)};},cancel:async()=>{}})}})}),/byte limit/);assert.equal(reads,1);

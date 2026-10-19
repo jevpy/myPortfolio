@@ -9,6 +9,7 @@ export const SOURCES = Object.freeze({
   infoq: Object.freeze({ name: 'InfoQ', url: 'https://www.infoq.com/', dateKind: 'published' }),
 });
 export const SOURCE = SOURCES.hn;
+// windowDays bounds collection only; stored history keeps every older article.
 export const SELECTION = Object.freeze({ windowDays: 7, order: 'newest', classifierVersion: CLASSIFIER_VERSION });
 export const safeId = value => Number.isSafeInteger(value) && value > 0;
 export const safeTime = value => Number.isFinite(value) && value >= 0 && value <= 8640000000000;
@@ -99,10 +100,10 @@ function sameShape(actual, expected) {
   return Object.keys(actual).length === keys.length && keys.every(key => Object.hasOwn(actual, key) && sameShape(actual[key], expected[key]));
 }
 export function makeArticle(input, clock) {
-  return buildArticle(input, clock, true);
+  return buildArticle(input, clock, true, true);
 }
 // The legacy path is private: it relaxes only the new destination rule, never structural validation.
-function buildArticle({ source, sourceId, title, url, eventAt, sourceTags = [] }, clock, screenDestination) {
+function buildArticle({ source, sourceId, title, url, eventAt, sourceTags = [] }, clock, screenDestination, windowed) {
   if (!Object.hasOwn(SOURCES, source) || typeof sourceId !== 'string' || !sourceId || sourceId.length > 2048 ||
       (source !== 'infoq' && (!/^[1-9]\d*$/.test(sourceId) || !safeId(Number(sourceId)))) ||
       !safeTitle(title) || !validDate(eventAt) || !Array.isArray(sourceTags) || sourceTags.length > 50 ||
@@ -110,7 +111,7 @@ function buildArticle({ source, sourceId, title, url, eventAt, sourceTags = [] }
       source === 'hn' && sourceTags.length > 0 || !Number.isFinite(clock)) throw Error('Invalid source article');
   const time = Date.parse(eventAt) / 1000;
   if (source === 'hn' && !Number.isInteger(time)) throw Error('Invalid submission precision');
-  if (!safeUrl(url) || screenDestination && !isArticleDestination(url, title) || time > clock || time < clock - WINDOW_SECONDS) return null;
+  if (!safeUrl(url) || screenDestination && !isArticleDestination(url, title) || time > clock || windowed && time < clock - WINDOW_SECONDS) return null;
   const topics = classifyArticle(title, url, sourceTags);
   if (!topics) return null;
   const dateKind = SOURCES[source].dateKind;
@@ -135,7 +136,8 @@ function validateEnvelope(value, schemaVersion, selection, screenDestination) {
       !(validDate(value.updatedAt) || value.updatedAt === null && value.articles.length === 0)) throw Error('Invalid news snapshot');
   const clock = Date.parse(value.updatedAt) / 1000;
   const articles = value.articles.map(article => {
-    const rebuilt = buildArticle(article, clock, screenDestination);
+    // Schema3 stayed a rolling window; schema4 is an accumulated history.
+    const rebuilt = buildArticle(article, clock, screenDestination, schemaVersion === 3);
     if (!rebuilt || !sameShape(article, rebuilt)) throw Error('Invalid news article');
     return rebuilt;
   });
@@ -164,6 +166,15 @@ export function normalizeSnapshot(value) {
     const legacy = validateSchema3(value);
     return validateSnapshot({ ...emptySnapshot(), updatedAt: legacy.updatedAt, articles: legacy.articles.filter(article => isArticleDestination(article.url, article.title)) });
   } catch { return emptySnapshot(); }
+}
+// Fresh rows replace stored copies with the same id; selection then drops URL duplicates.
+export function mergeHistory(fresh, previous) {
+  const ids = new Set(fresh.map(article => article.id));
+  return selectArticles([...fresh, ...previous.filter(article => !ids.has(article.id))]);
+}
+export function getArticles(snapshot, now = new Date()) {
+  const clock = new Date(now).getTime() / 1000;
+  return normalizeSnapshot(snapshot).articles.filter(article => article.time <= clock);
 }
 export function getRecentArticles(snapshot, now = new Date()) {
   const clock = new Date(now).getTime() / 1000;

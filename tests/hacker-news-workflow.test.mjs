@@ -64,7 +64,7 @@ test('guide describes bounded recent topic discovery, presentation and failure s
     'rolling seven-day', 'submission time, not verified publisher publication time',
     'ALL eligible articles found', 'without truncation', 'zero articles', '25 queries', 'two pages', '100 hits', '5,000',
     '50 logical requests', '150 requests', 'not exhaustive', 'updatedAt',
-    'not displayed', 'expired and future', 'even when a refresh fails',
+    'not displayed', 'accumulated history', 'hides only future articles', 'never silently erased', 'even when a refresh fails',
     'No source or category quotas or filler', 'originality', 'Show HN:', 'Ask HN:',
     'publisher URLs', 'last good snapshot', 'Schema version 4', 'Schema version 3 is a historical contract only', 'without `maxArticles`', 'dateKind', 'eventAt',
     'dateKind: submitted', 'dateKind: published',

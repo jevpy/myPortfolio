@@ -8,7 +8,7 @@ const en = {
   home: 'Home', skip: 'Skip to content',
   recent: 'Recent reading',
   topics: 'Browse reading by topic', all: 'All topics', shared: 'Shared', original: 'Read at source', newTab: '(opens in a new tab)',
-  empty: 'No recent links to read here yet.', emptyCategory: 'No links published or shared in this topic in the last seven days. Browse all topics or explore my notebook below.',
+  empty: 'No recent links to read here yet.', emptyCategory: 'No links published or shared in this topic yet. Browse all topics or explore my notebook below.',
   pagination: 'Reading pages', page: 'Page', previous: 'Previous', next: 'Next',
   range: (start: number, end: number, total: number) => `Showing ${start}–${end} of ${total}`,
 };
@@ -20,7 +20,7 @@ const es: BlogCopy = {
   home: 'Inicio', skip: 'Saltar al contenido',
   recent: 'Lecturas recientes',
   topics: 'Explorar lecturas por tema', all: 'Todos los temas', shared: 'Compartido', original: 'Leer en origen', newTab: '(se abre en una pestaña nueva)',
-  empty: 'Todavía no hay enlaces recientes para leer aquí.', emptyCategory: 'No hay enlaces publicados o compartidos sobre este tema en los últimos siete días. Explora todos los temas o mi cuaderno más abajo.',
+  empty: 'Todavía no hay enlaces recientes para leer aquí.', emptyCategory: 'Todavía no hay enlaces publicados o compartidos sobre este tema. Explora todos los temas o mi cuaderno más abajo.',
   pagination: 'Páginas de lecturas', page: 'Página', previous: 'Anterior', next: 'Siguiente',
   range: (start: number, end: number, total: number) => `Mostrando ${start}–${end} de ${total}`,
 };

@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { refreshHackerNews, collectHackerNews, API_BASE, SEARCH_QUERIES } from '../scripts/update-hacker-news.mjs';
-import { normalizeSnapshot, validateSnapshot, emptySnapshot, getRecentArticles, selectArticles, makeArticle, WINDOW_SECONDS } from '../src/data/hacker-news.mjs';
+import { normalizeSnapshot, validateSnapshot, emptySnapshot, getRecentArticles, getArticles, selectArticles, makeArticle, WINDOW_SECONDS } from '../src/data/hacker-news.mjs';
 import { classifyArticle } from '../src/data/article-topics.mjs';
 
 const date = new Date('2026-10-10T12:00:00.000Z');
@@ -20,9 +20,11 @@ function mockFetch(hits = [], hook) {
     return new Response(JSON.stringify(hook ? hook(parsed) : ({ hits, page: 0, nbPages: 1 })));
   };
 }
-function memoryFs(failAt) {
-  const files = new Map([['snapshot.json', 'previous bytes\n']]), calls = [];
+const PREVIOUS = `${JSON.stringify(emptySnapshot(), null, 2)}\n`;
+function memoryFs(failAt, previous = PREVIOUS) {
+  const files = new Map(previous === null ? [] : [['snapshot.json', previous]]), calls = [];
   return { files, calls,
+    async readFile(path) { if (!files.has(path)) throw Object.assign(Error('missing'), { code: 'ENOENT' }); return files.get(path); },
     async writeFile(path, bytes, options) { calls.push(['write', path, options]); if (failAt === 'write') throw Error('write failed'); files.set(path, bytes); },
     async rename(from, to) { calls.push(['rename', from, to]); if (failAt === 'rename') throw Error('rename failed'); files.set(to, files.get(from)); files.delete(from); },
     async unlink(path) { calls.push(['unlink', path]); files.delete(path); },
@@ -96,14 +98,14 @@ test('invalid response, network or failed page retains bytes without writing', a
   for (const payload of [{}, { hits: null, nbPages: 1, page: 0 }, { hits: [], nbPages: -1, page: 0 }, { hits: [], nbPages: 1, page: 7 }, { hits: [{ objectID: 'bad' }], nbPages: 1, page: 0 }, { hits: Array(101).fill(hit(1)), nbPages: 1, page: 0 }, { hits: [hit(1)], nbPages: 0, page: 0 }]) {
     const fs = memoryFs();
     await assert.rejects(refresh({ fetchImpl: mockFetch([], () => payload), fileSystem: fs }));
-    assert.equal(fs.files.get('snapshot.json'), 'previous bytes\n'); assert.equal(fs.calls.length, 0);
+    assert.equal(fs.files.get('snapshot.json'), PREVIOUS); assert.equal(fs.calls.length, 0);
   }
   const fs = memoryFs();
   await assert.rejects(refresh({ fileSystem: fs, fetchImpl: async () => { throw Error('offline'); } }), /Source hn failed/);
-  assert.equal(fs.files.get('snapshot.json'), 'previous bytes\n');
+  assert.equal(fs.files.get('snapshot.json'), PREVIOUS);
   const pageFs = memoryFs();
   await assert.rejects(refresh({ fileSystem: pageFs, fetchImpl: mockFetch([], parsed => Number(parsed.searchParams.get('page')) === 1 ? {} : { hits: Array.from({ length: 10 }, (_, i) => hit(i + 1)), page: 0, nbPages: 2 }) }));
-  assert.equal(pageFs.files.get('snapshot.json'), 'previous bytes\n');
+  assert.equal(pageFs.files.get('snapshot.json'), PREVIOUS);
   assert.equal(pageFs.calls.length, 0);
   await assert.rejects(refresh({ now: () => new Date('invalid'), fetchImpl: () => assert.fail('no fetch') }));
 });
@@ -132,7 +134,7 @@ test('HTTP retry policy and both header/body timeouts retain old bytes', async (
   for (const body of [false, true]) {
     const fs = memoryFs(); let signal;
     await assert.rejects(refresh({ concurrency: 1, fileSystem: fs, timeoutMs: 5, attempts: 1, fetchImpl: (_url, options) => { signal = options.signal; return body ? { ok: true, body: {getReader:()=>({read:()=>new Promise(()=>{}),cancel:async()=>{}})} } : new Promise(() => {}); } }), /Source hn failed/);
-    assert.equal(signal.aborted, true); assert.equal(fs.files.get('snapshot.json'), 'previous bytes\n');
+    assert.equal(signal.aborted, true); assert.equal(fs.files.get('snapshot.json'), PREVIOUS);
   }
 });
 
@@ -140,7 +142,7 @@ test('failed write/rename preserve old bytes; importing updater has no effects',
   for (const failAt of ['write', 'rename']) {
     const fs = memoryFs(failAt);
     await assert.rejects(refresh({ fileSystem: fs }), /failed/);
-    assert.equal(fs.files.get('snapshot.json'), 'previous bytes\n'); assert.equal(fs.files.size, 1);
+    assert.equal(fs.files.get('snapshot.json'), PREVIOUS); assert.equal(fs.files.size, 1);
   }
   const originalFetch = globalThis.fetch;
   globalThis.fetch = () => assert.fail('import must not fetch');
@@ -240,6 +242,47 @@ test('local seed normalizes honestly during migration', async () => {
   const seed = JSON.parse(await readFile(new URL('../src/data/hacker-news.json', import.meta.url), 'utf8'));
   if (seed.schemaVersion === 1) assert.deepEqual(normalizeSnapshot(seed), emptySnapshot());
   else assert.deepEqual(validateSnapshot(seed), seed);
-  assert.deepEqual(getRecentArticles(seed, new Date(seed.updatedAt)), seed.articles);
+  assert.deepEqual(getArticles(seed, new Date(seed.updatedAt)), seed.articles);
   assert.deepEqual(selectArticles(seed.articles), seed.articles);
+});
+
+const oldSeconds = seconds - 30 * 24 * 60 * 60;
+const oldArticle = (id, title = 'LLM agent harness') => makeArticle({ source: 'hn', sourceId: String(id), title, url: `https://example.com/old/${id}`, eventAt: new Date(oldSeconds * 1000).toISOString() }, oldSeconds);
+const historyBytes = articles => `${JSON.stringify({ ...emptySnapshot(), updatedAt: new Date(oldSeconds * 1000).toISOString(), articles }, null, 2)}\n`;
+
+test('refresh keeps every previous article and adds the new ones, newest first', async () => {
+  const fs = memoryFs(undefined, historyBytes([oldArticle(500)]));
+  const snapshot = await refresh({ fileSystem: fs, fetchImpl: mockFetch([hit(1)]) });
+  assert.deepEqual(snapshot.articles.map(a => a.id), ['hn:1', 'hn:500']);
+  assert.deepEqual(JSON.parse(fs.files.get('snapshot.json')), snapshot);
+  assert.deepEqual(validateSnapshot(snapshot), snapshot);
+  const again = await refresh({ fileSystem: fs, fetchImpl: mockFetch([]) });
+  assert.deepEqual(again.articles.map(a => a.id), ['hn:1', 'hn:500']);
+});
+
+test('a re-collected article replaces its stored copy instead of duplicating it', async () => {
+  const stale = makeArticle({ source: 'hn', sourceId: '1', title: 'Old LLM title', url: 'https://example.com/1', eventAt: new Date((seconds - 1) * 1000).toISOString() }, seconds);
+  const fs = memoryFs(undefined, historyBytes([]).replace('"updatedAt": "' + new Date(oldSeconds * 1000).toISOString() + '"', '"updatedAt": "' + date.toISOString() + '"').replace('"articles": []', `"articles": ${JSON.stringify([stale])}`));
+  const snapshot = await refresh({ fileSystem: fs, fetchImpl: mockFetch([hit(1)]) });
+  assert.deepEqual(snapshot.articles.map(a => [a.id, a.title]), [['hn:1', 'JavaScript web development 1']]);
+});
+
+test('missing history starts empty; unreadable history fails without writing', async () => {
+  const fresh = memoryFs(undefined, null);
+  assert.deepEqual((await refresh({ fileSystem: fresh })).articles.map(a => a.id), ['hn:1']);
+  for (const bytes of ['not json\n', JSON.stringify({ ...emptySnapshot(), updatedAt: date.toISOString(), articles: [{ id: 'bad' }] })]) {
+    const fs = memoryFs(undefined, bytes);
+    await assert.rejects(refresh({ fileSystem: fs }));
+    assert.equal(fs.files.get('snapshot.json'), bytes);
+    assert.equal(fs.calls.length, 0);
+  }
+});
+
+test('getArticles returns the whole history and hides only future rows', () => {
+  const snapshot = validateSnapshot({ ...emptySnapshot(), updatedAt: date.toISOString(), articles: [oldArticle(500)] });
+  assert.deepEqual(getArticles(snapshot, date), snapshot.articles);
+  assert.deepEqual(getArticles(snapshot, new Date(date.getTime() + 365 * 24 * 60 * 60 * 1000)), snapshot.articles);
+  assert.deepEqual(getArticles(snapshot, new Date((oldSeconds - 1) * 1000)), []);
+  assert.deepEqual(getArticles(snapshot, new Date('invalid')), []);
+  assert.deepEqual(getRecentArticles(snapshot, date), []);
 });

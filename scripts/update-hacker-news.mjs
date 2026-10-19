@@ -3,7 +3,7 @@ import { randomUUID } from 'node:crypto';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { API_BASE, requestJson, articleFromHit } from './hacker-news.mjs';
-import { WINDOW_SECONDS, selectArticles, emptySnapshot, validateSnapshot } from '../src/data/hacker-news.mjs';
+import { WINDOW_SECONDS, SCHEMA_VERSION, selectArticles, emptySnapshot, validateSnapshot, normalizeSnapshot, mergeHistory } from '../src/data/hacker-news.mjs';
 import { collectDevto } from './devto.mjs';
 import { collectInfoq } from './infoq.mjs';
 export { API_BASE };
@@ -83,10 +83,23 @@ export async function collectArticles({ now = new Date(), providers = PROVIDERS,
   return selectArticles(candidates);
 }
 
+// A missing file starts an empty history; an unreadable one aborts the refresh
+// so a corrupt snapshot can never silently erase the accumulated history.
+export async function readHistory(outputPath, fileSystem = fs) {
+  let bytes;
+  try { bytes = await fileSystem.readFile(outputPath, 'utf8'); }
+  catch (error) { if (error.code === 'ENOENT') return []; throw error; }
+  let value;
+  try { value = JSON.parse(bytes); }
+  catch { throw Error('Stored news history is not valid JSON'); }
+  return (value?.schemaVersion === SCHEMA_VERSION ? validateSnapshot(value) : normalizeSnapshot(value)).articles;
+}
+
 export async function refreshHackerNews({ outputPath = DEFAULT_OUTPUT, fileSystem = fs, now = () => new Date(), ...options } = {}) {
   const refreshedAt = now();
   if (!(refreshedAt instanceof Date) || !Number.isFinite(refreshedAt.getTime())) throw Error('Invalid refresh clock');
-  const articles = await collectArticles({ ...options, now: refreshedAt });
+  const fresh = await collectArticles({ ...options, now: refreshedAt });
+  const articles = mergeHistory(fresh, await readHistory(outputPath, fileSystem));
   const snapshot = validateSnapshot({ ...emptySnapshot(), updatedAt: refreshedAt.toISOString(), articles });
   const bytes = `${JSON.stringify(snapshot, null, 2)}\n`;
   const temporary = `${outputPath}.${randomUUID()}.tmp`;

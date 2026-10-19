@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { displayArticleTitle, articleHostname } from '../src/data/article-presentation.mjs';
-import { getRecentArticles, discussionUrl, validateSnapshot, isArticleDestination } from '../src/data/hacker-news.mjs';
+import { getRecentArticles, getArticles, discussionUrl, validateSnapshot, isArticleDestination } from '../src/data/hacker-news.mjs';
 import { classifyArticle, CATEGORIES } from '../src/data/article-topics.mjs';
 import { blogCopy, blogTopics, resolveBlogTopic, filterBlogArticles, blogTagLabel } from '../src/i18n/blog.ts';
 
@@ -131,7 +131,7 @@ test('all article opening links include one localized new-tab notice and safe ta
 test('current seed has eligible original destinations and honest display dates', async () => {
   const seed=JSON.parse(await readFile(new URL('../src/data/hacker-news.json',import.meta.url),'utf8'));
   assert.deepEqual(validateSnapshot(seed),seed);
-  const recent=getRecentArticles(seed,new Date(seed.updatedAt));
+  const recent=getArticles(seed,new Date(seed.updatedAt));
   assert.deepEqual(recent,seed.articles);
   for(const row of recent) assert.equal(isArticleDestination(row.url,row.title),true,row.url);
   assert.equal(blogTopics.reduce((sum,topic)=>sum+filterBlogArticles(recent,topic).length,0),recent.length);
@@ -139,7 +139,7 @@ test('current seed has eligible original destinations and honest display dates',
     assert.equal(row.dateKind,row.source==='hn'?'submitted':'published');
     assert.equal(row.eventAt,row[row.dateKind==='submitted'?'submittedAt':'publishedAt']);
   }
-  assert.deepEqual(getRecentArticles(seed,new Date(Date.parse(seed.updatedAt)+8*24*60*60*1000)),[]);
+  assert.deepEqual(getArticles(seed,new Date(Date.parse(seed.updatedAt)+8*24*60*60*1000)),seed.articles);
 });
 
 test('mixed-source dates use validated eventAt and truthful published/shared labels', () => {
@@ -161,7 +161,7 @@ test('removed reading copy has no nodes or locale fields; notebook and live filt
     assert.ok(blogCopy[locale].notebookLead);
   }
   assert.match(blog, /class="blog-lead">\{t.notebookLead\}/);
-  assert.match(blog, /getRecentArticles\(snapshotData, new Date\(\)\)/);
+  assert.match(blog, /getArticles\(snapshotData, new Date\(\)\)/);
   assert.match(blog, /filterBlogArticles\(recent, selected\)/);
   const css = await readFile(new URL('../src/styles/blog.css', import.meta.url), 'utf8');
   assert.doesNotMatch(css, /editorial-date-note|\.editorial-reading \.blog-section-head > \.blog-lead/);
@@ -222,5 +222,5 @@ test('both locales share escaped display titles and guarded publisher hostname w
   assert.match(blog, /<h3><a href=\{article\.url\} target="_blank" rel="noopener noreferrer">\{displayArticleTitle\(article\.title\)\}/);
   assert.match(blog, /\{articleHostname\(article\.url\)\}/);
   assert.doesNotMatch(blog, /new URL\(article\.url\)|set:html|innerHTML|aria-label=\{article\.title\}|\{article\.title\}/);
-  assert.match(blog, /getRecentArticles\(snapshotData, new Date\(\)\)/);
+  assert.match(blog, /getArticles\(snapshotData, new Date\(\)\)/);
 });
