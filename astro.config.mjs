@@ -16,6 +16,24 @@ const threeChunk = `_astro/three-${threeVersion}.js`;
 // https://astro.build/config
 export default defineConfig({
   integrations: [
+    {
+      // Client build only: the server bundle must keep Astro's own chunk layout,
+      // or the Vercel function cannot find its modules at runtime.
+      name: "stable-three-chunk",
+      hooks: {
+        "astro:build:setup": ({ vite, target }) => {
+          if (target !== "client") return;
+          vite.build ??= {};
+          vite.build.rollupOptions ??= {};
+          const output = vite.build.rollupOptions.output ?? {};
+          vite.build.rollupOptions.output = {
+            ...(Array.isArray(output) ? output[0] : output),
+            chunkFileNames: (chunk) =>
+              chunk.name === "three.module" ? threeChunk : "_astro/[name].[hash].js",
+          };
+        },
+      },
+    },
     tailwind(),
     react(),
     tailwind({
@@ -26,13 +44,5 @@ export default defineConfig({
   adapter: vercel(),
   vite: {
     define: { __THREE_CHUNK__: JSON.stringify(`/${threeChunk}`) },
-    build: {
-      rollupOptions: {
-        output: {
-          chunkFileNames: (chunk) =>
-            chunk.name === "three.module" ? threeChunk : "_astro/[name].[hash].js",
-        },
-      },
-    },
   },
 });
