@@ -22,8 +22,3505 @@
     "order": "newest",
     "classifierVersion": 2
   },
-  "updatedAt": "2026-10-24T12:54:13.899Z",
+  "updatedAt": "2026-10-25T13:20:23.528Z",
   "articles": [
+    {
+      "id": "devto:4915432",
+      "source": "devto",
+      "sourceId": "4915432",
+      "title": "n8n orchestrates, LangGraph writes, a human approves: an AI cold-email pipeline that can't spam",
+      "url": "https://dev.to/zhangautomation/n8n-orchestrates-langgraph-writes-a-human-approves-an-ai-cold-email-pipeline-that-cant-spam-2o8j",
+      "time": 1792933897,
+      "eventAt": "2026-10-25T13:11:37.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T13:11:37.000Z",
+      "sourceTags": [
+        "n8n",
+        "langgraph",
+        "ai",
+        "automation"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Automation Integrations"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50231179",
+      "source": "hn",
+      "sourceId": "50231179",
+      "title": "Workmux: Tmux workflow for parallel coding agents",
+      "url": "https://workmux.dev/",
+      "time": 1792933809,
+      "eventAt": "2026-10-25T13:10:09.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T13:10:09.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50231179",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4915400",
+      "source": "devto",
+      "sourceId": "4915400",
+      "title": "How I stopped my n8n WhatsApp bot from inventing prices (the \"LLM picks an ID\" pattern)",
+      "url": "https://dev.to/zhangautomation/how-i-stopped-my-n8n-whatsapp-bot-from-inventing-prices-the-llm-picks-an-id-pattern-4p1j",
+      "time": 1792933610,
+      "eventAt": "2026-10-25T13:06:50.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T13:06:50.000Z",
+      "sourceTags": [
+        "n8n",
+        "automation",
+        "ai",
+        "whatsapp"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Automation Integrations"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4915380",
+      "source": "devto",
+      "sourceId": "4915380",
+      "title": "ZenSloth: An Offline-First Bedtime Companion Built for the Art of Doing Nothing",
+      "url": "https://dev.to/aryan_mohan_71c9984118936/zensloth-an-offline-first-bedtime-companion-built-for-the-art-of-doing-nothing-3fke",
+      "time": 1792933278,
+      "eventAt": "2026-10-25T13:01:18.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T13:01:18.000Z",
+      "sourceTags": [
+        "devchallenge",
+        "hf26challenge",
+        "gemma",
+        "architecture"
+      ],
+      "primaryCategory": "Software Architecture",
+      "categories": [
+        "Software Architecture"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4915378",
+      "source": "devto",
+      "sourceId": "4915378",
+      "title": "Replacing Node-RED with a 10 MB browser editor and a start.sh",
+      "url": "https://panth.vardayinitech.in/blog/codeshell-replaces-node-red",
+      "time": 1792933269,
+      "eventAt": "2026-10-25T13:01:09.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T13:01:09.000Z",
+      "sourceTags": [
+        "docker",
+        "go",
+        "devops",
+        "opensource"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4915339",
+      "source": "devto",
+      "sourceId": "4915339",
+      "title": "Should You Build an MVP Before Your First Customer?",
+      "url": "https://dev.to/startupcafe/should-you-build-an-mvp-before-your-first-customer-4242",
+      "time": 1792932723,
+      "eventAt": "2026-10-25T12:52:03.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T12:52:03.000Z",
+      "sourceTags": [
+        "webdev",
+        "programming",
+        "startup",
+        "discuss"
+      ],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4915220",
+      "source": "devto",
+      "sourceId": "4915220",
+      "title": "How We Architected a Zero-Drift, Reactive Timezone Engine for Enterprise Applications",
+      "url": "https://dev.to/almas_hossain_cc/beyond-new-date-how-we-architected-a-zero-drift-reactive-timezone-engine-for-enterprise-179g",
+      "time": 1792930552,
+      "eventAt": "2026-10-25T12:15:52.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T12:15:52.000Z",
+      "sourceTags": [
+        "architecture",
+        "frontend",
+        "systemdesign",
+        "angular"
+      ],
+      "primaryCategory": "Software Architecture",
+      "categories": [
+        "Software Architecture"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4915091",
+      "source": "devto",
+      "sourceId": "4915091",
+      "title": "Vendorwake: the upstream changed, Gemma caught it, and a test proved it",
+      "url": "https://dev.to/shaileshvats2004/vendorwake-the-upstream-changed-gemma-caught-it-and-a-test-proved-it-3o3f",
+      "time": 1792929810,
+      "eventAt": "2026-10-25T12:03:30.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T12:03:30.000Z",
+      "sourceTags": [
+        "devchallenge",
+        "hf26challenge",
+        "opensource",
+        "ai"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4915144",
+      "source": "devto",
+      "sourceId": "4915144",
+      "title": "Your App Can Receive Email Too: Build an Email-to-Ticket Pipeline with TypeScript",
+      "url": "https://dev.to/boiliev/your-app-can-receive-email-too-build-an-email-to-ticket-pipeline-with-typescript-4ihh",
+      "time": 1792928980,
+      "eventAt": "2026-10-25T11:49:40.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T11:49:40.000Z",
+      "sourceTags": [
+        "typescript",
+        "node",
+        "webdev",
+        "tutorial"
+      ],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4915137",
+      "source": "devto",
+      "sourceId": "4915137",
+      "title": "VITI MAGAZINE SPECIAL REPORT | THE 24-MONTH COLLAPSE OF ITIL THEATER",
+      "url": "https://dev.to/bigf_fellow/viti-magazine-special-report-the-24-month-collapse-of-itil-theater-mh3",
+      "time": 1792928863,
+      "eventAt": "2026-10-25T11:47:43.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T11:47:43.000Z",
+      "sourceTags": [
+        "architecture",
+        "devops",
+        "sre",
+        "humor"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps",
+        "Software Architecture"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4915133",
+      "source": "devto",
+      "sourceId": "4915133",
+      "title": "I Tried to Build an Offline AI Assistant for an 8GB Laptop, and the CPU Said No",
+      "url": "https://dev.to/savinduthathsara/i-tried-to-build-an-offline-ai-assistant-for-an-8gb-laptop-and-the-cpu-said-no-5aea",
+      "time": 1792928668,
+      "eventAt": "2026-10-25T11:44:28.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T11:44:28.000Z",
+      "sourceTags": [
+        "ai",
+        "linux",
+        "machinelearning",
+        "python"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4915107",
+      "source": "devto",
+      "sourceId": "4915107",
+      "title": "OpenRouter's February 2026 Outages: How a Cold Cache Overwhelmed the Database",
+      "url": "https://buildopsy.com/system-design/openrouter-cache-thundering-herd-postmortem.html",
+      "time": 1792928287,
+      "eventAt": "2026-10-25T11:38:07.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T11:38:07.000Z",
+      "sourceTags": [
+        "ai",
+        "programming",
+        "productivity",
+        "architecture"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Software Architecture",
+        "Web Development"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4915104",
+      "source": "devto",
+      "sourceId": "4915104",
+      "title": "Why the KV cache, not the weights, decides how many users an LLM server can hold",
+      "url": "https://dev.to/andika_rachman_aa62526318/why-the-kv-cache-not-the-weights-decides-how-many-users-an-llm-server-can-hold-31o0",
+      "time": 1792928235,
+      "eventAt": "2026-10-25T11:37:15.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T11:37:15.000Z",
+      "sourceTags": [
+        "machinelearning",
+        "llm",
+        "ai",
+        "tutorial"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4915028",
+      "source": "devto",
+      "sourceId": "4915028",
+      "title": "Postmortem: The Tuesday Our AI Bill Had No Owner",
+      "url": "https://dev.to/gde/postmortem-the-tuesday-our-ai-bill-had-no-owner-34pd",
+      "time": 1792926942,
+      "eventAt": "2026-10-25T11:15:42.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T11:15:42.000Z",
+      "sourceTags": [
+        "discuss",
+        "vertexai",
+        "sre",
+        "ai"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4914911",
+      "source": "devto",
+      "sourceId": "4914911",
+      "title": "Ghost Data Still Exists: Building a Zero-Token Deletion-Audit Agent for GDPR Compliance",
+      "url": "https://dev.to/inushathathsara/ghost-data-still-exists-building-a-zero-token-deletion-audit-agent-for-gdpr-compliance-4j8g",
+      "time": 1792926499,
+      "eventAt": "2026-10-25T11:08:19.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T11:08:19.000Z",
+      "sourceTags": [
+        "ai",
+        "python",
+        "privacy",
+        "security"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4915003",
+      "source": "devto",
+      "sourceId": "4915003",
+      "title": "Make your RAG say 'I don't know': a score threshold, measured",
+      "url": "https://recallrun.dev/posts/empty-retrieval-refusal/",
+      "time": 1792926383,
+      "eventAt": "2026-10-25T11:06:23.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T11:06:23.000Z",
+      "sourceTags": [
+        "rag",
+        "python",
+        "llm",
+        "machinelearning"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4914951",
+      "source": "devto",
+      "sourceId": "4914951",
+      "title": "Giving Kubernetes ServiceAccounts an identity in Forgejo with oauth2-proxy",
+      "url": "https://dev.to/3deep5me/giving-kubernetes-serviceaccounts-an-identity-in-forgejo-with-oauth2-proxy-1po6",
+      "time": 1792926071,
+      "eventAt": "2026-10-25T11:01:11.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T11:01:11.000Z",
+      "sourceTags": [
+        "kubernetes",
+        "security",
+        "devops",
+        "opensource"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4913558",
+      "source": "devto",
+      "sourceId": "4913558",
+      "title": "Valkey 9.2's new rdbcompression lz4 setting cuts a 1M-row RDB from 178MB to 35MB",
+      "url": "https://dev.to/alexgeorgiev17/valkey-92s-new-rdbcompression-lz4-setting-cuts-a-1m-row-rdb-from-178mb-to-35mb-1cje",
+      "time": 1792926000,
+      "eventAt": "2026-10-25T11:00:00.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T11:00:00.000Z",
+      "sourceTags": [
+        "valkey",
+        "database",
+        "performance",
+        "devops"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50230132",
+      "source": "hn",
+      "sourceId": "50230132",
+      "title": "CVE-2026-107891: musl Libc Integer Overflow in regcomp Leading to Heap Issues",
+      "url": "https://www.openwall.com/lists/oss-security/2026/10/21/18",
+      "time": 1792924578,
+      "eventAt": "2026-10-25T10:36:18.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T10:36:18.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50230132",
+      "sourceTags": [],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4914870",
+      "source": "devto",
+      "sourceId": "4914870",
+      "title": "Ankita v2.7.0: undo for destructive actions — and skill permissions that advise, not enforce",
+      "url": "https://dev.to/krish_verma_77e28d3fd63ca/ankita-v270-undo-for-destructive-actions-and-skill-permissions-that-advise-not-enforce-2kb7",
+      "time": 1792923892,
+      "eventAt": "2026-10-25T10:24:52.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T10:24:52.000Z",
+      "sourceTags": [
+        "opensource",
+        "ai",
+        "showdev",
+        "security"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50229997",
+      "source": "hn",
+      "sourceId": "50229997",
+      "title": "Show HN: Echoboard where AI agents do science and humans only watch",
+      "url": "https://jevontane.com/echoboard/",
+      "time": 1792923511,
+      "eventAt": "2026-10-25T10:18:31.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T10:18:31.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50229997",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4914748",
+      "source": "devto",
+      "sourceId": "4914748",
+      "title": "I built a tool to prove my AI coach wrong about my Zone 2 rides. It sided with him.",
+      "url": "https://dev.to/dsiacci/i-built-a-tool-to-prove-my-ai-coach-wrong-about-my-zone-2-rides-it-sided-with-him-5dfp",
+      "time": 1792922725,
+      "eventAt": "2026-10-25T10:05:25.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T10:05:25.000Z",
+      "sourceTags": [
+        "devchallenge",
+        "hf26challenge",
+        "machinelearning",
+        "python"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4914769",
+      "source": "devto",
+      "sourceId": "4914769",
+      "title": "GCS Write Errors Ran for 12.5 Hours in us-central1. Spool Uploads to Disk, Drain Later",
+      "url": "https://dev.to/gabrielanhaia/gcs-write-errors-ran-for-125-hours-in-us-central1-spool-uploads-to-disk-drain-later-2php",
+      "time": 1792922519,
+      "eventAt": "2026-10-25T10:01:59.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T10:01:59.000Z",
+      "sourceTags": [
+        "node",
+        "javascript",
+        "googlecloud",
+        "architecture"
+      ],
+      "primaryCategory": "Software Architecture",
+      "categories": [
+        "Software Architecture",
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4914493",
+      "source": "devto",
+      "sourceId": "4914493",
+      "title": "n8n vs custom code for AI automation: what to buy, what to build",
+      "url": "https://pykero.com/blog/n8n-vs-custom-code-ai-automation",
+      "time": 1792919138,
+      "eventAt": "2026-10-25T09:05:38.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T09:05:38.000Z",
+      "sourceTags": [
+        "n8n",
+        "automation",
+        "buildvsbuy",
+        "aiagents"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Automation Integrations"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4878684",
+      "source": "devto",
+      "sourceId": "4878684",
+      "title": "Day 71: One Command, Two Machines",
+      "url": "https://dev.to/ndcodes/day-71-one-command-two-machines-1i3e",
+      "time": 1792918800,
+      "eventAt": "2026-10-25T09:00:00.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T09:00:00.000Z",
+      "sourceTags": [
+        "devops",
+        "jenkins",
+        "azure",
+        "cicd"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50229539",
+      "source": "hn",
+      "sourceId": "50229539",
+      "title": "I've left Anthropic after more than a year of working on Claude Code",
+      "url": "https://twitter.com/trq212/status/2113844051938054167",
+      "time": 1792918321,
+      "eventAt": "2026-10-25T08:52:01.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T08:52:01.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50229539",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4914379",
+      "source": "devto",
+      "sourceId": "4914379",
+      "title": "Twelve Cores, Seven Devices, One Disk",
+      "url": "https://codebyramiz.com/blog/running-multiple-claude-code-agents/",
+      "time": 1792917675,
+      "eventAt": "2026-10-25T08:41:15.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T08:41:15.000Z",
+      "sourceTags": [
+        "ai",
+        "claude",
+        "devops",
+        "productivity"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Cloud DevOps"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "hn:50229452",
+      "source": "hn",
+      "sourceId": "50229452",
+      "title": "CVE-2026-86950: The Great Glyph Grift",
+      "url": "https://calif.io/research/the-great-glyph-grift",
+      "time": 1792917296,
+      "eventAt": "2026-10-25T08:34:56.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T08:34:56.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50229452",
+      "sourceTags": [],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50229383",
+      "source": "hn",
+      "sourceId": "50229383",
+      "title": "Making the case for context-aware AI",
+      "url": "https://www.technologyreview.com/2026/10/22/1146812/making-the-case-for-context-aware-ai/",
+      "time": 1792916456,
+      "eventAt": "2026-10-25T08:20:56.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T08:20:56.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50229383",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4914260",
+      "source": "devto",
+      "sourceId": "4914260",
+      "title": "My /robots.txt Was Paying Full Pipeline Price",
+      "url": "https://dev.to/ssukhpinder/my-robotstxt-was-paying-full-pipeline-price-1f5",
+      "time": 1792916147,
+      "eventAt": "2026-10-25T08:15:47.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T08:15:47.000Z",
+      "sourceTags": [
+        "aspnetcore",
+        "dotnet",
+        "csharp",
+        "webdev"
+      ],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4914240",
+      "source": "devto",
+      "sourceId": "4914240",
+      "title": "EchoHire keeps the interview recording in the browser, and the free Render pill still said offline",
+      "url": "https://dev.to/mrerror313/echohire-keeps-the-interview-recording-in-the-browser-and-the-free-render-pill-still-said-offline-30fd",
+      "time": 1792915998,
+      "eventAt": "2026-10-25T08:13:18.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T08:13:18.000Z",
+      "sourceTags": [
+        "devchallenge",
+        "hf26challenge",
+        "webdev",
+        "python"
+      ],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50229278",
+      "source": "hn",
+      "sourceId": "50229278",
+      "title": "Joining the 2026 Asian Apiculture Association Conference",
+      "url": "https://boussejra.com/2026/10/24/asian-apiculture-association-conference.html",
+      "time": 1792914987,
+      "eventAt": "2026-10-25T07:56:27.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T07:56:27.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50229278",
+      "sourceTags": [],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4914179",
+      "source": "devto",
+      "sourceId": "4914179",
+      "title": "Slow Post: planning five DEV posts took me 67 minutes, so now two open models do it while I sleep",
+      "url": "https://dev.to/abeera_lodhi/slow-post-planning-five-dev-posts-took-me-67-minutes-so-now-two-open-models-do-it-while-i-sleep-1fep",
+      "time": 1792914951,
+      "eventAt": "2026-10-25T07:55:51.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T07:55:51.000Z",
+      "sourceTags": [
+        "devchallenge",
+        "hf26challenge",
+        "ai",
+        "machinelearning"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4914108",
+      "source": "devto",
+      "sourceId": "4914108",
+      "title": "What If the Next Operating System Had No Apps? The Future of Intent-Native Computing",
+      "url": "https://dev.to/sanskarcodes/what-if-the-next-operating-system-had-no-apps-the-future-of-intent-native-computing-4mjm",
+      "time": 1792913927,
+      "eventAt": "2026-10-25T07:38:47.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T07:38:47.000Z",
+      "sourceTags": [
+        "programming",
+        "ai",
+        "architecture",
+        "discuss"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Software Architecture"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4913887",
+      "source": "devto",
+      "sourceId": "4913887",
+      "title": "Pods Running, Service returns 503: the selector bug that fools everyone",
+      "url": "https://dev.to/sagar_27c8f0d73ec633f7d5b/pods-running-service-returns-503-the-selector-bug-that-fools-everyone-5aln",
+      "time": 1792911512,
+      "eventAt": "2026-10-25T06:58:32.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T06:58:32.000Z",
+      "sourceTags": [
+        "kubernetes",
+        "debugging",
+        "devops",
+        "sre"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4913730",
+      "source": "devto",
+      "sourceId": "4913730",
+      "title": "Let It Die: The Lazy Email Agent on TabPFN, Gemma and Temporal",
+      "url": "https://dev.to/khushighosh/let-it-die-the-lazy-email-agent-on-tabpfn-gemma-and-temporal-10o0",
+      "time": 1792910727,
+      "eventAt": "2026-10-25T06:45:27.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T06:45:27.000Z",
+      "sourceTags": [
+        "devchallenge",
+        "hf26challenge",
+        "ai",
+        "webdev"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Web Development"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "hn:50228951",
+      "source": "hn",
+      "sourceId": "50228951",
+      "title": "TaskWire An MCP-based taskboard for managing AI agent workflows",
+      "url": "https://taskwire.si",
+      "time": 1792910693,
+      "eventAt": "2026-10-25T06:44:53.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T06:44:53.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50228951",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4913749",
+      "source": "devto",
+      "sourceId": "4913749",
+      "title": "I Replaced My Whole SaaS Stack With One App I Described in a Sentence. Here's What Happened.",
+      "url": "https://dev.to/infoinlet1/i-replaced-my-whole-saas-stack-with-one-app-i-described-in-a-sentence-heres-what-happened-476a",
+      "time": 1792909311,
+      "eventAt": "2026-10-25T06:21:51.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T06:21:51.000Z",
+      "sourceTags": [
+        "webdev",
+        "productivity",
+        "discuss",
+        "sass"
+      ],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4913674",
+      "source": "devto",
+      "sourceId": "4913674",
+      "title": "Sloth: commit messages from a model that lives in the binary",
+      "url": "https://dev.to/ishaan-jindal/sloth-commit-messages-from-a-model-that-lives-in-the-binary-1930",
+      "time": 1792909077,
+      "eventAt": "2026-10-25T06:17:57.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T06:17:57.000Z",
+      "sourceTags": [
+        "hf26challenge",
+        "devchallenge",
+        "opensource",
+        "ai"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4913659",
+      "source": "devto",
+      "sourceId": "4913659",
+      "title": "Booming in Tech, Flat Everywhere Else: The Uneven Payoff of AI",
+      "url": "https://dev.to/james_anderson_h/booming-in-tech-flat-everywhere-else-the-uneven-payoff-of-ai-4od0",
+      "time": 1792907592,
+      "eventAt": "2026-10-25T05:53:12.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T05:53:12.000Z",
+      "sourceTags": [
+        "ai",
+        "productivity",
+        "discuss",
+        "startup"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4913626",
+      "source": "devto",
+      "sourceId": "4913626",
+      "title": "Why Patroni failover takes 26–49 seconds with default settings (and how to make it faster)",
+      "url": "https://www.highavailabilitydata.com/resources/failover-postgresql?lang=en",
+      "time": 1792906897,
+      "eventAt": "2026-10-25T05:41:37.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T05:41:37.000Z",
+      "sourceTags": [
+        "postgres",
+        "database",
+        "devops",
+        "sre"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4913600",
+      "source": "devto",
+      "sourceId": "4913600",
+      "title": "Day 1: Why ERP Needs a Definition-Driven Framework",
+      "url": "https://hackmd.io/@jeff377/day-01-why-definition-driven",
+      "time": 1792906542,
+      "eventAt": "2026-10-25T05:35:42.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T05:35:42.000Z",
+      "sourceTags": [
+        "architecture",
+        "dotnet",
+        "erp",
+        "softwareengineering"
+      ],
+      "primaryCategory": "Software Architecture",
+      "categories": [
+        "Software Architecture"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4913568",
+      "source": "devto",
+      "sourceId": "4913568",
+      "title": "What Really Happens When You Run curl google.com on Linux?",
+      "url": "https://asepsayyad007.in/blogs/what-really-happens-when-you-run-curl-googlecom-on-linux",
+      "time": 1792905909,
+      "eventAt": "2026-10-25T05:25:09.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T05:25:09.000Z",
+      "sourceTags": [
+        "linux",
+        "devops",
+        "ubuntu",
+        "cloud"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50228537",
+      "source": "hn",
+      "sourceId": "50228537",
+      "title": "Michal Wallace on Narrative Programming: Why Learn J when LLMs Code?",
+      "url": "https://alexalejandre.com/interviews/michal-wallace/",
+      "time": 1792905279,
+      "eventAt": "2026-10-25T05:14:39.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T05:14:39.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50228537",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4913536",
+      "source": "devto",
+      "sourceId": "4913536",
+      "title": "Build a Free AI News Digest in n8n (No API Key)",
+      "url": "https://dev.to/flowandfunnel/build-a-free-ai-news-digest-in-n8n-no-api-key-4bc5",
+      "time": 1792905278,
+      "eventAt": "2026-10-25T05:14:38.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T05:14:38.000Z",
+      "sourceTags": [
+        "n8n",
+        "automation",
+        "ai",
+        "tutorial"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Automation Integrations"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4913533",
+      "source": "devto",
+      "sourceId": "4913533",
+      "title": "System design for physical AI: steam turbine condition monitoring that can never write to the DCS",
+      "url": "https://codeatoms.ai/steam-turbine-condition-monitoring-pakistan/",
+      "time": 1792905267,
+      "eventAt": "2026-10-25T05:14:27.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T05:14:27.000Z",
+      "sourceTags": [
+        "ai",
+        "architecture",
+        "iot",
+        "machinelearning"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Software Architecture"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50228483",
+      "source": "hn",
+      "sourceId": "50228483",
+      "title": "eMudhra faces a bigger test of public trust after security lapse",
+      "url": "https://economictimes.indiatimes.com/ai/ai-insights/emudhra-faces-a-bigger-test-of-public-trust-after-security-lapse/articleshow/135165282.cms?from=mdr",
+      "time": 1792904625,
+      "eventAt": "2026-10-25T05:03:45.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T05:03:45.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50228483",
+      "sourceTags": [],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4913484",
+      "source": "devto",
+      "sourceId": "4913484",
+      "title": "n8n 3.0 Is Docker-Only: What Self-Hosters Need to Change Before Upgrading",
+      "url": "https://dev.to/sania_shahzaib_4831/n8n-30-is-docker-only-what-self-hosters-need-to-change-before-upgrading-3j7k",
+      "time": 1792904302,
+      "eventAt": "2026-10-25T04:58:22.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T04:58:22.000Z",
+      "sourceTags": [
+        "n8n",
+        "automation",
+        "docker",
+        "devops"
+      ],
+      "primaryCategory": "Automation Integrations",
+      "categories": [
+        "Automation Integrations",
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4913467",
+      "source": "devto",
+      "sourceId": "4913467",
+      "title": "What OpenAI, Anthropic, Mistral and Meta actually ask in AI engineer interviews",
+      "url": "https://dev.to/adityajha2005/what-openai-anthropic-mistral-and-meta-actually-ask-in-ai-engineer-interviews-2adk",
+      "time": 1792903835,
+      "eventAt": "2026-10-25T04:50:35.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T04:50:35.000Z",
+      "sourceTags": [
+        "ai",
+        "machinelearning",
+        "interview",
+        "career"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4913329",
+      "source": "devto",
+      "sourceId": "4913329",
+      "title": "Why 90% of Open-Source Trading Bots Blow Up (And How We Engineered STRIDE with Formal Risk Bounds in Python 3.12)",
+      "url": "https://dev.to/jabarca74/why-90-of-open-source-trading-bots-blow-up-and-how-we-engineered-stride-with-formal-risk-bounds-3d77",
+      "time": 1792901398,
+      "eventAt": "2026-10-25T04:09:58.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T04:09:58.000Z",
+      "sourceTags": [
+        "python",
+        "finanse",
+        "opensource",
+        "architecture"
+      ],
+      "primaryCategory": "Software Architecture",
+      "categories": [
+        "Software Architecture"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4913310",
+      "source": "devto",
+      "sourceId": "4913310",
+      "title": "Sentry and Mandrill Both Went Down When Postgres Ran Out of Transaction IDs",
+      "url": "https://dev.to/gabrielanhaia/sentry-and-mandrill-both-went-down-when-postgres-ran-out-of-transaction-ids-f11",
+      "time": 1792900905,
+      "eventAt": "2026-10-25T04:01:45.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T04:01:45.000Z",
+      "sourceTags": [
+        "postgres",
+        "database",
+        "sql",
+        "devops"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4913213",
+      "source": "devto",
+      "sourceId": "4913213",
+      "title": "My security tool aced its own exam. Then I ran it on real repos",
+      "url": "https://dev.to/vola-trebla/my-security-tool-aced-its-own-exam-then-i-ran-it-on-real-repos-28c",
+      "time": 1792898731,
+      "eventAt": "2026-10-25T03:25:31.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T03:25:31.000Z",
+      "sourceTags": [
+        "security",
+        "typescript",
+        "testing",
+        "opensource"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50227985",
+      "source": "hn",
+      "sourceId": "50227985",
+      "title": "Tokens aren't valuable: No more AI",
+      "url": "https://www.reddit.com/r/opensource/s/Vmk5Fd1N8H",
+      "time": 1792898718,
+      "eventAt": "2026-10-25T03:25:18.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T03:25:18.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50227985",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50227984",
+      "source": "hn",
+      "sourceId": "50227984",
+      "title": "Show HN: AI Heat Map Sourced from over 140 News Feeds",
+      "url": "https://ai.jagular.io",
+      "time": 1792898715,
+      "eventAt": "2026-10-25T03:25:15.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T03:25:15.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50227984",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4913192",
+      "source": "devto",
+      "sourceId": "4913192",
+      "title": "👻 The $249 Ghost Sale",
+      "url": "https://dev.to/annavi11arrea1/the-249-ghost-sale-12do",
+      "time": 1792898651,
+      "eventAt": "2026-10-25T03:24:11.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T03:24:11.000Z",
+      "sourceTags": [
+        "google",
+        "webdev",
+        "rails",
+        "analytics"
+      ],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4913185",
+      "source": "devto",
+      "sourceId": "4913185",
+      "title": "Does ANLI's 'neutral is hardest' survive its rounds? A Simpson's-paradox check on verifier agreement",
+      "url": "https://dev.to/munimv2/does-anlis-neutral-is-hardest-survive-its-rounds-a-simpsons-paradox-check-on-verifier-agreement-298c",
+      "time": 1792898548,
+      "eventAt": "2026-10-25T03:22:28.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T03:22:28.000Z",
+      "sourceTags": [
+        "machinelearning",
+        "datascience",
+        "nlp",
+        "benchmarks"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50227918",
+      "source": "hn",
+      "sourceId": "50227918",
+      "title": "Show HN: Close the UI building AI agent loop with Protoshot",
+      "url": "https://npmjs.com/protoshot",
+      "time": 1792897826,
+      "eventAt": "2026-10-25T03:10:26.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T03:10:26.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50227918",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4913150",
+      "source": "devto",
+      "sourceId": "4913150",
+      "title": "How to Audit OAuth App Access After a SaaS Supply-Chain Breach",
+      "url": "https://dev.to/jamilxt/how-to-audit-oauth-app-access-after-a-saas-supply-chain-breach-25ip",
+      "time": 1792897491,
+      "eventAt": "2026-10-25T03:04:51.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T03:04:51.000Z",
+      "sourceTags": [
+        "security",
+        "oauth",
+        "microsoft",
+        "cloud"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "Automation Integrations",
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50227867",
+      "source": "hn",
+      "sourceId": "50227867",
+      "title": "UK government sets out $800M of AI security funding",
+      "url": "https://www.reuters.com/world/uk/uk-government-sets-out-800-million-ai-security-funding-2026-10-23/",
+      "time": 1792897256,
+      "eventAt": "2026-10-25T03:00:56.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T03:00:56.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50227867",
+      "sourceTags": [],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4912984",
+      "source": "devto",
+      "sourceId": "4912984",
+      "title": "Your Voice Agent Isn't Slow. It's Silent. Non-Blocking Tools, Explained.",
+      "url": "https://dev.to/neeraj_sharma_757fbb49aa7/your-voice-agent-isnt-slow-its-silent-non-blocking-tools-explained-973",
+      "time": 1792893510,
+      "eventAt": "2026-10-25T01:58:30.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T01:58:30.000Z",
+      "sourceTags": [
+        "ai",
+        "python",
+        "agents",
+        "architecture"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Software Architecture"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "hn:50227488",
+      "source": "hn",
+      "sourceId": "50227488",
+      "title": "AI Performance in the Security Theater",
+      "url": "https://bykozy.me/blog/ai-performance-at-the-security-theater/",
+      "time": 1792893268,
+      "eventAt": "2026-10-25T01:54:28.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T01:54:28.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50227488",
+      "sourceTags": [],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4912966",
+      "source": "devto",
+      "sourceId": "4912966",
+      "title": "Your repo isn't on .NET 8 in just one file: what to change before November 10",
+      "url": "https://dev.to/ltslift/your-repo-isnt-on-net-8-in-just-one-file-what-to-change-before-november-10-8fk",
+      "time": 1792893100,
+      "eventAt": "2026-10-25T01:51:40.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T01:51:40.000Z",
+      "sourceTags": [
+        "dotnet",
+        "csharp",
+        "azure",
+        "devops"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50227356",
+      "source": "hn",
+      "sourceId": "50227356",
+      "title": "Cerebras Deploys Trillion-Parameter AI Models",
+      "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+      "time": 1792892029,
+      "eventAt": "2026-10-25T01:33:49.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T01:33:49.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50227356",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4796922",
+      "source": "devto",
+      "sourceId": "4796922",
+      "title": "Three Times My Test Failed and the LLM Was Right",
+      "url": "https://dev.to/debashish_ghosal/three-times-my-test-failed-and-the-llm-was-right-43l2",
+      "time": 1792890223,
+      "eventAt": "2026-10-25T01:03:43.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T01:03:43.000Z",
+      "sourceTags": [
+        "ai",
+        "programming",
+        "llm",
+        "testing"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4912875",
+      "source": "devto",
+      "sourceId": "4912875",
+      "title": "A Claude Code Hook That Times Out Lets the Command Through. Make It Fail Closed",
+      "url": "https://dev.to/gabrielanhaia/a-claude-code-hook-that-times-out-lets-the-command-through-make-it-fail-closed-1g5k",
+      "time": 1792890189,
+      "eventAt": "2026-10-25T01:03:09.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T01:03:09.000Z",
+      "sourceTags": [
+        "ai",
+        "security",
+        "tutorial",
+        "devtools"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50227138",
+      "source": "hn",
+      "sourceId": "50227138",
+      "title": "Tailworm – Tailscale Vulnerabilities",
+      "url": "https://tailworm.com/",
+      "time": 1792889988,
+      "eventAt": "2026-10-25T00:59:48.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T00:59:48.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50227138",
+      "sourceTags": [],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4912814",
+      "source": "devto",
+      "sourceId": "4912814",
+      "title": "Google privacy policy and Gmail ads: the 18-word exception",
+      "url": "https://dev.to/axrisi/google-privacy-policy-and-gmail-ads-the-18-word-exception-5c35",
+      "time": 1792889100,
+      "eventAt": "2026-10-25T00:45:00.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T00:45:00.000Z",
+      "sourceTags": [
+        "google",
+        "privacy",
+        "ai",
+        "news"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50227041",
+      "source": "hn",
+      "sourceId": "50227041",
+      "title": "Show HN: ADRs for AI – Deliberation records for human–AI work, versioned in Git",
+      "url": "https://adrs.systems",
+      "time": 1792889027,
+      "eventAt": "2026-10-25T00:43:47.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-25T00:43:47.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50227041",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4912822",
+      "source": "devto",
+      "sourceId": "4912822",
+      "title": "Uniswap V4 Security Guide: Hooks, Pools, and New Attack Vectors You Need to Know Before Deploying",
+      "url": "https://smartcontractauditor.ai/blog/uniswap-v4-security-guide-hooks-pools-and-new-attack-vectors",
+      "time": 1792888684,
+      "eventAt": "2026-10-25T00:38:04.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T00:38:04.000Z",
+      "sourceTags": [
+        "uniswap",
+        "security",
+        "web3"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4912801",
+      "source": "devto",
+      "sourceId": "4912801",
+      "title": "Architectural Deep-Dive: Cost-Aware Abstention for LLM-Based IT Ticket Classification",
+      "url": "https://bohdanhordii.dev/work/cost-aware-abstention-for-llm-based-it-ticket-classification",
+      "time": 1792887897,
+      "eventAt": "2026-10-25T00:24:57.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-25T00:24:57.000Z",
+      "sourceTags": [
+        "ai",
+        "architecture",
+        "devops",
+        "softwareengineering"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Cloud DevOps",
+        "Software Architecture"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50226729",
+      "source": "hn",
+      "sourceId": "50226729",
+      "title": "An animated explainer of the PHP2SHell vulnerability [video]",
+      "url": "https://www.youtube.com/watch?v=6Kz4bWKoXhU",
+      "time": 1792886108,
+      "eventAt": "2026-10-24T23:55:08.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T23:55:08.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50226729",
+      "sourceTags": [],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4912725",
+      "source": "devto",
+      "sourceId": "4912725",
+      "title": "How I Found a High-Severity Rounding Vulnerability in Morpho Midnight (Tenor Labs)",
+      "url": "https://dev.to/vaultvult/how-i-found-a-high-severity-rounding-vulnerability-in-morpho-midnight-tenor-labs-35c2",
+      "time": 1792885964,
+      "eventAt": "2026-10-24T23:52:44.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T23:52:44.000Z",
+      "sourceTags": [
+        "web3",
+        "security",
+        "solidity",
+        "smartcontracts"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50226554",
+      "source": "hn",
+      "sourceId": "50226554",
+      "title": "Your tokens aren't valuable: No more AI",
+      "url": "https://www.reddit.com/r/opensource/comments/1xelcuf/your_tokens_arent_valuable_no_more_ai/",
+      "time": 1792884645,
+      "eventAt": "2026-10-24T23:30:45.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T23:30:45.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50226554",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4912634",
+      "source": "devto",
+      "sourceId": "4912634",
+      "title": "Storage::put() in Your Use Case Is a Leak: Put Files Behind a Port in Laravel",
+      "url": "https://dev.to/gabrielanhaia/storageput-in-your-use-case-is-a-leak-put-files-behind-a-port-in-laravel-21ol",
+      "time": 1792882896,
+      "eventAt": "2026-10-24T23:01:36.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T23:01:36.000Z",
+      "sourceTags": [
+        "php",
+        "laravel",
+        "architecture",
+        "testing"
+      ],
+      "primaryCategory": "Software Architecture",
+      "categories": [
+        "Software Architecture"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50226299",
+      "source": "hn",
+      "sourceId": "50226299",
+      "title": "What we learned making 12 apps usable by AI agents with WebMCP",
+      "url": "https://mindoodb.com/blog/2026/10/27.10.2026090000KLEAGT/",
+      "time": 1792882771,
+      "eventAt": "2026-10-24T22:59:31.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T22:59:31.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50226299",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4912620",
+      "source": "devto",
+      "sourceId": "4912620",
+      "title": "I ran a free launch check on 34 vibe-coded apps shared this week. Here's what I found.",
+      "url": "https://throttlebird.com/blog/vibe-coded-launches-this-week-oct-24",
+      "time": 1792882493,
+      "eventAt": "2026-10-24T22:54:53.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T22:54:53.000Z",
+      "sourceTags": [
+        "webdev",
+        "security",
+        "beginners",
+        "showdev"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4912572",
+      "source": "devto",
+      "sourceId": "4912572",
+      "title": "Which NLI labels are least decisive? A per-class and per-genre annotator-agreement tour of SNLI, MultiNLI and ChaosNLI",
+      "url": "https://dev.to/munimv2/which-nli-labels-are-least-decisive-a-per-class-and-per-genre-annotator-agreement-tour-of-snli-37ip",
+      "time": 1792880742,
+      "eventAt": "2026-10-24T22:25:42.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T22:25:42.000Z",
+      "sourceTags": [
+        "machinelearning",
+        "datascience",
+        "nlp",
+        "benchmarks"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4912552",
+      "source": "devto",
+      "sourceId": "4912552",
+      "title": "Fine-tuning a 32B model on a 6 GB laptop GPU — and the three measurements that nearly fooled me",
+      "url": "https://dev.to/mycute_97b39c4e34027570f9/fine-tuning-a-32b-model-on-a-6-gb-laptop-gpu-and-the-three-measurements-that-nearly-fooled-me-2ojm",
+      "time": 1792880543,
+      "eventAt": "2026-10-24T22:22:23.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T22:22:23.000Z",
+      "sourceTags": [
+        "ai",
+        "hardware",
+        "llm",
+        "machinelearning"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4912521",
+      "source": "devto",
+      "sourceId": "4912521",
+      "title": "Delegating work across companies with AAuth",
+      "url": "https://dev.to/darkedges/delegating-work-across-companies-with-aauth-3b9c",
+      "time": 1792880114,
+      "eventAt": "2026-10-24T22:15:14.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T22:15:14.000Z",
+      "sourceTags": [
+        "security",
+        "authorization",
+        "javascript",
+        "cloudflare"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4912512",
+      "source": "devto",
+      "sourceId": "4912512",
+      "title": "How I kept two docs sites apart in one WordPress install (and almost gave up)",
+      "url": "https://dev.to/antonioprosperi2svg/how-i-kept-two-docs-sites-apart-in-one-wordpress-install-and-almost-gave-up-md7",
+      "time": 1792879648,
+      "eventAt": "2026-10-24T22:07:28.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T22:07:28.000Z",
+      "sourceTags": [
+        "wordpress",
+        "documentation",
+        "webdev",
+        "javascript"
+      ],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4912495",
+      "source": "devto",
+      "sourceId": "4912495",
+      "title": "Your Agent Is a Guest: Egress Policy for Agent Fleets",
+      "url": "https://dev.to/dima_kruglov_608741d9a416/your-agent-is-a-guest-egress-policy-for-agent-fleets-2baa",
+      "time": 1792879255,
+      "eventAt": "2026-10-24T22:00:55.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T22:00:55.000Z",
+      "sourceTags": [
+        "ai",
+        "llm",
+        "devops",
+        "python"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Cloud DevOps"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4912414",
+      "source": "devto",
+      "sourceId": "4912414",
+      "title": "Más Allá del Mito: Taxonomía de Cuatro Arquitecturas Hacia la Cognición Sintética Encarnada",
+      "url": "https://dev.to/davidsnm/mas-alla-del-mito-taxonomia-de-cuatro-arquitecturas-hacia-la-cognicion-sintetica-encarnada-2090",
+      "time": 1792876969,
+      "eventAt": "2026-10-24T21:22:49.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T21:22:49.000Z",
+      "sourceTags": [
+        "ai",
+        "architecture",
+        "programming",
+        "llm"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Software Architecture"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50225443",
+      "source": "hn",
+      "sourceId": "50225443",
+      "title": "Making My Blog Readable by AI Agents",
+      "url": "https://deallocatedobjects.com/posts/making-my-blog-readable-by-ai-agents",
+      "time": 1792876893,
+      "eventAt": "2026-10-24T21:21:33.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T21:21:33.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50225443",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4912381",
+      "source": "devto",
+      "sourceId": "4912381",
+      "title": "Securing Agent-to-Agent Delegation in .NET: A Practical Design",
+      "url": "https://dev.to/kamal1910/securing-agent-to-agent-delegation-in-net-a-practical-design-44no",
+      "time": 1792876808,
+      "eventAt": "2026-10-24T21:20:08.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T21:20:08.000Z",
+      "sourceTags": [
+        "dotnet",
+        "security",
+        "ai",
+        "csharp"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4912363",
+      "source": "devto",
+      "sourceId": "4912363",
+      "title": "AI agents were told my inputs were optional, then rejected for leaving them out 🤖",
+      "url": "https://dev.to/timmkal01/ai-agents-were-told-my-inputs-were-optional-then-rejected-for-leaving-them-out-3el4",
+      "time": 1792876277,
+      "eventAt": "2026-10-24T21:11:17.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T21:11:17.000Z",
+      "sourceTags": [
+        "ai",
+        "mcp",
+        "javascript",
+        "webdev"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Web Development"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4912347",
+      "source": "devto",
+      "sourceId": "4912347",
+      "title": "OpenAI's Agent Set no_notify to True. Another Removed Its Monitor, Then Denied It",
+      "url": "https://dev.to/gabrielanhaia/openais-agent-set-nonotify-to-true-another-removed-its-monitor-then-denied-it-1hf7",
+      "time": 1792875719,
+      "eventAt": "2026-10-24T21:01:59.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T21:01:59.000Z",
+      "sourceTags": [
+        "security",
+        "ai",
+        "git",
+        "devtools"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "hn:50225094",
+      "source": "hn",
+      "sourceId": "50225094",
+      "title": "Which AI in UX or HCI conference is in your radar for 2027?",
+      "url": "https://www.uxness.in/2026/08/top-ux-conferences-to-attend-in-2027.html",
+      "time": 1792874924,
+      "eventAt": "2026-10-24T20:48:44.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T20:48:44.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50225094",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Web Development"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50225018",
+      "source": "hn",
+      "sourceId": "50225018",
+      "title": "Altman issues self-serving warning they've created a monster they can't control",
+      "url": "https://the-decoder.com/openai-ceo-sam-altman-says-advanced-ai-will-inevitably-escape-its-sandbox-and-only-alignment-can-save-us/",
+      "time": 1792874430,
+      "eventAt": "2026-10-24T20:40:30.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T20:40:30.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50225018",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4912290",
+      "source": "devto",
+      "sourceId": "4912290",
+      "title": "5,385 spam comments refused in a day, no CAPTCHA. What I learned building bot protection for WordPress",
+      "url": "https://dev.to/naveen_kumar_4172fd753133/5385-spam-comments-refused-in-a-day-no-captcha-what-i-learned-building-bot-protection-for-5f46",
+      "time": 1792874214,
+      "eventAt": "2026-10-24T20:36:54.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T20:36:54.000Z",
+      "sourceTags": [
+        "backend",
+        "php",
+        "security",
+        "wordpress"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50224890",
+      "source": "hn",
+      "sourceId": "50224890",
+      "title": "AI agents, in separate VMs without network, communicated through the CPU cache",
+      "url": "https://twitter.com/rynorhn/status/2113757656498196605",
+      "time": 1792873730,
+      "eventAt": "2026-10-24T20:28:50.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T20:28:50.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50224890",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "hn:50224601",
+      "source": "hn",
+      "sourceId": "50224601",
+      "title": "Local Inference on a Raspberry Pi",
+      "url": "https://keepitwiel.github.io/2026/10/24/local-inference-on-a-raspberry-pi.html",
+      "time": 1792872168,
+      "eventAt": "2026-10-24T20:02:48.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T20:02:48.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50224601",
+      "sourceTags": [],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4909774",
+      "source": "devto",
+      "sourceId": "4909774",
+      "title": "MPS backend out of memory: the \"max allowed\" number on every Mac size",
+      "url": "https://allkeep.org/en/lab/mps-max-allowed-by-mac-size",
+      "time": 1792872156,
+      "eventAt": "2026-10-24T20:02:36.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T20:02:36.000Z",
+      "sourceTags": [
+        "pytorch",
+        "python",
+        "macos",
+        "machinelearning"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4912215",
+      "source": "devto",
+      "sourceId": "4912215",
+      "title": "Your agent's skills have no lockfile — a derivation graph for skill provenance",
+      "url": "https://dev.to/sangaraju1988/your-agents-skills-have-no-lockfile-a-derivation-graph-for-skill-provenance-2di3",
+      "time": 1792872113,
+      "eventAt": "2026-10-24T20:01:53.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T20:01:53.000Z",
+      "sourceTags": [
+        "ai",
+        "security",
+        "opensource",
+        "agents"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "hn:50224571",
+      "source": "hn",
+      "sourceId": "50224571",
+      "title": "ArXiv imposes rate limit on paper submissions to stem the AI slop tide",
+      "url": "https://www.theregister.com/ai-and-ml/2026/10/02/arxiv-imposes-rate-limit-on-paper-submissions-to-stem-the-ai-slop-tide/5300899",
+      "time": 1792871991,
+      "eventAt": "2026-10-24T19:59:51.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T19:59:51.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50224571",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4912194",
+      "source": "devto",
+      "sourceId": "4912194",
+      "title": "Mistral Agents API Memory, Honestly Explained: Conversations Persist, Users Don't (Yet)",
+      "url": "https://dev.to/abdeljabbar_elassali_78e/mistral-agents-api-memory-honestly-explained-conversations-persist-users-dont-yet-2ckg",
+      "time": 1792871690,
+      "eventAt": "2026-10-24T19:54:50.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T19:54:50.000Z",
+      "sourceTags": [
+        "ai",
+        "automation",
+        "n8n",
+        "agents"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Automation Integrations"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4912139",
+      "source": "devto",
+      "sourceId": "4912139",
+      "title": "Helm chart vs operator: PostgreSQL installed both ways on kind",
+      "url": "https://kadet-hub.org/blog/helm-chart-vs-operator/",
+      "time": 1792871101,
+      "eventAt": "2026-10-24T19:45:01.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T19:45:01.000Z",
+      "sourceTags": [
+        "kubernetes",
+        "devops",
+        "kapitan",
+        "gitops"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4912129",
+      "source": "devto",
+      "sourceId": "4912129",
+      "title": "DownloadsSloth: a local Gemma tool that tidies messy folders so you don't have to",
+      "url": "https://dev.to/aakash_mehta_48e67c642976/downloadssloth-a-local-gemma-tool-that-tidies-messy-folders-so-you-dont-have-to-5h5l",
+      "time": 1792870985,
+      "eventAt": "2026-10-24T19:43:05.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T19:43:05.000Z",
+      "sourceTags": [
+        "ai",
+        "devchallenge",
+        "hf26challenge",
+        "opensource"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4912122",
+      "source": "devto",
+      "sourceId": "4912122",
+      "title": "The retry storm that ate 40,000 messages",
+      "url": "https://dev.to/dhananjay_mundhada_02c326/the-retry-storm-that-ate-40000-messages-70g",
+      "time": 1792870847,
+      "eventAt": "2026-10-24T19:40:47.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T19:40:47.000Z",
+      "sourceTags": [
+        "java",
+        "architecture",
+        "devops",
+        "systemdesign"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps",
+        "Software Architecture"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4912119",
+      "source": "devto",
+      "sourceId": "4912119",
+      "title": "419,779 Workflow Engines Hold the Keys to Everything Else",
+      "url": "https://dev.to/ioneyrezende/419779-workflow-engines-hold-the-keys-to-everything-else-3n45",
+      "time": 1792870821,
+      "eventAt": "2026-10-24T19:40:21.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T19:40:21.000Z",
+      "sourceTags": [
+        "zoomeye",
+        "n8n",
+        "automation",
+        "credentialexposure"
+      ],
+      "primaryCategory": "Automation Integrations",
+      "categories": [
+        "Automation Integrations"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50224306",
+      "source": "hn",
+      "sourceId": "50224306",
+      "title": "(2025) Navigating the Noise: Separating Security Reality from Hype",
+      "url": "https://www.bitsight.com/blog/navigating-noise-separating-security-reality-hype",
+      "time": 1792870109,
+      "eventAt": "2026-10-24T19:28:29.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T19:28:29.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50224306",
+      "sourceTags": [],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50224280",
+      "source": "hn",
+      "sourceId": "50224280",
+      "title": "GLM 5.3 Flash Is Ace",
+      "url": "https://terfi.fyi/blog/my-current-llm-driver",
+      "time": 1792869958,
+      "eventAt": "2026-10-24T19:25:58.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T19:25:58.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50224280",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4912033",
+      "source": "devto",
+      "sourceId": "4912033",
+      "title": "n8n: IF vs Switch for Conditional Logic, With the Real Expressions and Node JSON",
+      "url": "https://learn.ynteractive.com/content/n8n-if-and-switch-node-tutorial",
+      "time": 1792869543,
+      "eventAt": "2026-10-24T19:19:03.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T19:19:03.000Z",
+      "sourceTags": [
+        "n8n",
+        "automation",
+        "beginners",
+        "nocode"
+      ],
+      "primaryCategory": "Automation Integrations",
+      "categories": [
+        "Automation Integrations"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4912017",
+      "source": "devto",
+      "sourceId": "4912017",
+      "title": "What GPU do you need for Qwen3.8, Qwen3.6, Gemma 4 and gpt-oss locally? (measured, Oct 2026)",
+      "url": "https://getrigbase.com/guides/what-gpu-for-qwen3-6-gemma-4-gpt-oss/",
+      "time": 1792869176,
+      "eventAt": "2026-10-24T19:12:56.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T19:12:56.000Z",
+      "sourceTags": [
+        "llm",
+        "ai",
+        "hardware",
+        "machinelearning"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50224121",
+      "source": "hn",
+      "sourceId": "50224121",
+      "title": "Who Pays for AI Data Centers?",
+      "url": "https://www.youtube.com/watch?v=NyOeLB0WVNE",
+      "time": 1792868956,
+      "eventAt": "2026-10-24T19:09:16.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T19:09:16.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50224121",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4911976",
+      "source": "devto",
+      "sourceId": "4911976",
+      "title": "AWS Won't Patch a CVSS 9.8 Bug in Multi Model Server. Its Management API Has No Login",
+      "url": "https://dev.to/gabrielanhaia/aws-wont-patch-a-cvss-98-bug-in-multi-model-server-its-management-api-has-no-login-2e71",
+      "time": 1792868716,
+      "eventAt": "2026-10-24T19:05:16.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T19:05:16.000Z",
+      "sourceTags": [
+        "security",
+        "aws",
+        "machinelearning",
+        "devops"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering",
+        "Cloud DevOps"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4911981",
+      "source": "devto",
+      "sourceId": "4911981",
+      "title": "cloudg: one CLI to map and audit AWS, Azure and GCP",
+      "url": "https://dev.to/morpheuslord/cloudg-one-cli-to-map-and-audit-aws-azure-and-gcp-3bgh",
+      "time": 1792868469,
+      "eventAt": "2026-10-24T19:01:09.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T19:01:09.000Z",
+      "sourceTags": [
+        "python",
+        "security",
+        "automation",
+        "devops"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "Automation Integrations",
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4911966",
+      "source": "devto",
+      "sourceId": "4911966",
+      "title": "From Ancient Epigraphy to 3D Proteins: Building Plugins, Skills & MCP Sidecars in Google Antigravity",
+      "url": "https://dev.to/gde/from-ancient-epigraphy-to-3d-proteins-building-plugins-skills-mcp-sidecars-in-google-antigravity-4l1m",
+      "time": 1792868218,
+      "eventAt": "2026-10-24T18:56:58.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T18:56:58.000Z",
+      "sourceTags": [
+        "ai",
+        "gemini",
+        "bioinformatics",
+        "opensource"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4911952",
+      "source": "devto",
+      "sourceId": "4911952",
+      "title": "Road to State Machines VI - But What If Independent Work Finishes in a Different Order?",
+      "url": "https://x.com/cbsofyalioglu/status/2114057329171734798",
+      "time": 1792868211,
+      "eventAt": "2026-10-24T18:56:51.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T18:56:51.000Z",
+      "sourceTags": [
+        "ai",
+        "python",
+        "systemdesign",
+        "programming"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4911873",
+      "source": "devto",
+      "sourceId": "4911873",
+      "title": "Building status.live: ski lifts, roads, and webcams with visible data freshness",
+      "url": "https://dev.to/elvean/building-statuslive-ski-lifts-roads-and-webcams-with-visible-data-freshness-4jk6",
+      "time": 1792866825,
+      "eventAt": "2026-10-24T18:33:45.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T18:33:45.000Z",
+      "sourceTags": [
+        "showdev",
+        "webdev",
+        "api",
+        "architecture"
+      ],
+      "primaryCategory": "Software Architecture",
+      "categories": [
+        "Software Architecture",
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50223798",
+      "source": "hn",
+      "sourceId": "50223798",
+      "title": "Chess Arena – Minimal chess vs. Hard AI (vanilla JavaScript, no login)",
+      "url": "https://playgama.ai/play/xl6duef7p3",
+      "time": 1792866353,
+      "eventAt": "2026-10-24T18:25:53.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T18:25:53.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50223798",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Web Development"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4911812",
+      "source": "devto",
+      "sourceId": "4911812",
+      "title": "Architectural Deep-Dive: Direct Pass@$k$ Optimization for Thought Pruning: Balancing Quality and Diversity in Test-Time Reasoning",
+      "url": "https://bohdanhordii.dev/work/direct-pass-k-optimization-for-thought-pruning-balancing-quality-and-diversity-in-test-time-reasoning",
+      "time": 1792865549,
+      "eventAt": "2026-10-24T18:12:29.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T18:12:29.000Z",
+      "sourceTags": [
+        "ai",
+        "architecture",
+        "devops",
+        "softwareengineering"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Cloud DevOps",
+        "Software Architecture"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50223644",
+      "source": "hn",
+      "sourceId": "50223644",
+      "title": "I created an selfimproment AI predictions site for soccer",
+      "url": "https://road2sushi.com/",
+      "time": 1792865082,
+      "eventAt": "2026-10-24T18:04:42.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T18:04:42.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50223644",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50223591",
+      "source": "hn",
+      "sourceId": "50223591",
+      "title": "For the next two weeks, we're covering $1M in security scans and fixes",
+      "url": "https://www.coderabbit.ai/blog/one-million-security-scans-and-fixes",
+      "time": 1792864697,
+      "eventAt": "2026-10-24T17:58:17.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T17:58:17.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50223591",
+      "sourceTags": [],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4911661",
+      "source": "devto",
+      "sourceId": "4911661",
+      "title": "You know you can automate screen reader tests right?",
+      "url": "https://dev.to/craigmorten/you-know-you-can-automate-screen-reader-tests-right-2dnk",
+      "time": 1792863392,
+      "eventAt": "2026-10-24T17:36:32.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T17:36:32.000Z",
+      "sourceTags": [
+        "a11y",
+        "webdev",
+        "playwright",
+        "node"
+      ],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4911653",
+      "source": "devto",
+      "sourceId": "4911653",
+      "title": "SlothOps: A Local AI Caretaker for Your Codebase",
+      "url": "https://dev.to/extinctsion/slothops-a-local-ai-caretaker-for-your-codebase-4nh",
+      "time": 1792863172,
+      "eventAt": "2026-10-24T17:32:52.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T17:32:52.000Z",
+      "sourceTags": [
+        "devchallenge",
+        "hf26challenge",
+        "ai",
+        "opensource"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4911632",
+      "source": "devto",
+      "sourceId": "4911632",
+      "title": "The Anatomy of CVE-2024-4577: Why You Shouldn’t Abandon PHP Over a CGI Best-Fit Code Page Exploit",
+      "url": "https://ctousman.com/blog/cve-2024-4577-php-cgi-argument-injection-exploit-fix",
+      "time": 1792862880,
+      "eventAt": "2026-10-24T17:28:00.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T17:28:00.000Z",
+      "sourceTags": [
+        "php",
+        "security",
+        "webdev",
+        "devops"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "Cloud DevOps",
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50223284",
+      "source": "hn",
+      "sourceId": "50223284",
+      "title": "Botchelor – a dating show where AI agents bring their own characters over MCP",
+      "url": "https://botchelor.com/gate?from=%2Fagents",
+      "time": 1792862731,
+      "eventAt": "2026-10-24T17:25:31.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T17:25:31.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50223284",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4911574",
+      "source": "devto",
+      "sourceId": "4911574",
+      "title": "GKE Autopilot vs Cloud Run: The Decision I Keep Coming Back To",
+      "url": "https://dev.to/purvanshbhatt/gke-autopilot-vs-cloud-run-the-decision-i-keep-coming-back-to-2m93",
+      "time": 1792862216,
+      "eventAt": "2026-10-24T17:16:56.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T17:16:56.000Z",
+      "sourceTags": [
+        "architecture",
+        "cloud",
+        "devops",
+        "startup"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps",
+        "Software Architecture"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50223210",
+      "source": "hn",
+      "sourceId": "50223210",
+      "title": "How LLM-Based Penetration Testing Harnesses Work",
+      "url": "https://utkusen.substack.com/p/how-llm-based-penetration-testing",
+      "time": 1792862147,
+      "eventAt": "2026-10-24T17:15:47.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T17:15:47.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50223210",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Harnesses"
+      ]
+    },
+    {
+      "id": "hn:50222975",
+      "source": "hn",
+      "sourceId": "50222975",
+      "title": "How could the US and China verifiably slow AI?",
+      "url": "https://www.lesswrong.com/posts/ywrgeAPMn83FxzFBk/how-could-the-us-and-china-verifiably-slow-ai",
+      "time": 1792860435,
+      "eventAt": "2026-10-24T16:47:15.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T16:47:15.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50222975",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4869464",
+      "source": "devto",
+      "sourceId": "4869464",
+      "title": "Add On-Device Summarization to React with Chrome's Summarizer API",
+      "url": "https://dev.to/raju_dandigam/add-on-device-summarization-to-react-with-chromes-summarizer-api-1bkn",
+      "time": 1792860256,
+      "eventAt": "2026-10-24T16:44:16.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T16:44:16.000Z",
+      "sourceTags": [
+        "ai",
+        "react",
+        "webdev",
+        "javascript"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Web Development"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50222824",
+      "source": "hn",
+      "sourceId": "50222824",
+      "title": "Is the browser becoming the common gateway for AI agents?",
+      "url": "https://ricuicui.com/articles/navigateur-porte-entree-agents-ia",
+      "time": 1792859435,
+      "eventAt": "2026-10-24T16:30:35.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T16:30:35.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50222824",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4911423",
+      "source": "devto",
+      "sourceId": "4911423",
+      "title": "I turned my portfolio into a playground (plug a theme into a display to open it)",
+      "url": "https://dev.to/m_ahmad/i-turned-my-portfolio-into-a-playground-plug-a-theme-into-a-display-to-open-it-1p6",
+      "time": 1792859428,
+      "eventAt": "2026-10-24T16:30:28.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T16:30:28.000Z",
+      "sourceTags": [
+        "showdev",
+        "webdev",
+        "nextjs",
+        "react"
+      ],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4911402",
+      "source": "devto",
+      "sourceId": "4911402",
+      "title": "The Cost of Cutting the Cord",
+      "url": "https://deanlee.info/essays/the-cost-of-cutting-the-cord",
+      "time": 1792859052,
+      "eventAt": "2026-10-24T16:24:12.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T16:24:12.000Z",
+      "sourceTags": [
+        "ai",
+        "machinelearning",
+        "economics",
+        "cloud"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Cloud DevOps"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4911391",
+      "source": "devto",
+      "sourceId": "4911391",
+      "title": "CRM verisiyle lead skorlama modeli kurmak: Etiket tanımı, zaman sızıntısı, kalibrasyon ve geri bildirim döngüsü",
+      "url": "https://dev.to/korayyalcin/crm-verisiyle-lead-skorlama-modeli-kurmak-etiket-tanimi-zaman-sizintisi-kalibrasyon-ve-geri-2dmb",
+      "time": 1792858951,
+      "eventAt": "2026-10-24T16:22:31.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T16:22:31.000Z",
+      "sourceTags": [
+        "machinelearning",
+        "python",
+        "crm",
+        "datascience"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4911381",
+      "source": "devto",
+      "sourceId": "4911381",
+      "title": "The Mosaic Leak Hiding in Agent RAG",
+      "url": "https://reidmarlow.com/the-mosaic-leak-hiding-in-agent-rag",
+      "time": 1792858928,
+      "eventAt": "2026-10-24T16:22:08.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T16:22:08.000Z",
+      "sourceTags": [
+        "ai",
+        "security",
+        "python",
+        "programming"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4911380",
+      "source": "devto",
+      "sourceId": "4911380",
+      "title": "Kimi K3.1 Pro: 104B active parameters still carry a 2.8T backpack",
+      "url": "https://dev.to/panditshivam/kimi-k31-pro-104b-active-parameters-still-carry-a-28t-backpack-ah6",
+      "time": 1792858927,
+      "eventAt": "2026-10-24T16:22:07.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T16:22:07.000Z",
+      "sourceTags": [
+        "python",
+        "ai",
+        "machinelearning"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4911309",
+      "source": "devto",
+      "sourceId": "4911309",
+      "title": "n8n Queue Mode: The Scale Upgrade with Four Silent Traps",
+      "url": "https://tools.triggerworkflow.com/blog/n8n-queue-mode-setup",
+      "time": 1792857813,
+      "eventAt": "2026-10-24T16:03:33.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T16:03:33.000Z",
+      "sourceTags": [
+        "n8n",
+        "queue",
+        "redis",
+        "selfhosted"
+      ],
+      "primaryCategory": "Automation Integrations",
+      "categories": [
+        "Automation Integrations"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50222559",
+      "source": "hn",
+      "sourceId": "50222559",
+      "title": "Show HN: AI agent swarms test if new CVEs are exploitable in your env",
+      "url": "https://app.enclave.ai/threat-feed",
+      "time": 1792857605,
+      "eventAt": "2026-10-24T16:00:05.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T16:00:05.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50222559",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4911271",
+      "source": "devto",
+      "sourceId": "4911271",
+      "title": "The HTTP Status Codes You're Probably Using Wrong (And How to Fix Them)",
+      "url": "https://dev.to/elias_miller/the-http-status-codes-youre-probably-using-wrong-and-how-to-fix-them-2hko",
+      "time": 1792857391,
+      "eventAt": "2026-10-24T15:56:31.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T15:56:31.000Z",
+      "sourceTags": [
+        "webdev",
+        "architecture",
+        "backend",
+        "api"
+      ],
+      "primaryCategory": "Software Architecture",
+      "categories": [
+        "Software Architecture",
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4911243",
+      "source": "devto",
+      "sourceId": "4911243",
+      "title": "Cash on delivery is a ledger problem",
+      "url": "https://dev.to/derbalajr/cash-on-delivery-is-a-ledger-problem-3oec",
+      "time": 1792856854,
+      "eventAt": "2026-10-24T15:47:34.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T15:47:34.000Z",
+      "sourceTags": [
+        "laravel",
+        "php",
+        "architecture",
+        "fintech"
+      ],
+      "primaryCategory": "Software Architecture",
+      "categories": [
+        "Software Architecture"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50222088",
+      "source": "hn",
+      "sourceId": "50222088",
+      "title": "From Software Engineering to AI Research or a Tale of 413 \"No\"",
+      "url": "https://faillearnrepeat.net/blog/from-swe-to-ai-research/",
+      "time": 1792854940,
+      "eventAt": "2026-10-24T15:15:40.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T15:15:40.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50222088",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Software Architecture"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4911117",
+      "source": "devto",
+      "sourceId": "4911117",
+      "title": "It can't read anything on my laptop, so the eight lines are the whole interface",
+      "url": "https://dev.to/turingcorp/it-cant-read-anything-on-my-laptop-so-the-eight-lines-are-the-whole-interface-dd5",
+      "time": 1792854687,
+      "eventAt": "2026-10-24T15:11:27.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T15:11:27.000Z",
+      "sourceTags": [
+        "ai",
+        "llm",
+        "machinelearning",
+        "tools"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50222016",
+      "source": "hn",
+      "sourceId": "50222016",
+      "title": "Computer Security Is About to Get Worse",
+      "url": "https://www.eff.org/deeplinks/2026/10/computer-security-about-get-lot-worse-heres-what-you-can-do",
+      "time": 1792854573,
+      "eventAt": "2026-10-24T15:09:33.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T15:09:33.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50222016",
+      "sourceTags": [],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50221978",
+      "source": "hn",
+      "sourceId": "50221978",
+      "title": "Security problems, what security problems? This is only the beginning",
+      "url": "https://13trillionparameters.com/comics/006-security-wasnt-in-the-prompt",
+      "time": 1792854331,
+      "eventAt": "2026-10-24T15:05:31.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T15:05:31.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50221978",
+      "sourceTags": [],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4911081",
+      "source": "devto",
+      "sourceId": "4911081",
+      "title": "Zero-Backend AI: Running Local Embeddings, BM25, and Hybrid RRF Search 100% in the Browser",
+      "url": "https://dev.to/guobug/zero-backend-ai-running-local-embeddings-bm25-and-hybrid-rrf-search-100-in-the-browser-27c3",
+      "time": 1792854089,
+      "eventAt": "2026-10-24T15:01:29.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T15:01:29.000Z",
+      "sourceTags": [
+        "webdev",
+        "ai",
+        "javascript",
+        "architecture"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Software Architecture",
+        "Web Development"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4911061",
+      "source": "devto",
+      "sourceId": "4911061",
+      "title": "I Matched 10,000 People to Loans. It Took Just 1 AI Call.",
+      "url": "https://dev.to/kaushaly4s5s7/i-matched-10000-people-to-loans-it-took-just-1-ai-call-1mh3",
+      "time": 1792853709,
+      "eventAt": "2026-10-24T14:55:09.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T14:55:09.000Z",
+      "sourceTags": [
+        "ai",
+        "softwaredevelopment",
+        "n8n",
+        "aws"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Automation Integrations"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4911054",
+      "source": "devto",
+      "sourceId": "4911054",
+      "title": "Build a Basic AI Agent From Scratch: Session Management II",
+      "url": "https://dev.to/rogiia/build-a-basic-ai-agent-from-scratch-session-management-ii-489l",
+      "time": 1792853614,
+      "eventAt": "2026-10-24T14:53:34.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T14:53:34.000Z",
+      "sourceTags": [
+        "ai",
+        "python",
+        "machinelearning"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "hn:50221762",
+      "source": "hn",
+      "sourceId": "50221762",
+      "title": "AI Assistance Reduces Persistence and Hurts Independent Performance",
+      "url": "https://arxiv.org/abs/2604.04721",
+      "time": 1792853129,
+      "eventAt": "2026-10-24T14:45:29.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T14:45:29.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50221762",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4911020",
+      "source": "devto",
+      "sourceId": "4911020",
+      "title": "Why no Python configuration library covers everything",
+      "url": "https://dev.to/niccolum/why-no-python-configuration-library-covers-everything-1phe",
+      "time": 1792853114,
+      "eventAt": "2026-10-24T14:45:14.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T14:45:14.000Z",
+      "sourceTags": [
+        "python",
+        "configuration",
+        "devops",
+        "opensource"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4910991",
+      "source": "devto",
+      "sourceId": "4910991",
+      "title": "👾 Nested Bookmarks Organizer for Chrome w/Custom Ticker",
+      "url": "https://dev.to/annavi11arrea1/nested-bookmarks-organizer-for-chrome-wcustom-ticker-267p",
+      "time": 1792852659,
+      "eventAt": "2026-10-24T14:37:39.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T14:37:39.000Z",
+      "sourceTags": [
+        "webdev",
+        "themes",
+        "customization",
+        "browser"
+      ],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4910967",
+      "source": "devto",
+      "sourceId": "4910967",
+      "title": "Correct, Cited, and Two Years Out of Date: Measuring Version Leakage in RAG",
+      "url": "https://dev.to/raihan-js/correct-cited-and-two-years-out-of-date-measuring-version-leakage-in-rag-5cdk",
+      "time": 1792852208,
+      "eventAt": "2026-10-24T14:30:08.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T14:30:08.000Z",
+      "sourceTags": [
+        "machinelearning",
+        "python",
+        "nlp",
+        "llm"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4910882",
+      "source": "devto",
+      "sourceId": "4910882",
+      "title": "Everyone Clicks 'I Agree.' No One Reads Them: I Fine-Tuned a 4B Model with Tinker to Catch Unfair Terms of Service in 30 Seconds",
+      "url": "https://dev.to/emmasofia/everyone-clicks-i-agree-no-one-reads-them-i-fine-tuned-a-4b-model-with-tinker-to-catch-unfair-30lm",
+      "time": 1792852154,
+      "eventAt": "2026-10-24T14:29:14.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T14:29:14.000Z",
+      "sourceTags": [
+        "devchallenge",
+        "hf26challenge",
+        "opensource",
+        "ai"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4910954",
+      "source": "devto",
+      "sourceId": "4910954",
+      "title": "I Built an Open-Source Alternative to Browser Sync — Your Data, Your Server",
+      "url": "https://dev.to/ghazialibi/i-built-an-open-source-alternative-to-browser-sync-your-data-your-server-180p",
+      "time": 1792852045,
+      "eventAt": "2026-10-24T14:27:25.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T14:27:25.000Z",
+      "sourceTags": [
+        "opensource",
+        "selfhosted",
+        "privacy",
+        "webdev"
+      ],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4909064",
+      "source": "devto",
+      "sourceId": "4909064",
+      "title": "Claude Code hooks for teams: four hooks worth committing to your repo",
+      "url": "https://aiworkspacebuilder.ai/blog/claude-code-hooks-for-teams-four-hooks-worth-committing-to-your-repo",
+      "time": 1792851440,
+      "eventAt": "2026-10-24T14:17:20.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T14:17:20.000Z",
+      "sourceTags": [
+        "claude",
+        "ai",
+        "devops",
+        "productivity"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Cloud DevOps"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50221446",
+      "source": "hn",
+      "sourceId": "50221446",
+      "title": "AI gets about 10x cheaper every year",
+      "url": "https://stevekrouse.com/10x",
+      "time": 1792851323,
+      "eventAt": "2026-10-24T14:15:23.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T14:15:23.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50221446",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4910887",
+      "source": "devto",
+      "sourceId": "4910887",
+      "title": "Pyxis: product analytics without cookies, IP addresses or personal data",
+      "url": "https://www.samuelsantana.dev/en/blog/pyxis-analytics-without-cookies-ip-or-personal-data",
+      "time": 1792851019,
+      "eventAt": "2026-10-24T14:10:19.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T14:10:19.000Z",
+      "sourceTags": [
+        "analytics",
+        "opensource",
+        "claude",
+        "security"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4910822",
+      "source": "devto",
+      "sourceId": "4910822",
+      "title": "Can You Break Our AI Security Defenses? Help Test Buried Injections & Taintgate",
+      "url": "https://dev.to/rudratosh/can-you-break-our-ai-security-defenses-help-test-buried-injections-taintgate-4bcl",
+      "time": 1792850897,
+      "eventAt": "2026-10-24T14:08:17.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T14:08:17.000Z",
+      "sourceTags": [
+        "opensource",
+        "ai",
+        "security",
+        "python"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4901271",
+      "source": "devto",
+      "sourceId": "4901271",
+      "title": "The Commons: Claims, Never Commands — a shared pool where models talk to each other, not over each other",
+      "url": "https://liminaljermo.substack.com/p/the-commons-claims-never-commands",
+      "time": 1792850400,
+      "eventAt": "2026-10-24T14:00:00.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T14:00:00.000Z",
+      "sourceTags": [
+        "ai",
+        "mcp",
+        "architecture",
+        "typescript"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Software Architecture",
+        "Web Development"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50221226",
+      "source": "hn",
+      "sourceId": "50221226",
+      "title": "US Air Force wants AI to assist aerial refueling",
+      "url": "https://www.militarytimes.com/industry/techwatch/2026/10/23/us-air-force-wants-ai-to-assist-aerial-refueling/",
+      "time": 1792849976,
+      "eventAt": "2026-10-24T13:52:56.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T13:52:56.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50221226",
+      "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4910783",
+      "source": "devto",
+      "sourceId": "4910783",
+      "title": "PHP2Shell, Node.js, GitLab & LiteLLM Vulnerabilities: October 2026 Patch Guide",
+      "url": "https://dev.to/asyncinnovator/php2shell-nodejs-gitlab-litellm-vulnerabilities-october-2026-patch-guide-25le",
+      "time": 1792849353,
+      "eventAt": "2026-10-24T13:42:33.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T13:42:33.000Z",
+      "sourceTags": [
+        "security",
+        "php",
+        "node",
+        "devops"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "Cloud DevOps",
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "hn:50221110",
+      "source": "hn",
+      "sourceId": "50221110",
+      "title": "Broccoli2Shell: Brotli decoder RCE (CVE-2026-111497) in Node.js, Python and more",
+      "url": "https://broccoli2shell.com/",
+      "time": 1792849019,
+      "eventAt": "2026-10-24T13:36:59.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T13:36:59.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50221110",
+      "sourceTags": [],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4910746",
+      "source": "devto",
+      "sourceId": "4910746",
+      "title": "How We Shrank an AI Model by 85% and Kept 90% of Its Smarts",
+      "url": "https://dev.to/genrius_ai/how-do-you-fit-a-4b-llm-in-124-gb-trellis-coded-2-bit-quantization-explained-with-real-benchmarks-3c9g",
+      "time": 1792848794,
+      "eventAt": "2026-10-24T13:33:14.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T13:33:14.000Z",
+      "sourceTags": [
+        "ai",
+        "llm",
+        "machinelearning",
+        "opensource"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "hn:50221068",
+      "source": "hn",
+      "sourceId": "50221068",
+      "title": "The Vulnerability Apocalypse and Why We Should Fund Open Source",
+      "url": "https://www.eff.org/deeplinks/2026/10/vulnerability-apocalypse-and-why-we-should-fund-open-source",
+      "time": 1792848623,
+      "eventAt": "2026-10-24T13:30:23.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-24T13:30:23.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50221068",
+      "sourceTags": [],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4910711",
+      "source": "devto",
+      "sourceId": "4910711",
+      "title": "Designing a Cloud-Native Weather Telemetry System: Handling 60x Storm Traffic Spikes with NestJS, gRPC, RabbitMQ & TimescaleDB",
+      "url": "https://dev.to/linhtch90/designing-a-cloud-native-weather-telemetry-system-handling-60x-storm-traffic-spikes-with-nestjs-jic",
+      "time": 1792848131,
+      "eventAt": "2026-10-24T13:22:11.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T13:22:11.000Z",
+      "sourceTags": [
+        "architecture",
+        "node",
+        "microservices",
+        "typescript"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps",
+        "Software Architecture",
+        "Web Development"
+      ],
+      "tags": []
+    },
     {
       "id": "hn:50220773",
       "source": "hn",
@@ -36,6 +3533,30 @@
       "submittedAt": "2026-10-24T12:49:06.000Z",
       "discussionUrl": "https://news.ycombinator.com/item?id=50220773",
       "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4910492",
+      "source": "devto",
+      "sourceId": "4910492",
+      "title": "I Built an AI That Remembers the Promises We Forget",
+      "url": "https://dev.to/hassan_shah_733ea1eb37c88/i-built-an-ai-that-remembers-the-promises-we-forget-9db",
+      "time": 1792844829,
+      "eventAt": "2026-10-24T12:27:09.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T12:27:09.000Z",
+      "sourceTags": [
+        "devchallenge",
+        "hf26challenge",
+        "ai",
+        "programming"
+      ],
       "primaryCategory": "AI Engineering",
       "categories": [
         "AI Engineering"
@@ -153,6 +3674,28 @@
       "primaryCategory": "Web Development",
       "categories": [
         "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4910208",
+      "source": "devto",
+      "sourceId": "4910208",
+      "title": "Patch the image, not the version",
+      "url": "https://maruf.ing/writing/patch-the-image",
+      "time": 1792841437,
+      "eventAt": "2026-10-24T11:30:37.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T11:30:37.000Z",
+      "sourceTags": [
+        "node",
+        "docker",
+        "devops",
+        "kubernetes"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps"
       ],
       "tags": []
     },
@@ -396,6 +3939,54 @@
       "tags": [
         "AI"
       ]
+    },
+    {
+      "id": "devto:4909944",
+      "source": "devto",
+      "sourceId": "4909944",
+      "title": "The Agent Logged In as You: A Session Is Not an Instruction",
+      "url": "https://dev.to/anusha_mukka/the-agent-logged-in-as-you-a-session-is-not-an-instruction-3iog",
+      "time": 1792838106,
+      "eventAt": "2026-10-24T10:35:06.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T10:35:06.000Z",
+      "sourceTags": [
+        "ai",
+        "security",
+        "agents",
+        "iam"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4909893",
+      "source": "devto",
+      "sourceId": "4909893",
+      "title": "One header in the config. A thousand on the wire.",
+      "url": "https://saipisey.com/blog/prometheus-common-header-pileup",
+      "time": 1792837328,
+      "eventAt": "2026-10-24T10:22:08.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T10:22:08.000Z",
+      "sourceTags": [
+        "prometheus",
+        "go",
+        "observability",
+        "devops"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps"
+      ],
+      "tags": []
     },
     {
       "id": "hn:50219763",
@@ -671,6 +4262,29 @@
       ]
     },
     {
+      "id": "devto:4909469",
+      "source": "devto",
+      "sourceId": "4909469",
+      "title": "The eMudhra CA Keys Were One Byte Long. Does Your Container Still Trust Them?",
+      "url": "https://www.kielltampubolon.id/writing/the-emudhra-ca-keys-were-one-byte-long-does-your-container-still-trust-them/",
+      "time": 1792831760,
+      "eventAt": "2026-10-24T08:49:20.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T08:49:20.000Z",
+      "sourceTags": [
+        "security",
+        "devops",
+        "docker",
+        "linux"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
       "id": "hn:50219355",
       "source": "hn",
       "sourceId": "50219355",
@@ -687,6 +4301,31 @@
         "Security"
       ],
       "tags": []
+    },
+    {
+      "id": "devto:4909487",
+      "source": "devto",
+      "sourceId": "4909487",
+      "title": "SlothClerk: a sloth that reads your contracts offline with Gemma",
+      "url": "https://dev.to/sidaksethisingh/slothclerk-a-sloth-that-reads-your-contracts-offline-with-gemma-49mi",
+      "time": 1792830748,
+      "eventAt": "2026-10-24T08:32:28.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T08:32:28.000Z",
+      "sourceTags": [
+        "devchallenge",
+        "hf26challenge",
+        "ai",
+        "webdev"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Web Development"
+      ],
+      "tags": [
+        "AI"
+      ]
     },
     {
       "id": "devto:4909471",
@@ -733,6 +4372,32 @@
         "Software Architecture"
       ],
       "tags": []
+    },
+    {
+      "id": "devto:4909398",
+      "source": "devto",
+      "sourceId": "4909398",
+      "title": "PHP2Shell: AI turned a decade-old flaw into an exploit in hours",
+      "url": "https://damianobianda.hashnode.dev/php2shell-ai-turned-a-decade-old-flaw-into-an-exploit-in-hours",
+      "time": 1792829883,
+      "eventAt": "2026-10-24T08:18:03.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T08:18:03.000Z",
+      "sourceTags": [
+        "php",
+        "security",
+        "ai",
+        "webdev"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering",
+        "Web Development"
+      ],
+      "tags": [
+        "AI"
+      ]
     },
     {
       "id": "devto:4909388",
@@ -913,6 +4578,31 @@
       ]
     },
     {
+      "id": "devto:4848735",
+      "source": "devto",
+      "sourceId": "4848735",
+      "title": "Multirun: A Multi-Agent Run Framework",
+      "url": "https://denislavgavrilov.com/multirun-a-multi-agent-run-framework",
+      "time": 1792825775,
+      "eventAt": "2026-10-24T07:09:35.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T07:09:35.000Z",
+      "sourceTags": [
+        "ai",
+        "agents",
+        "claude",
+        "opensource"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
       "id": "hn:50218929",
       "source": "hn",
       "sourceId": "50218929",
@@ -973,6 +4663,53 @@
         "Security"
       ],
       "tags": []
+    },
+    {
+      "id": "devto:4909012",
+      "source": "devto",
+      "sourceId": "4909012",
+      "title": "How to Fix a Slow Vibe-Coded App: A 7-Step Beginner Guide to Faster Pages and Queries",
+      "url": "https://dev.to/siteory/how-to-fix-a-slow-vibe-coded-app-a-7-step-beginner-guide-to-faster-pages-and-queries-53a8",
+      "time": 1792823480,
+      "eventAt": "2026-10-24T06:31:20.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T06:31:20.000Z",
+      "sourceTags": [
+        "beginners",
+        "vibecoding",
+        "webdev",
+        "performance"
+      ],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4908996",
+      "source": "devto",
+      "sourceId": "4908996",
+      "title": "Your AI Agent Says “Done.” What Did It Actually Verify?",
+      "url": "https://dev.to/robertadam987_/your-ai-agent-says-done-what-did-it-actually-verify-16jd",
+      "time": 1792823176,
+      "eventAt": "2026-10-24T06:26:16.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T06:26:16.000Z",
+      "sourceTags": [
+        "ai",
+        "programming",
+        "testing",
+        "productivity"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
     },
     {
       "id": "devto:4908954",
@@ -1038,6 +4775,30 @@
       "submittedAt": "2026-10-24T06:06:37.000Z",
       "discussionUrl": "https://news.ycombinator.com/item?id=50218706",
       "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4908909",
+      "source": "devto",
+      "sourceId": "4908909",
+      "title": "A 1.5B model is a triage signal, not a verdict",
+      "url": "https://dev.to/rytjy/a-15b-model-is-a-triage-signal-not-a-verdict-2j63",
+      "time": 1792821788,
+      "eventAt": "2026-10-24T06:03:08.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T06:03:08.000Z",
+      "sourceTags": [
+        "llm",
+        "ai",
+        "python",
+        "opensource"
+      ],
       "primaryCategory": "AI Engineering",
       "categories": [
         "AI Engineering"
@@ -1248,6 +5009,28 @@
       "tags": []
     },
     {
+      "id": "devto:4908728",
+      "source": "devto",
+      "sourceId": "4908728",
+      "title": "Decarbonizing Peru’s Grid: Building an Interactive Wind & Solar Explorer for Paracas with Streamlit, Plotly, and GitHub Actions",
+      "url": "https://dev.to/gian_francoarocutipaaro/decarbonizing-perus-grid-building-an-interactive-wind-solar-explorer-for-paracas-with-e81",
+      "time": 1792818307,
+      "eventAt": "2026-10-24T05:05:07.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T05:05:07.000Z",
+      "sourceTags": [
+        "python",
+        "datascience",
+        "streamlit",
+        "devops"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps"
+      ],
+      "tags": []
+    },
+    {
       "id": "devto:4908717",
       "source": "devto",
       "sourceId": "4908717",
@@ -1286,6 +5069,29 @@
       "submittedAt": "2026-10-24T04:52:28.000Z",
       "discussionUrl": "https://news.ycombinator.com/item?id=50218438",
       "sourceTags": [],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4908656",
+      "source": "devto",
+      "sourceId": "4908656",
+      "title": "Why Long AI Coding Sessions Get Expensive (Quadratic Attention Explained)",
+      "url": "https://smiit.in/writing/long-session-cost/",
+      "time": 1792816620,
+      "eventAt": "2026-10-24T04:37:00.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T04:37:00.000Z",
+      "sourceTags": [
+        "ai",
+        "llm",
+        "performance"
+      ],
       "primaryCategory": "AI Engineering",
       "categories": [
         "AI Engineering"
@@ -1365,6 +5171,29 @@
       "tags": [
         "AI"
       ]
+    },
+    {
+      "id": "devto:4908542",
+      "source": "devto",
+      "sourceId": "4908542",
+      "title": "firmware-auditor: Zero-Emulation Static Security Analysis for Firmware Rootfs in CI/CD",
+      "url": "https://dev.to/richjj98/firmware-auditor-zero-emulation-static-security-analysis-for-firmware-rootfs-in-cicd-2g6d",
+      "time": 1792814472,
+      "eventAt": "2026-10-24T04:01:12.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T04:01:12.000Z",
+      "sourceTags": [
+        "security",
+        "python",
+        "devsecops",
+        "iot"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "Cloud DevOps"
+      ],
+      "tags": []
     },
     {
       "id": "devto:4908540",
@@ -1499,6 +5328,30 @@
       "tags": [
         "AI",
         "Harnesses"
+      ]
+    },
+    {
+      "id": "devto:4908382",
+      "source": "devto",
+      "sourceId": "4908382",
+      "title": "Flutter On-Device AI With TensorFlow Lite",
+      "url": "https://www.uzairxdev.online/blog/flutter-on-device-ai-tensorflow-lite",
+      "time": 1792810885,
+      "eventAt": "2026-10-24T03:01:25.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T03:01:25.000Z",
+      "sourceTags": [
+        "flutter",
+        "tensorflowlite",
+        "ondeviceai",
+        "machinelearning"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
       ]
     },
     {
@@ -1666,6 +5519,32 @@
       "tags": []
     },
     {
+      "id": "devto:4908245",
+      "source": "devto",
+      "sourceId": "4908245",
+      "title": "OpenCode's leak was Console, not your CLI",
+      "url": "https://agentjournal.dev/blog/opencode-console-leak-scope/",
+      "time": 1792807250,
+      "eventAt": "2026-10-24T02:00:50.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T02:00:50.000Z",
+      "sourceTags": [
+        "security",
+        "agents",
+        "ai",
+        "programming"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
       "id": "hn:50217568",
       "source": "hn",
       "sourceId": "50217568",
@@ -1725,6 +5604,30 @@
         "Security"
       ],
       "tags": []
+    },
+    {
+      "id": "devto:4908166",
+      "source": "devto",
+      "sourceId": "4908166",
+      "title": "Can you re-derive a benchmark's gold labels from its raw annotator votes? Two reproducible censuses on SNLI and MultiNLI",
+      "url": "https://dev.to/munimv2/can-you-re-derive-a-benchmarks-gold-labels-from-its-raw-annotator-votes-two-reproducible-censuses-1756",
+      "time": 1792805155,
+      "eventAt": "2026-10-24T01:25:55.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T01:25:55.000Z",
+      "sourceTags": [
+        "machinelearning",
+        "datascience",
+        "nlp",
+        "benchmarks"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
     },
     {
       "id": "hn:50217473",
@@ -1816,6 +5719,52 @@
       "tags": []
     },
     {
+      "id": "devto:4908106",
+      "source": "devto",
+      "sourceId": "4908106",
+      "title": "How I Detect the Illicit Consent Grant Attack in Microsoft Entra ID",
+      "url": "https://dev.to/earbona23/how-i-detect-the-illicit-consent-grant-attack-in-microsoft-entra-id-4ioc",
+      "time": 1792803751,
+      "eventAt": "2026-10-24T01:02:31.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T01:02:31.000Z",
+      "sourceTags": [
+        "security",
+        "azure",
+        "entraid",
+        "microsoftgraph"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4908055",
+      "source": "devto",
+      "sourceId": "4908055",
+      "title": "Sloth Inbox: local AI that gives you fewer things to do",
+      "url": "https://dev.to/johnx4321/sloth-inbox-local-ai-that-gives-you-fewer-things-to-do-2dj9",
+      "time": 1792803491,
+      "eventAt": "2026-10-24T00:58:11.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T00:58:11.000Z",
+      "sourceTags": [
+        "devchallenge",
+        "hf26challenge",
+        "ai",
+        "opensource"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
       "id": "devto:4908037",
       "source": "devto",
       "sourceId": "4908037",
@@ -1859,6 +5808,28 @@
       "tags": [
         "AI"
       ]
+    },
+    {
+      "id": "devto:4908032",
+      "source": "devto",
+      "sourceId": "4908032",
+      "title": "Building MachineConvert: a static site where every number has to show its source",
+      "url": "https://dev.to/machineconvert/building-machineconvert-a-static-site-where-every-number-has-to-show-its-source-3h9i",
+      "time": 1792801818,
+      "eventAt": "2026-10-24T00:30:18.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-24T00:30:18.000Z",
+      "sourceTags": [
+        "seo",
+        "webdev",
+        "showdev",
+        "javascript"
+      ],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
     },
     {
       "id": "devto:4908000",
@@ -2000,6 +5971,33 @@
       ],
       "tags": [
         "AI"
+      ]
+    },
+    {
+      "id": "devto:4907887",
+      "source": "devto",
+      "sourceId": "4907887",
+      "title": "Your Agent Deleted the Wrong Directory at 3 A.M. — and the Prompt Said 'Be Careful'",
+      "url": "https://dev.to/rinworklab/your-agent-deleted-the-wrong-directory-at-3-am-and-the-prompt-said-be-careful-1iof",
+      "time": 1792798033,
+      "eventAt": "2026-10-23T23:27:13.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-23T23:27:13.000Z",
+      "sourceTags": [
+        "ai",
+        "claudecode",
+        "devops",
+        "automation"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Automation Integrations",
+        "Cloud DevOps"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
       ]
     },
     {
@@ -2198,6 +6196,31 @@
       "tags": []
     },
     {
+      "id": "devto:4907684",
+      "source": "devto",
+      "sourceId": "4907684",
+      "title": "Your Model Is a Binary You Ship to Strangers: Release Engineering for Edge AI",
+      "url": "https://dev.to/dima_kruglov_608741d9a416/your-model-is-a-binary-you-ship-to-strangers-release-engineering-for-edge-ai-1nn3",
+      "time": 1792792857,
+      "eventAt": "2026-10-23T22:00:57.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-23T22:00:57.000Z",
+      "sourceTags": [
+        "ai",
+        "llm",
+        "devops",
+        "python"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Cloud DevOps"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
       "id": "hn:50215934",
       "source": "hn",
       "sourceId": "50215934",
@@ -2290,6 +6313,47 @@
       ]
     },
     {
+      "id": "hn:50215363",
+      "source": "hn",
+      "sourceId": "50215363",
+      "title": "TypeScript 7.1 content mappers made type checks 20× faster",
+      "url": "https://ismail.karsli.net/blog/typesql-content-mappers/",
+      "time": 1792789764,
+      "eventAt": "2026-10-23T21:09:24.000Z",
+      "dateKind": "submitted",
+      "submittedAt": "2026-10-23T21:09:24.000Z",
+      "discussionUrl": "https://news.ycombinator.com/item?id=50215363",
+      "sourceTags": [],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4907553",
+      "source": "devto",
+      "sourceId": "4907553",
+      "title": "Node2Shell (CVE-2026-111497): The Node.js Brotli RCE You Need to Patch Today",
+      "url": "https://dev.to/mubashirtaj/node2shell-cve-2026-111497-the-nodejs-brotli-rce-you-need-to-patch-today-15ah",
+      "time": 1792789631,
+      "eventAt": "2026-10-23T21:07:11.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-23T21:07:11.000Z",
+      "sourceTags": [
+        "node",
+        "security",
+        "webdev",
+        "programming"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
       "id": "hn:50215283",
       "source": "hn",
       "sourceId": "50215283",
@@ -2354,6 +6418,54 @@
       "tags": [
         "AI"
       ]
+    },
+    {
+      "id": "devto:4907528",
+      "source": "devto",
+      "sourceId": "4907528",
+      "title": "How to Evaluate AI Agent Performance: A Practical Guide",
+      "url": "https://agentic-affairs.com/ai-agent-performance-evaluation/",
+      "time": 1792789092,
+      "eventAt": "2026-10-23T20:58:12.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-23T20:58:12.000Z",
+      "sourceTags": [
+        "ai",
+        "agents",
+        "machinelearning",
+        "programming"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4907506",
+      "source": "devto",
+      "sourceId": "4907506",
+      "title": "84% of abandoned v0 apps run a known-exploited Next.js",
+      "url": "https://macrocyber.co/blog/abandoned-v0-apps-nextjs-react2shell",
+      "time": 1792788606,
+      "eventAt": "2026-10-23T20:50:06.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-23T20:50:06.000Z",
+      "sourceTags": [
+        "nextjs",
+        "security",
+        "webdev",
+        "react"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "Web Development"
+      ],
+      "tags": []
     },
     {
       "id": "hn:50215039",
@@ -3206,6 +7318,31 @@
       "tags": []
     },
     {
+      "id": "devto:4906684",
+      "source": "devto",
+      "sourceId": "4906684",
+      "title": "PHP2Shell and the smarter-attacker test: which defences still hold when AI finds the bugs",
+      "url": "https://blog.scenehere.ca/posts/smarter-attacker-test/",
+      "time": 1792775747,
+      "eventAt": "2026-10-23T17:15:47.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-23T17:15:47.000Z",
+      "sourceTags": [
+        "security",
+        "ai",
+        "php",
+        "opensource"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
       "id": "devto:4906683",
       "source": "devto",
       "sourceId": "4906683",
@@ -3374,6 +7511,29 @@
         "AI",
         "Agents"
       ]
+    },
+    {
+      "id": "devto:4906394",
+      "source": "devto",
+      "sourceId": "4906394",
+      "title": "Stopgap fix: patch CVE-2026-109618 / 109619 (PHP RCE) while still on PHP 7.4",
+      "url": "https://dev.to/softjapan/stopgap-fix-patch-cve-2026-109618-109619-php-rce-while-still-on-php-74-2pbd",
+      "time": 1792772426,
+      "eventAt": "2026-10-23T16:20:26.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-23T16:20:26.000Z",
+      "sourceTags": [
+        "php",
+        "docker",
+        "security",
+        "devops"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "Cloud DevOps"
+      ],
+      "tags": []
     },
     {
       "id": "devto:4905760",
@@ -3990,18 +8150,18 @@
       "dateKind": "published",
       "publishedAt": "2026-10-23T14:30:00.000Z",
       "sourceTags": [
-        "Scalability",
-        "AWS Lambda",
         "Serverless",
         "Cost Optimization",
         "S3",
+        "AWS Lambda",
+        "Scalability",
         "Applied Research",
+        "AWS",
+        "Cloud Architecture",
+        "Science",
         "Distributed Systems",
         "Architecture",
-        "AWS",
         "Distributed Query",
-        "Science",
-        "Cloud Architecture",
         "Architecture & Design",
         "Development",
         "news"
@@ -4703,6 +8863,30 @@
       ]
     },
     {
+      "id": "devto:4905120",
+      "source": "devto",
+      "sourceId": "4905120",
+      "title": "Auth systems aren't features, they're mini platforms",
+      "url": "https://dev.to/robertpaschal/auth-systems-arent-features-theyre-mini-platforms-2ek4",
+      "time": 1792756944,
+      "eventAt": "2026-10-23T12:02:24.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-23T12:02:24.000Z",
+      "sourceTags": [
+        "backend",
+        "webdev",
+        "security",
+        "architecture"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "Software Architecture",
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
       "id": "devto:4894595",
       "source": "devto",
       "sourceId": "4894595",
@@ -4793,6 +8977,30 @@
       ]
     },
     {
+      "id": "devto:4905066",
+      "source": "devto",
+      "sourceId": "4905066",
+      "title": "SlothChef",
+      "url": "https://dev.to/abhinav_shrivas_3007ba1c7/slothchef-39m0",
+      "time": 1792756492,
+      "eventAt": "2026-10-23T11:54:52.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-23T11:54:52.000Z",
+      "sourceTags": [
+        "devchallenge",
+        "hf26challenge",
+        "ai",
+        "opensource"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
       "id": "devto:4905064",
       "source": "devto",
       "sourceId": "4905064",
@@ -4810,6 +9018,28 @@
       ],
       "primaryCategory": "Web Development",
       "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4905058",
+      "source": "devto",
+      "sourceId": "4905058",
+      "title": "My Invite-Only Gate Lived in the Browser",
+      "url": "https://dev.to/marcoblch/my-invite-only-gate-lived-in-the-browser-3697",
+      "time": 1792756301,
+      "eventAt": "2026-10-23T11:51:41.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-23T11:51:41.000Z",
+      "sourceTags": [
+        "security",
+        "webdev",
+        "react"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
         "Web Development"
       ],
       "tags": []
@@ -5002,14 +9232,14 @@
       "dateKind": "published",
       "publishedAt": "2026-10-23T11:00:00.000Z",
       "sourceTags": [
-        "Cloud",
         "Cost Optimization",
-        "FinOps",
-        "Architecture",
+        "Cloud",
         "Cloud Computing",
-        "Architecture & Design",
-        "Development",
+        "Architecture",
+        "FinOps",
         "DevOps",
+        "Development",
+        "Architecture & Design",
         "article"
       ],
       "primaryCategory": "Cloud DevOps",
@@ -5415,6 +9645,33 @@
       "tags": []
     },
     {
+      "id": "devto:4903979",
+      "source": "devto",
+      "sourceId": "4903979",
+      "title": "\"Please don't delete prod\" is not a security control",
+      "url": "https://dev.to/rishi_makwana/please-dont-delete-prod-is-not-a-security-control-4kg2",
+      "time": 1792744880,
+      "eventAt": "2026-10-23T08:41:20.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-23T08:41:20.000Z",
+      "sourceTags": [
+        "ai",
+        "security",
+        "automation",
+        "agents"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering",
+        "Automation Integrations"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
       "id": "devto:4903973",
       "source": "devto",
       "sourceId": "4903973",
@@ -5634,6 +9891,30 @@
       "tags": [
         "AI",
         "Agents"
+      ]
+    },
+    {
+      "id": "devto:4903848",
+      "source": "devto",
+      "sourceId": "4903848",
+      "title": "What if the next era isn't AI... but DNA Software & Next-Gen Compute? (And why we need to build for it now) 🧬⚛️",
+      "url": "https://dev.to/koda2026/what-if-the-next-era-isnt-ai-but-dna-software-next-gen-compute-and-why-we-need-to-build-for-neo",
+      "time": 1792743384,
+      "eventAt": "2026-10-23T08:16:24.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-23T08:16:24.000Z",
+      "sourceTags": [
+        "ai",
+        "quantum",
+        "discuss",
+        "hackerstage"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
       ]
     },
     {
@@ -6507,24 +10788,6 @@
       "tags": []
     },
     {
-      "id": "hn:50204287",
-      "source": "hn",
-      "sourceId": "50204287",
-      "title": "CVE-2026-107891: musl Libc: multiple integer overflow in regcomp",
-      "url": "https://www.openwall.com/lists/oss-security/2026/10/21/18",
-      "time": 1792727170,
-      "eventAt": "2026-10-23T03:46:10.000Z",
-      "dateKind": "submitted",
-      "submittedAt": "2026-10-23T03:46:10.000Z",
-      "discussionUrl": "https://news.ycombinator.com/item?id=50204287",
-      "sourceTags": [],
-      "primaryCategory": "Security",
-      "categories": [
-        "Security"
-      ],
-      "tags": []
-    },
-    {
       "id": "devto:4902610",
       "source": "devto",
       "sourceId": "4902610",
@@ -7067,6 +11330,32 @@
       "tags": []
     },
     {
+      "id": "devto:4901590",
+      "source": "devto",
+      "sourceId": "4901590",
+      "title": "Why free model tiers look dead when they aren't",
+      "url": "https://cleosnine.com/writing/free-tiers-look-dead.html",
+      "time": 1792715026,
+      "eventAt": "2026-10-23T00:23:46.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-23T00:23:46.000Z",
+      "sourceTags": [
+        "ai",
+        "llm",
+        "api",
+        "devops"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Cloud DevOps",
+        "Web Development"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
       "id": "devto:4886484",
       "source": "devto",
       "sourceId": "4886484",
@@ -7207,6 +11496,32 @@
       "tags": []
     },
     {
+      "id": "devto:4901127",
+      "source": "devto",
+      "sourceId": "4901127",
+      "title": "I submitted a side-project extension for review and an AI bot found 4 real security bugs in it",
+      "url": "https://dev.to/kleogeos/i-submitted-a-side-project-extension-for-review-and-an-ai-bot-found-4-real-security-bugs-in-it-59f5",
+      "time": 1792710681,
+      "eventAt": "2026-10-22T23:11:21.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-22T23:11:21.000Z",
+      "sourceTags": [
+        "showdev",
+        "security",
+        "typescript",
+        "ai"
+      ],
+      "primaryCategory": "Security",
+      "categories": [
+        "Security",
+        "AI Engineering",
+        "Web Development"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
       "id": "hn:50202373",
       "source": "hn",
       "sourceId": "50202373",
@@ -7306,26 +11621,6 @@
         "Security"
       ],
       "tags": []
-    },
-    {
-      "id": "hn:50202098",
-      "source": "hn",
-      "sourceId": "50202098",
-      "title": "Cerebras Deploys Trillion-Parameter AI Models",
-      "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
-      "time": 1792708881,
-      "eventAt": "2026-10-22T22:41:21.000Z",
-      "dateKind": "submitted",
-      "submittedAt": "2026-10-22T22:41:21.000Z",
-      "discussionUrl": "https://news.ycombinator.com/item?id=50202098",
-      "sourceTags": [],
-      "primaryCategory": "AI Engineering",
-      "categories": [
-        "AI Engineering"
-      ],
-      "tags": [
-        "AI"
-      ]
     },
     {
       "id": "hn:50202041",
@@ -9474,6 +13769,30 @@
       ]
     },
     {
+      "id": "devto:4898103",
+      "source": "devto",
+      "sourceId": "4898103",
+      "title": "How to Customise DeepResearch for Teams with Brand Kits & Collections",
+      "url": "https://dev.to/valyuai/how-to-customise-deepresearch-for-teams-with-brand-kits-collections-16do",
+      "time": 1792684718,
+      "eventAt": "2026-10-22T15:58:38.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-22T15:58:38.000Z",
+      "sourceTags": [
+        "ai",
+        "tutorial",
+        "productivity",
+        "search"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
       "id": "devto:4898060",
       "source": "devto",
       "sourceId": "4898060",
@@ -9494,6 +13813,31 @@
         "Cloud DevOps"
       ],
       "tags": []
+    },
+    {
+      "id": "devto:4897974",
+      "source": "devto",
+      "sourceId": "4897974",
+      "title": "I built figlens so cloud coding agents can read Figma files offline",
+      "url": "https://dev.to/runkids/i-built-figlens-so-cloud-coding-agents-can-read-figma-files-offline-37e",
+      "time": 1792683762,
+      "eventAt": "2026-10-22T15:42:42.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-22T15:42:42.000Z",
+      "sourceTags": [
+        "opensource",
+        "ai",
+        "webdev"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Web Development"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
     },
     {
       "id": "devto:4897966",
@@ -9797,7 +14141,7 @@
       "id": "devto:4897504",
       "source": "devto",
       "sourceId": "4897504",
-      "title": "1. Python configuration: how we got here, and why it still hurts",
+      "title": "Python configuration: how we got here, and why it still hurts",
       "url": "https://dev.to/niccolum/1-python-configuration-how-we-got-here-and-why-it-still-hurts-3kpn",
       "time": 1792680196,
       "eventAt": "2026-10-22T14:43:16.000Z",
@@ -10767,6 +15111,28 @@
       "tags": []
     },
     {
+      "id": "devto:4819453",
+      "source": "devto",
+      "sourceId": "4819453",
+      "title": "Plurals, Genders, and Variables: ICU MessageFormat for Developers",
+      "url": "https://www.babelize.co/blogs/icu-messageformat-plurals-guide/",
+      "time": 1792674437,
+      "eventAt": "2026-10-22T13:07:17.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-22T13:07:17.000Z",
+      "sourceTags": [
+        "i18n",
+        "javascript",
+        "localization",
+        "webdev"
+      ],
+      "primaryCategory": "Web Development",
+      "categories": [
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
       "id": "hn:50194777",
       "source": "hn",
       "sourceId": "50194777",
@@ -11631,15 +15997,15 @@
       "publishedAt": "2026-10-22T11:00:00.000Z",
       "sourceTags": [
         "Agents",
+        "QCon AI Boston 2026",
         "Fault Tolerance",
         "Transcripts",
+        "Actor Model",
         "Architecture",
         "Distributed Systems",
-        "Actor Model",
-        "QCon AI Boston 2026",
         "AI, ML & Data Engineering",
-        "Architecture & Design",
         "Development",
+        "Architecture & Design",
         "presentation"
       ],
       "primaryCategory": "AI Engineering",
@@ -12462,10 +16828,10 @@
       "dateKind": "published",
       "publishedAt": "2026-10-22T09:00:00.000Z",
       "sourceTags": [
-        "Agentic AI Architecture",
-        "duckdb",
         "Data Lake",
+        "duckdb",
         "Disaster Recovery",
+        "Agentic AI Architecture",
         "AI, ML & Data Engineering",
         "Architecture & Design",
         "article"
@@ -12897,6 +17263,30 @@
         "Web Development"
       ],
       "tags": []
+    },
+    {
+      "id": "devto:4894777",
+      "source": "devto",
+      "sourceId": "4894777",
+      "title": "Built a Local AI Code Reviewer with Ollama | Private & Open Source 🚀",
+      "url": "https://dev.to/abhisekroy169/built-a-local-ai-code-reviewer-with-ollama-private-open-source-237b",
+      "time": 1792656621,
+      "eventAt": "2026-10-22T08:10:21.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-22T08:10:21.000Z",
+      "sourceTags": [
+        "devchallenge",
+        "hf26challenge",
+        "opensource",
+        "ai"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
     },
     {
       "id": "hn:50192585",
@@ -14256,7 +18646,7 @@
       "source": "devto",
       "sourceId": "4892688",
       "title": "Collections and the Catalog: How a Database Remembers What Exists",
-      "url": "https://medium.com/@priyanshu_verma/collections-and-the-catalog-how-a-database-remembers-what-exists-0e47f6d2707f",
+      "url": "https://dev.to/priyanshuverma/collections-and-the-catalog-how-a-database-remembers-what-exists-5e6e",
       "time": 1792633874,
       "eventAt": "2026-10-22T01:51:14.000Z",
       "dateKind": "published",
@@ -14840,6 +19230,29 @@
       "primaryCategory": "Security",
       "categories": [
         "Security",
+        "Web Development"
+      ],
+      "tags": []
+    },
+    {
+      "id": "devto:4892199",
+      "source": "devto",
+      "sourceId": "4892199",
+      "title": "Architecting Multi-Tenant SaaS with PostgreSQL Row-Level Security (RLS) in 2026",
+      "url": "https://umatechnolab.com/insights/multitenant-saas-architecture-postgres-rls-2026",
+      "time": 1792622104,
+      "eventAt": "2026-10-21T22:35:04.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-21T22:35:04.000Z",
+      "sourceTags": [
+        "saas",
+        "architecture",
+        "cloudengineering",
+        "webdev"
+      ],
+      "primaryCategory": "Software Architecture",
+      "categories": [
+        "Software Architecture",
         "Web Development"
       ],
       "tags": []
@@ -15445,6 +19858,31 @@
       "tags": [
         "AI",
         "Agents"
+      ]
+    },
+    {
+      "id": "devto:4891590",
+      "source": "devto",
+      "sourceId": "4891590",
+      "title": "I built a Claude Code skill that de-slops AI-generated web design",
+      "url": "https://dev.to/haoli/i-built-a-claude-code-skill-that-de-slops-ai-generated-web-design-42kn",
+      "time": 1792611863,
+      "eventAt": "2026-10-21T19:44:23.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-21T19:44:23.000Z",
+      "sourceTags": [
+        "ai",
+        "design",
+        "python",
+        "webdev"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Web Development"
+      ],
+      "tags": [
+        "AI"
       ]
     },
     {
@@ -18644,6 +23082,32 @@
       ]
     },
     {
+      "id": "devto:4889187",
+      "source": "devto",
+      "sourceId": "4889187",
+      "title": "What if the agents of the world never have to touch your POS?",
+      "url": "https://dev.to/icegaming/what-if-the-agents-of-the-world-never-have-to-touch-your-pos-2i4l",
+      "time": 1792582264,
+      "eventAt": "2026-10-21T11:31:04.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-21T11:31:04.000Z",
+      "sourceTags": [
+        "ai",
+        "opensource",
+        "webdev",
+        "programming"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Web Development"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
       "id": "infoq:https://www.infoq.com/articles/agentic-ai-architecture-article-series/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI+Architecture",
       "source": "infoq",
       "sourceId": "https://www.infoq.com/articles/agentic-ai-architecture-article-series/?utm_campaign=infoq_content&utm_source=infoq&utm_medium=feed&utm_term=AI+Architecture",
@@ -21677,6 +26141,30 @@
       "tags": []
     },
     {
+      "id": "devto:4887030",
+      "source": "devto",
+      "sourceId": "4887030",
+      "title": "thalmle — T-HAL-MLE nativo en R: regresión LASSO adaptativa para dosis-respuesta continua",
+      "url": "https://dev.to/magopredator/thalmle-t-hal-mle-nativo-en-r-regresion-lasso-adaptativa-para-dosis-respuesta-continua-4648",
+      "time": 1792559924,
+      "eventAt": "2026-10-21T05:18:44.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-21T05:18:44.000Z",
+      "sourceTags": [
+        "r",
+        "statistics",
+        "machinelearning",
+        "opensource"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
       "id": "devto:4887010",
       "source": "devto",
       "sourceId": "4887010",
@@ -22448,6 +26936,31 @@
       "primaryCategory": "AI Engineering",
       "categories": [
         "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "devto:4886523",
+      "source": "devto",
+      "sourceId": "4886523",
+      "title": "I built an AI resume screener where every score has reasons",
+      "url": "https://dev.to/bohdan_shymov/i-built-an-ai-resume-screener-where-every-score-has-reasons-2a71",
+      "time": 1792551298,
+      "eventAt": "2026-10-21T02:54:58.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-21T02:54:58.000Z",
+      "sourceTags": [
+        "ai",
+        "webdev",
+        "nextjs",
+        "showdev"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Web Development"
       ],
       "tags": [
         "AI"
@@ -25613,6 +30126,32 @@
       ]
     },
     {
+      "id": "devto:4883980",
+      "source": "devto",
+      "sourceId": "4883980",
+      "title": "Your AI Agent Is Burning Money — A Dev's Cost-Control Guide",
+      "url": "https://dev.to/paullovelace/your-ai-agent-is-burning-money-a-devs-cost-control-guide-5h7k",
+      "time": 1792508192,
+      "eventAt": "2026-10-20T14:56:32.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-20T14:56:32.000Z",
+      "sourceTags": [
+        "ai",
+        "productivity",
+        "tooling",
+        "devops"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Cloud DevOps"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
       "id": "devto:4883953",
       "source": "devto",
       "sourceId": "4883953",
@@ -28642,6 +33181,31 @@
       "tags": []
     },
     {
+      "id": "devto:4881494",
+      "source": "devto",
+      "sourceId": "4881494",
+      "title": "Mercury 3 is fast. Your agent still has to wait for its tools.",
+      "url": "https://dev.to/panditshivam/mercury-3-is-fast-your-agent-still-has-to-wait-for-its-tools-116i",
+      "time": 1792476389,
+      "eventAt": "2026-10-20T06:06:29.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-20T06:06:29.000Z",
+      "sourceTags": [
+        "ai",
+        "machinelearning",
+        "programming",
+        "performance"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
       "id": "devto:4881469",
       "source": "devto",
       "sourceId": "4881469",
@@ -29092,6 +33656,28 @@
       "tags": [
         "AI"
       ]
+    },
+    {
+      "id": "devto:4880981",
+      "source": "devto",
+      "sourceId": "4880981",
+      "title": "The Mystery of the Dying 1GB Server",
+      "url": "https://asepsayyad007.in/blogs/the-mystery-of-the-dying-1gb-server",
+      "time": 1792466994,
+      "eventAt": "2026-10-20T03:29:54.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-20T03:29:54.000Z",
+      "sourceTags": [
+        "linux",
+        "cloud",
+        "devops",
+        "ubuntu"
+      ],
+      "primaryCategory": "Cloud DevOps",
+      "categories": [
+        "Cloud DevOps"
+      ],
+      "tags": []
     },
     {
       "id": "devto:4880937",
@@ -31300,7 +35886,7 @@
       "source": "devto",
       "sourceId": "4878535",
       "title": "The File Format: Pages, Headers, and Magic Bytes",
-      "url": "https://medium.com/@priyanshu_verma/the-file-format-pages-headers-and-magic-bytes-d85f94e6ee53",
+      "url": "https://dev.to/priyanshuverma/the-file-format-pages-headers-and-magic-bytes-2k78",
       "time": 1792423679,
       "eventAt": "2026-10-19T15:27:59.000Z",
       "dateKind": "published",
@@ -31423,26 +36009,6 @@
         "llm",
         "machinelearning"
       ],
-      "primaryCategory": "AI Engineering",
-      "categories": [
-        "AI Engineering"
-      ],
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "id": "hn:50153425",
-      "source": "hn",
-      "sourceId": "50153425",
-      "title": "AI Assistance Reduces Persistence and Hurts Independent Performance",
-      "url": "https://arxiv.org/abs/2604.04721",
-      "time": 1792422594,
-      "eventAt": "2026-10-19T15:09:54.000Z",
-      "dateKind": "submitted",
-      "submittedAt": "2026-10-19T15:09:54.000Z",
-      "discussionUrl": "https://news.ycombinator.com/item?id=50153425",
-      "sourceTags": [],
       "primaryCategory": "AI Engineering",
       "categories": [
         "AI Engineering"
@@ -32884,7 +37450,7 @@
       "source": "devto",
       "sourceId": "4876916",
       "title": "Reactivity in Data Fetching: httpResource, rxResource vs the HttpClient",
-      "url": "https://dev.to/wayne_gakuo/reactivity-in-data-fetching-httpresource-rxresource-vs-the-httpclient-584m",
+      "url": "https://dev.to/gde/reactivity-in-data-fetching-httpresource-rxresource-vs-the-httpclient-584m",
       "time": 1792411957,
       "eventAt": "2026-10-19T12:12:37.000Z",
       "dateKind": "published",
@@ -33157,6 +37723,31 @@
       ]
     },
     {
+      "id": "devto:4877394",
+      "source": "devto",
+      "sourceId": "4877394",
+      "title": "Anthropic Replaced Git. The Interesting Part Is the Merge Queue.",
+      "url": "https://blog.dhruuv.me/anthropic-replaced-git-the-interesting-part-is-the-merge-queue-5520",
+      "time": 1792408535,
+      "eventAt": "2026-10-19T11:15:35.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-19T11:15:35.000Z",
+      "sourceTags": [
+        "ai",
+        "git",
+        "devops",
+        "productivity"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Cloud DevOps"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
       "id": "devto:4877390",
       "source": "devto",
       "sourceId": "4877390",
@@ -33244,11 +37835,11 @@
       "dateKind": "published",
       "publishedAt": "2026-10-19T11:00:00.000Z",
       "sourceTags": [
-        "The InfoQ Podcast",
-        "Software Engineering",
-        "Web App Developer",
         "UI Testing",
         "Local First",
+        "Software Engineering",
+        "Web App Developer",
+        "The InfoQ Podcast",
         "AI, ML & Data Engineering",
         "podcast"
       ],
@@ -34955,6 +39546,30 @@
       "tags": []
     },
     {
+      "id": "devto:4875595",
+      "source": "devto",
+      "sourceId": "4875595",
+      "title": "HisabMate: A Local-First, AI-Assisted Digital Bahi-Khata for Indian Microbusinesses",
+      "url": "https://dev.to/shaurya_mehta/hisabmate-a-local-first-ai-assisted-digital-bahi-khata-for-indian-microbusinesses-1g1e",
+      "time": 1792389385,
+      "eventAt": "2026-10-19T05:56:25.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-19T05:56:25.000Z",
+      "sourceTags": [
+        "devchallenge",
+        "hf26challenge",
+        "ai",
+        "programming"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering"
+      ],
+      "tags": [
+        "AI"
+      ]
+    },
+    {
       "id": "hn:50148855",
       "source": "hn",
       "sourceId": "50148855",
@@ -35724,7 +40339,7 @@
       "source": "devto",
       "sourceId": "4865543",
       "title": "I put my business rules in the database instead of React, here's what it bought me",
-      "url": "https://dev.to/suraj_nandan_dcd78e7ec898/i-put-my-business-rules-in-the-database-instead-of-react-heres-what-it-bought-me-3492",
+      "url": "https://dev.to/suraj_nandan/i-put-my-business-rules-in-the-database-instead-of-react-heres-what-it-bought-me-3492",
       "time": 1792380600,
       "eventAt": "2026-10-19T03:30:00.000Z",
       "dateKind": "published",
@@ -38410,6 +43025,32 @@
         "hacktoberfest",
         "typescript",
         "search"
+      ],
+      "primaryCategory": "AI Engineering",
+      "categories": [
+        "AI Engineering",
+        "Web Development"
+      ],
+      "tags": [
+        "AI",
+        "Agents"
+      ]
+    },
+    {
+      "id": "devto:4872940",
+      "source": "devto",
+      "sourceId": "4872940",
+      "title": "Building Continuum: Cross-Agent Graph Memory with Explainable Recall Using FalkorDB",
+      "url": "https://dev.to/himanshu_jha_de18b7f5726d/building-continuum-cross-agent-graph-memory-with-explainable-recall-using-falkordb-37o8",
+      "time": 1792340634,
+      "eventAt": "2026-10-18T16:23:54.000Z",
+      "dateKind": "published",
+      "publishedAt": "2026-10-18T16:23:54.000Z",
+      "sourceTags": [
+        "ai",
+        "graphdatabases",
+        "python",
+        "webdev"
       ],
       "primaryCategory": "AI Engineering",
       "categories": [
